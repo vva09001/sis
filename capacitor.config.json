@@ -1,0 +1,7 @@
+{
+  "appId": "sis.hanoi",
+  "appName": "SIS HaNoi",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build"
+}

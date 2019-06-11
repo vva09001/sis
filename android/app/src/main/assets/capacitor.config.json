@@ -1,0 +1,7 @@
+{
+  "appId": "com.feezit.app",
+  "appName": "FeezIt",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build"
+}

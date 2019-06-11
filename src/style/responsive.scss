@@ -1,0 +1,12 @@
+@media(max-width: 380px){
+  :root {
+    .list {
+      .sub-card {
+        ion-badge {
+          font-size: 10px;
+          padding: 0px 3px;
+        }
+      }
+    }
+  }
+}
