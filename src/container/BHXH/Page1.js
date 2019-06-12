@@ -3,17 +3,20 @@ import Layout from 'container/Layout/Layout';
 import Button from 'components/common/Buttons';
 import { IonCard, IonCardTitle, IonButton } from '@ionic/react';
 import { Link } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 class Page1 extends Component {
   render() {
+    const { t } = this.props;
     return (
-      <Layout title="Đăng ký dịch vụ thủ tục BHXH Mang thai hộ">
+      <Layout title={t('pageTitle_01')}>
         <IonCard>
-          <IonCardTitle>Bạn đăng ký hỗ trợ thủ tục BHXH đối với trường họp nào</IonCardTitle>
-          <Button number={1} title="Bạn là người mang thai hộ" />
-          <Button number={2} title="Bạn là người nhờ mang thai hộ" />
+          <IonCardTitle>{t('carTitle_01')}</IonCardTitle>
+          <Button number={1} title={t('options_01')} />
+          <Button number={2} title={t('options_02')} />
           <div className="btn--black">
             <IonButton color="light">
-              <Link to="/">Quay về</Link>
+              <Link to="/">{t('back')}</Link>
             </IonButton>
           </div>
         </IonCard>
@@ -22,4 +25,8 @@ class Page1 extends Component {
   }
 }
 
-export default Page1;
+Page1.propTypes = {
+  t: PropTypes.func
+};
+
+export default withTranslation()(Page1);
