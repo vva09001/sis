@@ -1,10 +1,52 @@
-@media(max-width: 380px){
+@media (max-width: 380px) {
   :root {
     .list {
       .sub-card {
         ion-badge {
           font-size: 10px;
           padding: 0px 3px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 10px;
+      margin-bottom: 30px;
+      .button-left {
+        height: 39px;
+        width: 45px;
+        background: linear-gradient(to right, #28adce, #23b480);
+        text-align: center;
+        border-radius: 100%;
+        p {
+          margin: 0;
+          padding: 32%;
+          color: #ffffff;
+        }
+      }
+      .button-right {
+        margin-left: 10px;
+        width: 300px;
+        .button {
+          background: #f7f2f1;
+          padding: 10px;
+          text-align: left;
+          outline: none;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          line-height: 16px;
+          height: 47px;
+          max-height: 47px;
+        }
+        .button:active {
+          background: #d6d6d6c4;
         }
       }
     }

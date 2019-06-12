@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900');
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -60,36 +59,64 @@
   --ion-color-medium-shade: #a7a4ab;
   --ion-color-medium-tint: #c5c1c8;
 
-  // --ion-color-light: #ffffff;
-  // --ion-color-light-rgb: 255, 255, 255;
-  // --ion-color-light-contrast: #000000;
-  // --ion-color-light-contrast-rgb: 0, 0, 0;
-  // --ion-color-light-shade: #e0e0e0;
-  // --ion-color-light-tint: #ffffff;
-  // --ion-color-color-gradient: linear-gradient(to right, #ff543a, #ff2d60);
+  --ion-color-light: linear-gradient(to right, #f1f0f0, #cbc9c8);
+  --ion-color-light-rgb: 255, 255, 255;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #e0e0e0;
+  --ion-color-light-tint: linear-gradient(to right, #f1f0f0, #cbc9c8);
+
   .layout {
     height: 100vh;
-    // background-image: url('../assets//img/backgroud.png');
-    // background-size: cover;
     ion-content {
       --background: url('../assets//img/backgroud.png') 0 0/100% 100% no-repeat;
     }
-
+    .header-md:after {
+      content: unset;
+    }
     .header {
-      min-height: 200px;
-      border-bottom: 1px solid #ffffffbb;
-      border-bottom-right-radius: 20%;
-      border-bottom-left-radius: 20%;
-      box-shadow: 0px 4px #d6d6d6c4;
-      color: #f8a63d;
-      text-align: center;
       img {
         padding-top: 30px;
       }
+      ion-text {
+        p {
+          padding: 0 40px;
+        }
+      }
+      ion-toolbar {
+        --background: #ffffffbb;
+        --border-width: 0px;
+        min-height: 200px;
+        border-bottom-right-radius: 20%;
+        border-bottom-left-radius: 20%;
+        box-shadow: 0px 4px #d6d6d6c4;
+        color: #f8a63d;
+        text-align: center;
+      }
     }
-    ion-toolbar {
-      --background: #ffffffbb;
-      --border-width: 0px;
+    .content {
+      ion-card {
+        margin: 16px 0px;
+        ion-card-title {
+          font-size: 16px;
+          text-align: center;
+          margin: 15px;
+        }
+        .btn--black {
+          display: flex;
+          justify-content: center;
+          justify-items: center;
+          ion-button {
+            width: 60%;
+            height: 38.88px;
+            max-height: 38.88px;
+            --backgroud: linear-gradient(to right, #f1f0f0, #cbc9c8);
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
   }
   .auth-page {
@@ -102,16 +129,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 15px 10px;
+    margin-bottom: 40px;
     .button-left {
-      height: 38px;
-      width: 38px;
+      height: 47px;
+      width: 47px;
       background: linear-gradient(to right, #28adce, #23b480);
       text-align: center;
       border-radius: 100%;
       p {
-        margin: 0;
-        padding: 29%;
+        text-align: center;
         color: #ffffff;
       }
     }
@@ -119,16 +146,21 @@
       margin-left: 10px;
       width: 300px;
       .button {
-        background: #ffffff;
-        padding: 5px;
+        background: #f7f2f1;
+        padding: 15px;
         text-align: left;
         outline: none;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         line-height: 16px;
+        height: 47px;
+        max-height: 47px;
       }
       .button:active {
         background: #d6d6d6c4;
+      }
+      p {
+        margin: 0;
       }
     }
   }
@@ -150,27 +182,29 @@
         --background: linear-gradient(to right, #0071bc, #00a99d);
         width: 90%;
         margin: 0 5%;
+        height: 49px;
       }
       a {
         text-decoration: none;
       }
     }
 
-    ion-input.phone.sc-ion-input-ios-h.sc-ion-input-ios-s.ios.hydrated {
+    .phone {
       border: 1px solid #6e7274;
       border-bottom-left-radius: 20px;
       border-top-left-radius: 20px;
       border-right: unset;
     }
-    ion-input.user.sc-ion-input-ios-h.sc-ion-input-ios-s.ios.hydrated {
-      border: 2px solid #464646;
+    .user {
+      border: 2px solid #131313;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 20px;
       border-left: unset;
       border-top: unset;
       border-bottom: unset;
+      margin-right: -15px;
     }
-    ion-input.pass.sc-ion-input-ios-h.sc-ion-input-ios-s.ios.hydrated {
+    .pass {
       border: 1px solid #6e7274;
       border-bottom-left-radius: 20px;
       border-top-left-radius: 20px;
@@ -203,6 +237,7 @@
       ion-button {
         --background: linear-gradient(to right, #f0f0f1, #cdcece);
         width: 50%;
+        height: 49px;
       }
     }
   }

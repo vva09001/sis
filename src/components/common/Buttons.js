@@ -10,7 +10,9 @@ const Button = props => {
         </IonText>
       </div>
       <div className="button-right">
-        <div className="button">{props.title}</div>
+        <div className="button">
+          <p>{props.title}</p>
+        </div>
       </div>
     </div>
   );

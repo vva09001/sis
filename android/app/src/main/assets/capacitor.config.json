@@ -1,6 +1,6 @@
 {
-  "appId": "com.feezit.app",
-  "appName": "FeezIt",
+  "appId": "com.SISHaNoi.app",
+  "appName": "SISHaNoi",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build"

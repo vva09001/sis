@@ -1,4 +1,4 @@
-package com.feezit.app;
+package com.SISHaNoi.app;
 
 import android.os.Bundle;
 
