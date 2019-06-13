@@ -5,9 +5,17 @@
   "password": "Mật khẩu",
   "register": "Đăng ký tài khoản",
   "forgotPassword": "Quên mật khẩu",
-  "back": "quay về",
+  "back": "Quay về",
+  "wellcome": "Xin chào",
+  "continue": "Tiếp tục",
   "pageTitle_01": "Đăng ký dịch vụ thủ tục BHXH Mang thai hộ",
+  "pageTitle_02": "Đăng ký dịch vụ thủ tục BHXH phục dưỡng hồi sức khỏe sau thai sản",
+  "pageTitle_03": "Ví điện tử quản lý BHXH Cá nhân",
   "carTitle_01": "Bạn đăng ký hỗ trợ thủ tục BHXH đối với trường họp nào",
+  "carTitle_02": "Quyền lợi hưởng BHXH - Sinh con",
   "options_01": "Bạn là người mang thai hộ",
-  "options_02": "Bạn là người nhờ mang thai hộ"
+  "options_02": "Bạn là người nhờ mang thai hộ",
+  "info_01": "Theo quy định BHXH, cá nhân bạn không thể tự đi giải quyết quyền lợi này được. Việc này phải do cán bộ phụ trách BHXH trong đơn vị (DN) bạn thực hiện",
+  "info_02": " Nhưng có thể có các trường hợp: cán bộ phụ trách BHXH nghiệp vụ quá yếu, hoặc vô trách nhiệm, hoặc vì lý do có chủ đích gì khác khiến việc hưởng quyền lợi BHXH của bạn bị trậm trễ, bạn không thể đợi lâu hơn được nữa",
+  "info_03": "Vậy chỉ còn cách bạn phải tự biết quy trình giải quyết thủ tục, có hồ sơ soạn sẵn cho bạn. Bạn chỉ việc mang lên VP đơn vị (DN) yêu cầu cán bộ phụ trách BHXH giải quyết, đồng thời giám sát cho đến khi xong việc cho bạn."
 }

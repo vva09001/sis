@@ -9,10 +9,8 @@ const Button = props => {
           <p>{props.number}</p>
         </IonText>
       </div>
-      <div className="button-right">
-        <div className="button">
-          <p>{props.title}</p>
-        </div>
+      <div className="button">
+        <p>{props.title}</p>
       </div>
     </div>
   );

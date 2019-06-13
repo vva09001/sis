@@ -6,18 +6,18 @@ import history from 'utils/history';
 import RootContainer from 'container/RootContainer';
 import HomePage from 'container/HomePage';
 import Page1 from 'container/BHXH/Page1';
-import MyContainer from 'container/List';
-import UserContainer from 'container/User';
+import Infomations from 'container/BHXH/Infomations';
+import Login from 'container/User/Login';
 
 const AppRouter = () => {
   return (
     <Router history={history}>
       <RootContainer>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/bhxh" component={Page1} />
-          <Route path="/my" component={MyContainer} />
-          <Route path="/user" component={UserContainer} />
+          <Route exact path="/" component={Login} />
+          <Route exact path="/homepage" component={HomePage} />
+          <Route path="/page1" component={Page1} />
+          <Route path="/info" component={Infomations} />
         </Switch>
       </RootContainer>
     </Router>

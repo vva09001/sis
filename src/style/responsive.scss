@@ -13,28 +13,28 @@
 
 @media (max-width: 320px) {
   :root {
-    .button-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 15px 10px;
-      margin-bottom: 30px;
-      .button-left {
-        height: 39px;
-        width: 45px;
-        background: linear-gradient(to right, #28adce, #23b480);
-        text-align: center;
-        border-radius: 100%;
-        p {
-          margin: 0;
-          padding: 32%;
-          color: #ffffff;
+    .card {
+      .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 10px;
+        margin-bottom: 30px;
+        .button-left {
+          height: 39px;
+          width: 45px;
+          background: linear-gradient(to right, #28adce, #23b480);
+          text-align: center;
+          border-radius: 100%;
+          p {
+            margin: 0;
+            padding: 30%;
+            color: #ffffff;
+          }
         }
-      }
-      .button-right {
-        margin-left: 10px;
-        width: 300px;
         .button {
+          margin-left: 10px;
+          width: 300px;
           background: #f7f2f1;
           padding: 10px;
           text-align: left;
@@ -42,12 +42,21 @@
           border-top-right-radius: 20px;
           border-bottom-right-radius: 20px;
           line-height: 16px;
-          height: 47px;
-          max-height: 47px;
+          min-height: 47px;
+          p {
+            margin: 0;
+            margin-top: 7px;
+            text-align: left;
+            font-size: 11pt;
+          }
         }
         .button:active {
           background: #d6d6d6c4;
         }
+      }
+      .btn--black {
+        position: relative;
+        top: 19px;
       }
     }
   }
