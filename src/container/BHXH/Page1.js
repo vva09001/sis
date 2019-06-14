@@ -10,7 +10,6 @@ class Page1 extends Component {
     const { t } = this.props;
     return (
       <Layout
-        cardName="content"
         title={t('pageTitle_01')}
         contentTitle={t('carTitle_01')}
         btnColor="light"

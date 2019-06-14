@@ -15,7 +15,7 @@ const Layout = props => {
         </div>
         <div className={props.cardName}>
           <div className="card">
-            <IonCardTitle>{props.contentTitle}</IonCardTitle>
+            {props.contentTitle === null ? null : <IonCardTitle>{props.contentTitle}</IonCardTitle>}
             {props.children}
             <div className="btn--black">
               <Link to={props.to}>
@@ -37,6 +37,10 @@ Layout.propTypes = {
   t: PropTypes.func,
   cardName: PropTypes.string,
   btnColor: PropTypes.string
+};
+Layout.defaultProps = {
+  contentTitle: null,
+  cardName: 'content'
 };
 
 export default withTranslation()(Layout);

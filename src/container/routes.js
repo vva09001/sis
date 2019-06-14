@@ -8,6 +8,7 @@ import HomePage from 'container/HomePage';
 import Page1 from 'container/BHXH/Page1';
 import Infomations from 'container/BHXH/Infomations';
 import Login from 'container/User/Login';
+import NoParticipation from 'container/Search/NoParticipation';
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
           <Route exact path="/homepage" component={HomePage} />
           <Route path="/page1" component={Page1} />
           <Route path="/info" component={Infomations} />
+          <Route path="/NoParticipation" component={NoParticipation} />
         </Switch>
       </RootContainer>
     </Router>

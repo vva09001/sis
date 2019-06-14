@@ -59,5 +59,25 @@
         top: 19px;
       }
     }
+    .layout {
+      .header {
+        ion-text {
+          p {
+            margin: 0;
+            font-size: 15px;
+          }
+        }
+      }
+      .contentBoder {
+        .card {
+          ion-card-title {
+            font-size: 14px;
+            text-align: center;
+            margin: 0 15px;
+            padding: 60px 0 0 0;
+          }
+        }
+      }
+    }
   }
 }

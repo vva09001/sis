@@ -7,10 +7,17 @@ class Infomations extends Component {
   render() {
     const { t } = this.props;
     return (
-      <Layout cardName="contentBoder" title={t('pageTitle_02')} btnColor="primary" to="/">
-        <p>{t('info_01')}</p>
-        <p>{t('info_02')}</p>
-        <p>{t('info_03')}</p>
+      <Layout
+        cardName="contentBoder"
+        title={t('pageTitle_02')}
+        btnColor="primary"
+        to="/NoParticipation"
+      >
+        <div className="cardInfo">
+          <p>{t('info_01')}</p>
+          <p>{t('info_02')}</p>
+          <p>{t('info_03')}</p>
+        </div>
       </Layout>
     );
   }

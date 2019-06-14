@@ -24,16 +24,16 @@ class HomePage extends Component {
           <div className="pass">
             <IonInput placeholder={t('password')} />
           </div>
+          <div className="btn-login">
+            <Link to="homepage">
+              <IonButton>{t('login')}</IonButton>
+            </Link>
+          </div>
+          <div className="register">
+            <IonButton class="btn-register">{t('register')}</IonButton>
+            <IonButton class="btn-pass">{t('forgotPassword')}</IonButton>
+          </div>
         </IonCardContent>
-        <div className="btn-login">
-          <Link to="homepage">
-            <IonButton>{t('login')}</IonButton>
-          </Link>
-        </div>
-        <div className="register">
-          <IonButton class="btn-register">{t('register')}</IonButton>
-          <IonButton class="btn-pass">{t('forgotPassword')}</IonButton>
-        </div>
       </Authpage>
     );
   }
