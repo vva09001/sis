@@ -19,7 +19,7 @@ class Time extends Component {
             </div>
             <div className="timeRight">
               <div className="timeDisplay">
-               <span>0</span>
+                <span>0</span>
               </div>
               <div className="timeDisplay">
                 <span>0</span>
@@ -28,12 +28,18 @@ class Time extends Component {
             </div>
           </div>
           <div className="time-content">
-            <p>Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng lương ....
-            Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng lương ....</p>
-            <p>nếu bạn chưa đủ điều kiện nhận lương thì s nếu bạn chưa đủ điều kiện nhận lương thì s</p>
+            <p>
+              Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng lương Tham gia,
+              Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng
+            </p>
+            <p>
+              nếu bạn chưa đủ điều kiện nhận lương thì s nếu bạn chưa đủ điều kiện nhận lương thì s
+            </p>
           </div>
           <div className="btn-wrap">
-            <button type="button" className="time-btn__leave">Bỏ Qua</button>
+            <button type="button" className="time-btn__leave">
+              Bỏ Qua
+            </button>
           </div>
         </IonContent>
       </div>
