@@ -81,8 +81,9 @@
     ion-toolbar {
       --background: #ffffffe0;
       --border-width: 0px;
-      border-bottom-right-radius: 20%;
-      border-bottom-left-radius: 20%;
+      border-radius: 173px/52px;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
       box-shadow: 0 8px 6px -2px #9b9b9a;
       color: #f8a63d;
       text-align: center;

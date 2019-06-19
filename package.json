@@ -29,7 +29,8 @@
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
     "redux-persist-transform-expire": "0.0.2",
-    "redux-saga": "^0.16.2"
+    "redux-saga": "^0.16.2",
+    "store": "^2.0.12"
   },
   "scripts": {
     "start": "react-scripts start",
