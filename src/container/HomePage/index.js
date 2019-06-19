@@ -4,15 +4,14 @@ import Header from 'container/Common/Header';
 import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+
 class HomePage extends Component {
   render() {
     const { t } = this.props;
     return (
       <div className="homePage">
         <IonContent>
-          <div className="header">
-            <Header title={t('pageTitle_03')} />
-          </div>
+          <Header title={t('pageTitle_03')} />
           <div className="content">
             <div className="header-title">
               <h1>{t('wellcome')}</h1>

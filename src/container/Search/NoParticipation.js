@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
-import { IonDatetime, IonItem, IonCheckbox, IonLabel, IonInput } from '@ionic/react';
+import ButtonDate from 'components/common/ButtonDate';
+import { IonCheckbox, IonLabel } from '@ionic/react';
 
 class NoParticipation extends Component {
   render() {
@@ -11,16 +12,11 @@ class NoParticipation extends Component {
         contentTitle="Bạn bổ xung thêm thông tin theo quy định BHXH để Ví kiểm tra quyền lợi cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác"
         btnColor="primary"
         to="homepage"
+        btnName="Hoàn thành"
       >
         <div className="form">
           <p>Ngày vợ sinh</p>
-          <div>
-            <IonItem>
-              <IonDatetime displayFormat="MM" placeholder="mm /" />
-              <IonDatetime displayFormat="DD" placeholder="dd /" />
-              <IonDatetime displayFormat="YY" placeholder="yy /" />
-            </IonItem>
-          </div>
+          <ButtonDate />
           <p>Phương thức sinh con</p>
           <div className="checkBoox">
             <IonCheckbox slot="start" color="danger" value="Phẫu thuật" checked="false" />

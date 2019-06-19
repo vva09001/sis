@@ -14,11 +14,14 @@ class Page1 extends Component {
         contentTitle={t('carTitle_01')}
         btnColor="light"
         to="homepage"
+        btnName="Quay về"
       >
         <Link to="info">
           <Button number={1} title={t('options_01')} />
         </Link>
-        <Button number={2} title={t('options_02')} />
+        <Link to="action">
+          <Button number={2} title={t('options_02')} />
+        </Link>
       </Layout>
     );
   }

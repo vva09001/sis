@@ -3,23 +3,19 @@ import PropTypes from 'prop-types';
 import Header from 'container/Common/Header';
 import { IonContent, IonButton, IonCardTitle } from '@ionic/react';
 import { Link } from 'react-router-dom';
-import { withTranslation } from 'react-i18next';
 
 const Layout = props => {
-  const { t } = props;
   return (
     <div className="layout">
       <IonContent>
-        <div className="header">
-          <Header title={props.title} />
-        </div>
+        <Header title={props.title} />
         <div className={props.cardName}>
           <div className="card">
             {props.contentTitle === null ? null : <IonCardTitle>{props.contentTitle}</IonCardTitle>}
             {props.children}
             <div className="btn--black">
               <Link to={props.to}>
-                <IonButton color={props.btnColor}>{t('back')}</IonButton>
+                <IonButton color={props.btnColor}>{props.btnName}</IonButton>
               </Link>
             </div>
           </div>
@@ -36,11 +32,12 @@ Layout.propTypes = {
   contentTitle: PropTypes.string,
   t: PropTypes.func,
   cardName: PropTypes.string,
-  btnColor: PropTypes.string
+  btnColor: PropTypes.string,
+  btnName: PropTypes.string
 };
 Layout.defaultProps = {
   contentTitle: null,
   cardName: 'content'
 };
 
-export default withTranslation()(Layout);
+export default Layout;

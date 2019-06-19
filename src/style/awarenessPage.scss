@@ -1,0 +1,67 @@
+:root {
+  .awarenessPage {
+    height: 100vh;
+    ion-content {
+      --background: url('../assets//img/layout3.png') 0 0/100% 100% no-repeat;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      height: 150px;
+      .wapperImg {
+        margin: auto;
+        img {
+          height: 56px;
+          width: 151px;
+        }
+      }
+    }
+    .btn-back {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      margin-top: 20px;
+      ion-button {
+        height: 38.88px;
+        max-height: 38.88px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        --border-radius: 15px;
+        --background: linear-gradient(to right, #0073bb, #00a99d);
+      }
+      a {
+        width: 60%;
+        text-decoration: none;
+      }
+    }
+    .contentAwareness {
+      .box1 {
+        color: #ffffff;
+        background: linear-gradient(to right, #00a99d, #fdfdfdc9);
+        margin-bottom: 50px;
+        padding: 20px;
+        p {
+          margin: 0;
+        }
+      }
+      .box2 {
+        p {
+          margin: 0;
+        }
+        .textRight {
+          padding: 5px;
+          font-style: italic;
+          text-align: right;
+          background: linear-gradient(to right, #c9c7c89a, #ffffff);
+        }
+        .textLeft {
+          font-style: italic;
+          padding: 5px;
+          text-align: left;
+          background: linear-gradient(to right, #ffffff, #c9c7c89a);
+        }
+      }
+    }
+  }
+}

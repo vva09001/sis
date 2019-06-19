@@ -1,0 +1,57 @@
+:root {
+  .time {
+    height: 100vh;
+    ion-content {
+      --background: url('../assets//img/time.png') 0 0/100% 100% no-repeat;
+    }
+    .timeWapper {
+      display: flex;
+      padding-top: 25px;
+      .timeLeft {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        p {
+          margin: 0;
+        }
+        .timeDisplay {
+          height: 47px;
+          width: 47px;
+          border-radius: 100%;
+          background: linear-gradient(to right, #28acd5, #22b47b);
+          // p {
+          //   position: absolute;
+          //   top: 10%;
+          //   left: 10%;
+          //   font-size: 24px;
+          //   color: #ffffff;
+          // }
+        }
+      }
+      .timeRight {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        p {
+          margin: 0;
+        }
+        .timeDisplay {
+          position: relative;
+          height: 47px;
+          width: 47px;
+          border-radius: 100%;
+          background: linear-gradient(to right, #28acd5, #22b47b);
+          p {
+            position: absolute;
+            top: 10%;
+            // left: 30%;
+            font-size: 24px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+:root {
+  .homePage {
+    height: 100vh;
+    ion-content {
+      --background: url('../assets//img/wellcom.png') 0 0/100% 100% no-repeat;
+    }
+    .header {
+      img {
+        padding-top: 30px;
+      }
+      ion-text {
+        p {
+          padding: 0 60px;
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
+      ion-toolbar {
+        --background: #eaebedb9;
+        --border-width: 0px;
+        box-shadow: 0 8px 6px -2px #9b9b9a;
+        color: #f8a63d;
+        text-align: center;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+    .content {
+      background-color: #eaeaea9a;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      .header-title {
+        padding: 20px 0 0 0;
+        h1 {
+          text-align: center;
+          color: #0071bc;
+          margin: 0;
+          font-weight: bold;
+        }
+      }
+      .btn {
+        position: relative;
+        top: 15px;
+        ion-button {
+          --border-radius: 15px;
+          --background: linear-gradient(to right, #0071bc, #00a99d);
+          width: 60%;
+          margin: 0 5%;
+          height: 38px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .img {
+        img {
+          height: 230px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        h5 {
+          text-align: center;
+          color: #0071bc;
+          margin-top: 0;
+        }
+      }
+      a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}

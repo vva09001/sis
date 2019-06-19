@@ -1,0 +1,103 @@
+:root {
+  .auth-page {
+    height: 100vh;
+    ion-content {
+      --background: url('../assets//img/login-backgroud.png') 0 0/100% 100% no-repeat;
+    }
+    .header {
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        color: #000000;
+        margin-top: 0;
+      }
+    }
+    ion-card-content {
+      padding: 40px;
+    }
+    img {
+      height: 169px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-login {
+      margin: 10px 0 10px 0;
+      ion-button {
+        --border-radius: 15px;
+        --background: linear-gradient(to right, #0071bc, #00a99d);
+        width: 100%;
+        height: 39px;
+      }
+      a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+
+    .phone {
+      border: 2px solid #6e7274;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      border-right: unset;
+      width: 95%;
+      margin-bottom: -2px;
+    }
+    .user {
+      position: relative;
+      z-index: 10;
+    }
+    .user:after {
+      content: '';
+      width: 10%;
+      border: 2px solid #6e7274;
+      height: 35px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-left: unset;
+      border-radius: 0px 20px 20px 0px;
+    }
+    .pass {
+      border: 2px solid #6e7274;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      border-right: unset;
+      width: 95%;
+      margin-top: -2px;
+    }
+    input.native-input.sc-ion-input-ios {
+      margin-left: 20px;
+    }
+    .register {
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      .btn-register {
+        margin-right: 0;
+        color: #00a99d;
+        --border-radius: 15px 0px 0px 15px;
+        --background: #f0f0f1;
+        --background-activated: rgba(238, 237, 237, 0.76);
+        --color-activated: #00a99d;
+        font-size: 12px;
+        width: 50%;
+      }
+      .btn-pass {
+        margin-left: 0;
+        --color: #c1272d;
+        --border-radius: 0 15px 15px 0;
+        --backgroud: #cdcece;
+        --background-activated: rgba(238, 237, 237, 0.795);
+        --color-activated: #c1272d;
+        font-size: 13px;
+        width: 50%;
+      }
+      ion-button {
+        --background: linear-gradient(to right, #f0f0f1, #cdcece);
+        width: 100%;
+        height: 39px;
+      }
+    }
+  }
+}

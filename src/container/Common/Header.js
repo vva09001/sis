@@ -5,14 +5,16 @@ import { IonHeader, IonToolbar, IonText } from '@ionic/react';
 
 const Header = props => {
   return (
-    <IonHeader>
-      <IonToolbar className="header">
-        <img src="img/LOGOSIS.png" width="170" alt="logo" />
-        <IonText>
-          <p>{props.title}</p>
-        </IonText>
-      </IonToolbar>
-    </IonHeader>
+    <div className="header">
+      <IonHeader>
+        <IonToolbar>
+          <img src="img/LOGOSIS.png" width="170" alt="logo" />
+          <IonText>
+            <p>{props.title}</p>
+          </IonText>
+        </IonToolbar>
+      </IonHeader>
+    </div>
   );
 };
 Header.propTypes = {
