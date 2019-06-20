@@ -1,56 +1,88 @@
 :root {
   .time {
     height: 100vh;
+    padding: 12px;
     ion-content {
       --background: url('../assets//img/time.png') 0 0/100% 100% no-repeat;
     }
     .timeWapper {
-      display: flex;
       padding-top: 25px;
+      height: 145px;
+      display: flex;
+      justify-content: space-between;
       .timeLeft {
-        width: 50%;
-        display: flex;
+        box-shadow: 7px 0 5px -5px rgba(0,0,0,0.7);
+        display: inherit;
         justify-content: center;
-        justify-items: center;
-        p {
-          margin: 0;
-        }
+        align-items: center;
+        background: rgba(255,255,255,0.5);
+        width: 49%;
+        .text-year {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-left: 10px;
+          }
         .timeDisplay {
+          box-shadow: 1px 6px 3px grey;
+          margin: 0px 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           height: 47px;
           width: 47px;
           border-radius: 100%;
           background: linear-gradient(to right, #28acd5, #22b47b);
-          // p {
-          //   position: absolute;
-          //   top: 10%;
-          //   left: 10%;
-          //   font-size: 24px;
-          //   color: #ffffff;
-          // }
+          span {
+            font-size: 24px;
+            color: #ffffff;
+          }
         }
       }
       .timeRight {
-        width: 50%;
-        display: flex;
+        background: rgba(255,255,255,0.5);
+        width: 49%;
+        display: inherit;
         justify-content: center;
-        justify-items: center;
-        p {
-          margin: 0;
-        }
+        align-items: center;
+        .text-month {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-left: 10px;
+          }
         .timeDisplay {
+          box-shadow: 1px 6px 3px grey;
+          margin: 0px 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           position: relative;
           height: 47px;
           width: 47px;
           border-radius: 100%;
           background: linear-gradient(to right, #28acd5, #22b47b);
-          p {
-            position: absolute;
-            top: 10%;
-            // left: 30%;
+          span {
             font-size: 24px;
             color: #ffffff;
           }
         }
+      }
+    }
+    .time-content {
+      background: rgba(255,255,255,0.5);
+      padding: 10px;
+      margin-top: 25px;
+      p {
+        font-size: 13px;
+      }
+    }
+    .btn-wrap {
+      text-align: center;
+      margin-top: 40px;
+      .time-btn__leave {
+        padding: 8px 45px;
+        border-radius: 10px;
       }
     }
   }
