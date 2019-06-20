@@ -34,7 +34,7 @@ class Time extends Component {
               <span className="text-month">Tháng</span>
             </div>
           </div>
-          <div className="time-content" onClick={() => this.setState({ showModal: true })}>
+          <div className="time-content">
             <p>
               Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng lương Tham gia,
               Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng
@@ -48,15 +48,6 @@ class Time extends Component {
               Bỏ Qua
             </IonButton>
           </div>
-          <IonModal
-            isOpen={this.state.showModal}
-            onDidDismiss={() => this.setState(() => ({ showModal: false }))}
-          >
-            <p>This is modal content</p>
-            <IonButton onClick={() => this.setState(() => ({ showModal: false }))}>
-              Close Modal
-            </IonButton>
-          </IonModal>
         </IonContent>
       </div>
     );
