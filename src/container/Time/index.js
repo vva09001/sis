@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import Header from 'container/Common/Header';
-import { IonContent } from '@ionic/react';
+import { IonContent, IonButton, IonModal } from '@ionic/react';
+
 class Time extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+    };
+  }
   render() {
     return (
       <div className="time">
@@ -27,7 +34,7 @@ class Time extends Component {
               <span className="text-month">Tháng</span>
             </div>
           </div>
-          <div className="time-content">
+          <div className="time-content" onClick={() => this.setState({ showModal: true })}>
             <p>
               Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng lương Tham gia,
               Tham gia đóng bảo hiểm nữa thì bạn mới đủ điều kiện nhận lương tăng
@@ -37,10 +44,19 @@ class Time extends Component {
             </p>
           </div>
           <div className="btn-wrap">
-            <button type="button" className="time-btn__leave">
+            <IonButton color="light" className="time-btn__leave">
               Bỏ Qua
-            </button>
+            </IonButton>
           </div>
+          <IonModal
+            isOpen={this.state.showModal}
+            onDidDismiss={() => this.setState(() => ({ showModal: false }))}
+          >
+            <p>This is modal content</p>
+            <IonButton onClick={() => this.setState(() => ({ showModal: false }))}>
+              Close Modal
+            </IonButton>
+          </IonModal>
         </IonContent>
       </div>
     );

@@ -11,18 +11,17 @@
       display: flex;
       justify-content: space-between;
       .timeLeft {
-        box-shadow: 7px 0 5px -5px rgba(0,0,0,0.7);
+        box-shadow: 7px 0 5px -5px rgba(0, 0, 0, 0.7);
         display: inherit;
         justify-content: center;
         align-items: center;
-        background: rgba(255,255,255,0.5);
+        background: rgba(255, 255, 255, 0.5);
         width: 49%;
         .text-year {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            margin-left: 10px;
-          }
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+        }
         .timeDisplay {
           box-shadow: 1px 6px 3px grey;
           margin: 0px 5px;
@@ -40,17 +39,16 @@
         }
       }
       .timeRight {
-        background: rgba(255,255,255,0.5);
+        background: rgba(255, 255, 255, 0.5);
         width: 49%;
         display: inherit;
         justify-content: center;
         align-items: center;
         .text-month {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            margin-left: 10px;
-          }
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+        }
         .timeDisplay {
           box-shadow: 1px 6px 3px grey;
           margin: 0px 5px;
@@ -70,19 +68,24 @@
       }
     }
     .time-content {
-      background: rgba(255,255,255,0.5);
+      background: #e2e1e1a4;
       padding: 10px;
       margin-top: 25px;
       p {
-        font-size: 13px;
+        font-style: italic;
+        font-size: 12px;
       }
     }
     .btn-wrap {
-      text-align: center;
-      margin-top: 40px;
-      .time-btn__leave {
-        padding: 8px 45px;
-        border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      ion-button {
+        width: 203px;
+        height: 41px;
+        --background: linear-gradient(to right, #eeeded, #bbbbbb);
+        font-size: 15px;
+        font-weight: bold;
       }
     }
   }

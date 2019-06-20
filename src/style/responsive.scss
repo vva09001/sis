@@ -13,6 +13,23 @@
 
 @media (max-width: 320px) {
   :root {
+    .time {
+      .timeWapper {
+        .timeLeft {
+          .timeDisplay {
+            height: 40px;
+            width: 40px;
+          }
+        }
+        .timeRight {
+          .timeDisplay {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+
     .card {
       .button-container {
         display: flex;
