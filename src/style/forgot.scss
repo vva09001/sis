@@ -1,0 +1,57 @@
+.forgotinsurrance-wrap {
+   padding: 80px 30px;
+   .img-ins {
+      height: 105px !important;
+      width: 170px;
+   }
+   ion-button {
+      font-weight: bold;
+      --border-radius: 10px;
+      width: 200px;
+    }
+    .btn-back {
+       text-align: center;
+       margin-top: 35px;
+      ion-button {
+         --background: #cdcece;
+         --color: black;
+      }
+    }
+   .content {
+      h2 {
+         font-weight: bold;
+         margin-bottom: 30px;
+      }
+   }
+}
+.forgotpw-wrap {
+   height: 100%;
+   padding: 20px 86px;
+   .content {
+      text-align: center;
+      h2 {
+         font-weight: bold;
+         margin-bottom: 30px;
+      }
+      p {
+         margin-bottom: 30px;
+      }
+   }
+   .btn-login {
+      ion-button {
+         --background: #cdcece !important;
+         --color: black;
+        }
+   }
+   .btn-getpw {
+      ion-button {
+        height: 47px;
+        margin-bottom: 20px;
+       }
+   }
+   ion-button {
+      width: 100%;
+      font-weight: bold;
+      --border-radius: 10px;
+    }
+}

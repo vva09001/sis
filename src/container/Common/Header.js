@@ -12,12 +12,14 @@ const Header = props => {
           <IonText>
             <p>{props.title}</p>
           </IonText>
+          <div>{props.children}</div>
         </IonToolbar>
       </IonHeader>
     </div>
   );
 };
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  children: PropTypes.node
 };
 export default Header;
