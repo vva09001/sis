@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from 'container/Common/Header';
-import { IonContent, IonButton, IonModal } from '@ionic/react';
+import { IonContent, IonButton } from '@ionic/react';
 
 class Time extends Component {
   constructor(props) {

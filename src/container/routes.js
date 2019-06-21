@@ -6,7 +6,7 @@ import history from 'utils/history';
 import RootContainer from 'container/RootContainer';
 import HomePage from 'container/HomePage';
 import Page1 from 'container/BHXH/Page1';
-import Infomations from 'container/BHXH/Infomations';
+import Infomations from 'container/BHXH/WifeParticipatesInInsurance';
 import Login from 'container/User/Login';
 import NoParticipation from 'container/Search/NoParticipation';
 import Awareness from 'container/WrongPerception/Awareness';
