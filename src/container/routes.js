@@ -12,6 +12,9 @@ import NoParticipation from 'container/Search/NoParticipation';
 import Awareness from 'container/WrongPerception/Awareness';
 import Action from 'container/WrongPerception/Action';
 import Time from '../container/Time';
+import ForgotPW from '../container/User/forgotpw';
+import ForgotInsurrance from '../container/User/forgotInsurrance';
+import InsBenefit from '../container/Info/Insbenefit';
 const AppRouter = () => {
   return (
     <Router history={history}>
@@ -25,6 +28,9 @@ const AppRouter = () => {
           <Route path="/awareness" component={Awareness} />
           <Route path="/action" component={Action} />
           <Route path="/time" component={Time} />
+          <Route path="/forgotpw" component={ForgotPW} />
+          <Route path="/forgotinsurrance" component={ForgotInsurrance} />
+          <Route path="/insbenefit" component={InsBenefit} />
         </Switch>
       </RootContainer>
     </Router>

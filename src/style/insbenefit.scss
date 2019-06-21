@@ -1,0 +1,14 @@
+.cardInfo {
+   padding: 20px;
+   .form-input {
+      color: #2c80d3;
+      .third-input {
+         display: flex;
+         input {
+            width: 35px;
+            border-radius: 20px;
+            margin-left: 12px;
+         }
+      }
+   }
+}
