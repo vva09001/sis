@@ -68,7 +68,7 @@
   --ion-color-light-tint: linear-gradient(to right, #f1f0f0, #cbc9c8);
   .header {
     img {
-      padding-top: 10px;
+      padding-top: 50px;
     }
     ion-text {
       p {
@@ -76,6 +76,7 @@
         font-weight: bold;
         font-size: 16px;
         font-style: italic;
+        margin: 20px;
       }
     }
     ion-toolbar {
@@ -87,6 +88,8 @@
       box-shadow: 0 8px 6px -2px #9b9b9a;
       color: #f8a63d;
       text-align: center;
+      max-height: 250px;
+      height: 250px;
     }
   }
   .button-container {
@@ -94,7 +97,7 @@
     align-items: center;
     justify-content: center;
     margin: 15px 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     .button-left {
       height: 47px;
       width: 47px;
@@ -115,6 +118,12 @@
       position: relative;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 20px;
+      font-size: 11px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+      padding-left: 30px;
       p {
         margin-left: 30px;
         font-size: 11pt;
@@ -125,12 +134,56 @@
     }
   }
   .date-wapper {
-    border: 1px solid;
+    border: 1px solid #797777;
     border-radius: 20px;
-    width: 65%;
+    width: 60%;
     ion-item {
       --border-radius: 20px;
       --border-style: solid;
+    }
+  }
+  .input-number {
+    margin-left: 10px;
+    .native-input.sc-ion-input-ios {
+      padding: 0;
+      width: 49px;
+      height: 23px;
+      text-align: center;
+    }
+    ion-input {
+      --background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #797777;
+    }
+  }
+  .input-cardID {
+    margin-left: 10px;
+    .native-input.sc-ion-input-ios {
+      padding: 0;
+      width: 190px !important;
+      height: 30px !important;
+    }
+    ion-input {
+      --background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #797777;
+      height: 30px;
+      width: 190px;
+    }
+  }
+  .text-title {
+    border-bottom: 1px solid #dbdbdb;
+    box-shadow: 0 8px 6px -6px #9b9b9a;
+    text-align: center;
+  }
+  .checkBoox {
+    margin: 0 0 10px 5px;
+    ion-checkbox {
+      --ion-color-base: #ffa31a !important;
+    }
+    ion-label {
+      position: absolute;
+      left: 50px;
     }
   }
 }

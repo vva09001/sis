@@ -12,7 +12,7 @@
       border-bottom-right-radius: 30px;
       border-bottom-left-radius: 30px;
       position: absolute;
-      top: 20%;
+      top: 30%;
       a {
         text-decoration: none;
       }
@@ -20,7 +20,7 @@
         margin: 1rem;
       }
       .card {
-        margin: 16px 0px;
+        margin: 30px 0px;
         ion-card-title {
           font-size: 14px;
           text-align: center;
@@ -28,7 +28,7 @@
           padding: 60px 0 0 0;
         }
         .cardInfo {
-          padding: 20px 0 0 0;
+          padding-top: 10%;
         }
         .btn--black {
           position: relative;
@@ -40,6 +40,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            font-weight: bold;
             --border-radius: 15px;
             --background: linear-gradient(to right, #28adce, #23b480);
           }
@@ -49,7 +50,10 @@
           }
         }
         .form {
-          margin: 15px;
+          margin: 20px;
+          span {
+            color: #0071bc;
+          }
           p {
             color: #0071bc;
             font-weight: bold;
@@ -62,39 +66,19 @@
             width: 16px;
             height: 16px;
           }
-          .checkBoox {
-            margin: 0 0 10px 5px;
-            ion-checkbox {
-              --ion-color-base: #ffa31a !important;
-            }
-            ion-label {
-              position: absolute;
-              left: 50px;
-            }
-          }
+          // .checkBoox {
+          //   margin: 0 0 10px 5px;
+          //   ion-checkbox {
+          //     --ion-color-base: #ffa31a !important;
+          //   }
+          //   ion-label {
+          //     position: absolute;
+          //     left: 50px;
+          //   }
+          // }
           .numberChildren {
             display: flex;
-            .input {
-              margin-top: 5px;
-              input {
-                border: 1px solid #ffff;
-                border-radius: 15px;
-                width: 40%;
-                height: 30px;
-                outline: none;
-                padding-left: 10px;
-              }
-            }
-          }
-          ion-input {
-            width: 60%;
-          }
-          input.native-input.sc-ion-input-ios {
-            border: 1px solid #ffffffe0;
-            height: 30px;
-            border-radius: 15px;
-            background: #ffff;
-            padding-left: 10px;
+            align-items: center;
           }
           .input {
             margin-top: 5px;
@@ -104,7 +88,7 @@
               width: 60%;
               height: 30px;
               outline: none;
-              padding-left: 10px;
+              padding-left: 20px;
             }
           }
         }

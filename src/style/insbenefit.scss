@@ -1,14 +1,23 @@
 .cardInfo {
-   padding: 20px;
-   .form-input {
-      color: #2c80d3;
-      .third-input {
-         display: flex;
-         input {
-            width: 35px;
-            border-radius: 20px;
-            margin-left: 12px;
-         }
-      }
-   }
+  .text-title {
+    border-bottom: 1px solid #dbdbdb;
+    box-shadow: 0 8px 6px -6px #9b9b9a;
+    text-align: center;
+  }
+  .form-input {
+    margin: 20px;
+    p {
+      color: #0071bc;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    span {
+      color: #0071bc;
+    }
+    .third-input {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
 }

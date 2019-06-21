@@ -9,7 +9,10 @@ class ForgotPW extends Component {
           <img src="img/user.png" alt="icon_user" className="img-login" />
           <div className="content">
             <h2>Bạn Quên Mật Khẩu</h2>
-            <p>Ví sẽ gửi vào email của bạn, mật khẩu bạn đã đăng ký vs ví</p>
+            <p>
+              Ví sẽ gửi vào mail, zalo của bạn
+              <br /> mật khẩu bạn đã đăng ký với Ví
+            </p>
             <div className="btn-getpw">
               <IonButton>
                 Nhận lại mật khẩu <br />
@@ -17,7 +20,7 @@ class ForgotPW extends Component {
               </IonButton>
             </div>
             <div className="btn-login">
-              <IonButton>Đăng nhập</IonButton>
+              <IonButton color="light">Đăng nhập</IonButton>
             </div>
           </div>
         </div>

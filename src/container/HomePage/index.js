@@ -21,7 +21,7 @@ class HomePage extends Component {
               <h5>Trần Hoài Bác</h5>
             </div>
             <div className="btn">
-              <Link to="page1">
+              <Link to="awareness">
                 <IonButton>{t('continue')}</IonButton>
               </Link>
             </div>

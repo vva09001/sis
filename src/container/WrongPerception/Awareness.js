@@ -15,7 +15,7 @@ class Awareness extends Component {
         Box2Bottext1="Nếu biết quyền lợi, sự hữu dụng thực tế của"
         Box2Bottext2="BHXH, sự tiện ích khi sử dụng Ví điện từ này liệu"
         Box2Bottext3="bạn có quan tâm hơn"
-        to="/"
+        to="action"
       />
     );
   }

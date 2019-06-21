@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ButtonDate from 'components/common/ButtonDate';
+import InputNumber from 'components/common/ButtonNumber';
+import ContentTitle from 'container/Common/ContentTitle';
 class InsBenefit extends Component {
   render() {
     return (
@@ -9,17 +11,15 @@ class InsBenefit extends Component {
         title={
           'Quyền lợi hưởng BHXH - sảy thai, nạo hút thai, phá thai bệnh lý, thai chết trong thời điểm chưa phải là thời điểm sinh con'
         }
-        btnColor="light"
+        btnColor="primary"
         to="/noParticipation"
         btnName="Hoàn Thành"
       >
         <div className="cardInfo">
-          <div className="text-title">
-            <p>
-              Bổ sung thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ
-              hỗ trợ cho bạn nhanh và chính sác nhất.
-            </p>
-          </div>
+          <ContentTitle>
+            Bổ sung thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ
+            trợ cho bạn nhanh và chính sác nhất.
+          </ContentTitle>
           <div className="form-input">
             <div>
               <p>
@@ -34,7 +34,7 @@ class InsBenefit extends Component {
             </div>
             <div className="third-input">
               <span>Thai đã được bao nhiêu tuần tuổi</span>
-              <input type="number" />
+              <InputNumber />
             </div>
           </div>
         </div>

@@ -76,11 +76,22 @@
         top: 19px;
       }
     }
+    .cardInfo .text-title {
+      padding-top: 15px;
+      border-bottom: 1px solid #dbdbdb;
+      box-shadow: 0 8px 6px -6px #9b9b9a;
+      text-align: center;
+    }
+    .date-wapper {
+      border: 1px solid #797777;
+      border-radius: 20px;
+      width: 65%;
+    }
     .layout {
       .header {
         ion-text {
           p {
-            margin: 0;
+            margin: 10px;
             font-size: 15px;
           }
         }

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ButtonDate from 'components/common/ButtonDate';
-import { IonCheckbox, IonLabel } from '@ionic/react';
+import ButtonNumber from 'components/common/ButtonNumber';
+import InputCardID from 'components/common/InputCardid';
+import CheckBok from 'components/common/CheckBook';
 
 class NoParticipation extends Component {
   render() {
@@ -18,23 +20,15 @@ class NoParticipation extends Component {
           <p>Ngày vợ sinh</p>
           <ButtonDate />
           <p>Phương thức sinh con</p>
-          <div className="checkBoox">
-            <IonCheckbox slot="start" color="danger" value="Phẫu thuật" checked="false" />
-            <IonLabel>Phẫu thuật</IonLabel>
-          </div>
-          <div className="checkBoox">
-            <IonCheckbox slot="start" color="danger" value="Sinh con thường" checked="false" />
-            <IonLabel>Sinh con thường</IonLabel>
-          </div>
+          <CheckBok labelName="Phẫu Thuật" />
+          <CheckBok labelName="Sinh con thường" />
           <div className="numberChildren">
             <p>Số con sinh</p>
-            <div className="input">
-              <input type="number" />
-            </div>
+            <ButtonNumber />
           </div>
           <p>Số chứng minh thư hoặc thẻ căn cước của vợ</p>
           <div className="input">
-            <input type="number" />
+            <InputCardID />
           </div>
         </div>
       </Layout>

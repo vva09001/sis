@@ -1,0 +1,55 @@
+:root {
+  .layout-options {
+    height: 100vh;
+    ion-content {
+      --background: url('../assets//img/layoutOptions.png') 0 0/100% 100% no-repeat;
+    }
+    .header {
+      ion-text {
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: #000000;
+        }
+      }
+    }
+  }
+  .layout-butons {
+    height: 100vh;
+    ion-content {
+      --background: url('../assets//img/layoutOptions.png') 0 0/100% 100% no-repeat;
+    }
+    img {
+      padding-top: 10px;
+    }
+    .btn--black {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ion-button {
+        width: 239px;
+        height: 41px;
+      }
+    }
+    .header {
+      ion-text {
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: #000000;
+          text-align: center;
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+      }
+      .sussget {
+        font-size: 11px;
+        font-style: italic;
+        color: #000000;
+        text-align: center;
+      }
+    }
+  }
+}

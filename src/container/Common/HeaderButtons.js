@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IonHeader, IonToolbar, IonText } from '@ionic/react';
 
-const Header = props => {
+const HeaderButtons = props => {
   return (
-    <div className="header">
+    <div className="header-buttons">
       <IonHeader>
         <IonToolbar>
           <img src="img/LOGOSIS.png" width="170" alt="logo" />
           <IonText>
             <p>{props.title}</p>
           </IonText>
-          <div>{props.content}</div>
+          <div>{props.children}</div>
         </IonToolbar>
       </IonHeader>
     </div>
   );
 };
-Header.propTypes = {
+HeaderButtons.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.node
+  children: PropTypes.node
 };
-export default Header;
+export default HeaderButtons;

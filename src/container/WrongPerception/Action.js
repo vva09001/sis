@@ -14,7 +14,7 @@ class Action extends Component {
         Box2Midtext4="đi đến đâu, bao giờ xong, pháp lý nào hỗ trợ mình…"
         Box2Bottext1="Tra cứu 24/7 tất cả quyền lợi BHXH"
         Box2Bottext2="cá nhân, hỗ trợ tiện ích giải quyết nhanh gọn thủ tục."
-        to="/awareness"
+        to="optionsregister"
       />
     );
   }
