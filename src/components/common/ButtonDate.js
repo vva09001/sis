@@ -4,9 +4,9 @@ const ButtonDate = () => {
   return (
     <div className="date-wapper">
       <IonItem>
-        <IonDatetime displayFormat="MM" placeholder="mm /" />
-        <IonDatetime displayFormat="DD" placeholder="dd /" />
-        <IonDatetime displayFormat="YY" placeholder="yy /" />
+        <IonDatetime displayFormat="AA" placeholder="mm /" />
+        <IonDatetime displayFormat="BB" placeholder="dd /" />
+        <IonDatetime displayFormat="DD" placeholder="yy /" />
       </IonItem>
     </div>
   );
