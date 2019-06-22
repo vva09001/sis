@@ -3,7 +3,11 @@ import { IonItem, IonDatetime } from '@ionic/react';
 const ButtonDate = () => {
   return (
     <div className="date-wapper">
-      123123123
+      <IonItem>
+        <IonDatetime displayFormat="MM" placeholder="mm /" />
+        <IonDatetime displayFormat="DD" placeholder="dd /" />
+        <IonDatetime displayFormat="YY" placeholder="yy /" />
+      </IonItem>
     </div>
   );
 };
