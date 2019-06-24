@@ -32,11 +32,11 @@
   --ion-color-success-shade: #0ec254;
   --ion-color-success-tint: #28e070;
 
-  --ion-color-warning: #ffce00;
+  --ion-color-warning: #fbb03b;
   --ion-color-warning-rgb: 255, 206, 0;
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
-  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-shade: #f5c918;
   --ion-color-warning-tint: #ffd31a;
 
   --ion-color-danger: #f04141;
@@ -122,11 +122,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-left: -15px;
       color: #000000;
       padding-left: 30px;
       p {
         margin-left: 30px;
         font-size: 11pt;
+      }
+      a {
+        font-size: 11px;
+        text-decoration: none;
       }
     }
     .button:active {

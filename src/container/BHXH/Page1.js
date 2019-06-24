@@ -17,10 +17,10 @@ class Page1 extends Component {
         btnName="Quay về"
       >
         <Link to="info">
-          <Button number={1} title={t('options_01')} />
+          <Button number={1}>{t('options_01')}</Button>
         </Link>
         <Link to="action">
-          <Button number={2} title={t('options_02')} />
+          <Button number={2}> {t('options_02')}</Button>
         </Link>
       </Layout>
     );

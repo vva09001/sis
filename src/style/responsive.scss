@@ -104,7 +104,34 @@
             margin: 0 15px;
             padding: 60px 0 0 0;
           }
+          .cardInfo {
+            padding-top: 20%;
+          }
         }
+      }
+    }
+    .layout-butons {
+      .content {
+        .form {
+          .input-custom {
+            width: 170px !important;
+            ion-input {
+              width: 170px;
+            }
+          }
+          .btn-save {
+            left: 140px !important;
+          }
+          .btn-forget {
+            left: 226px !important;
+          }
+        }
+      }
+    }
+    .button-container {
+      .button-left {
+        height: 43px;
+        width: 45px;
       }
     }
   }

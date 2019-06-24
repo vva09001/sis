@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthPage from '../Layout/Authpage';
 import { IonButton } from '@ionic/react';
+import history from 'utils/history';
 class ForgotInsurrance extends Component {
   render() {
     return (
@@ -26,7 +27,9 @@ class ForgotInsurrance extends Component {
             </p>
             <IonButton class="btn-frins">Đường dẫn tra cứu</IonButton>
             <div className="btn-back">
-              <IonButton color="light">Quay về</IonButton>
+              <IonButton color="light" onClick={() => history.goBack()}>
+                Quay về
+              </IonButton>
             </div>
           </div>
         </div>

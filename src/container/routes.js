@@ -6,6 +6,9 @@ import HomePage from 'container/HomePage';
 import Awareness from 'container/WrongPerception/Awareness';
 import Action from 'container/WrongPerception/Action';
 import OptionsRegister from './Options/OptionsRegister';
+import SaveWallet from './WalletInformation/SaveIdentification';
+import SavePersonalInfo from './WalletInformation/SavePersonalInfo';
+import OTP from './User/OTP';
 import Page1 from 'container/BHXH/Page1';
 import Infomations from 'container/BHXH/WifeParticipatesInInsurance';
 import Login from 'container/User/Login';
@@ -26,6 +29,9 @@ const AppRouter = () => {
           <Route path="/awareness" component={Awareness} />
           <Route path="/action" component={Action} />
           <Route path="/optionsregister" component={OptionsRegister} />
+          <Route path="/savewallet" component={SaveWallet} />
+          <Route path="/personalinfo" component={SavePersonalInfo} />
+          <Route path="/otp" component={OTP} />
           <Route path="/page1" component={Page1} />
           <Route path="/info" component={Infomations} />
           <Route path="/noParticipation" component={NoParticipation} />

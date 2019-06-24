@@ -9,13 +9,16 @@ const Button = props => {
           <p>{props.number}</p>
         </IonText>
       </div>
-      <div className="button">{props.title}</div>
+      <div className="button" onClick={props.click}>
+        {props.children}
+      </div>
     </div>
   );
 };
 
 Button.propTypes = {
   number: PropTypes.number,
-  title: PropTypes.string
+  children: PropTypes.node,
+  click: PropTypes.func
 };
 export default Button;

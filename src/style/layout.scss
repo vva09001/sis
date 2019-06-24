@@ -21,18 +21,19 @@
       }
       .card {
         margin: 30px 0px;
+        margin-bottom: 0;
         ion-card-title {
           font-size: 14px;
           text-align: center;
           margin: 0 15px;
-          padding: 60px 0 0 0;
+          padding: 80px 0 0 0;
         }
         .cardInfo {
-          padding-top: 10%;
+          padding-top: 60px;
         }
         .btn--black {
           position: relative;
-          top: 35px;
+          top: 20px;
           ion-button {
             width: 60%;
             height: 38.88px;
