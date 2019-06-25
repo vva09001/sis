@@ -9,6 +9,8 @@ import OptionsRegister from './Options/OptionsRegister';
 import SaveWallet from './WalletInformation/SaveIdentification';
 import SavePersonalInfo from './WalletInformation/SavePersonalInfo';
 import OTP from './User/OTP';
+import GetOTP from './Options/GetOTP';
+import InfoOTP from './Info/InfoOTP';
 import Page1 from 'container/BHXH/Page1';
 import Infomations from 'container/BHXH/WifeParticipatesInInsurance';
 import Login from 'container/User/Login';
@@ -32,6 +34,8 @@ const AppRouter = () => {
           <Route path="/savewallet" component={SaveWallet} />
           <Route path="/personalinfo" component={SavePersonalInfo} />
           <Route path="/otp" component={OTP} />
+          <Route path="/getOTP" component={GetOTP} />
+          <Route path="/infoOTP" component={InfoOTP} />
           <Route path="/page1" component={Page1} />
           <Route path="/info" component={Infomations} />
           <Route path="/noParticipation" component={NoParticipation} />
