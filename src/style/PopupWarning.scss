@@ -1,0 +1,29 @@
+.alert-wrapper.sc-ion-alert-md {
+  border-radius: 26px;
+  .alert-head.sc-ion-alert-md {
+    background-image: linear-gradient(to right, #ed1c24, #c1272d);
+    .alert-title.sc-ion-alert-md {
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  .alert-message.sc-ion-alert-md {
+    font-size: 14px;
+    padding-top: 24px;
+  }
+  .alert-button-group.sc-ion-alert-md {
+    padding-bottom: 15px;
+    .alert-button.sc-ion-alert-md {
+      background-image: linear-gradient(to right, #f3f3f3, #d2d2d2);
+      border-radius: 20px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 190px;
+      .alert-button-inner.sc-ion-alert-md {
+        font-size: 14px;
+        justify-content: center;
+      }
+    }
+  }
+}

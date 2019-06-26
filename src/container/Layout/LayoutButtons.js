@@ -17,7 +17,11 @@ const LayoutOptions = props => {
               </IonText>
               <div>
                 {props.sussget && <p className="sussget">{props.sussget}</p>}
-                {props.buttonName && <IonButton>{props.buttonName}</IonButton>}
+                {props.headerTo && (
+                  <IonButton>
+                    <Link to={props.headerTo}>Tìm Hiểu Thêm</Link>
+                  </IonButton>
+                )}
               </div>
             </IonToolbar>
           </IonHeader>
@@ -38,10 +42,10 @@ const LayoutOptions = props => {
 LayoutOptions.propTypes = {
   title: PropTypes.string,
   sussget: PropTypes.node,
-  buttonName: PropTypes.string,
   children: PropTypes.node,
   to: PropTypes.string,
   btnColor: PropTypes.string,
-  btnName: PropTypes.string
+  btnName: PropTypes.string,
+  headerTo: PropTypes.string
 };
 export default LayoutOptions;

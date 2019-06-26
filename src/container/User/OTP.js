@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Layout from '../Layout/LayoutOptions';
 import { IonInput, IonButton } from '@ionic/react';
 import history from 'utils/history';
+import { Link } from 'react-router-dom';
 
 class OTP extends Component {
   render() {
+    // console.log(a);
     return (
       <Layout title="Lưu số điện thoại đã đăng kí nhận mã tra cứu OTP">
         <div className="text-box">
@@ -21,7 +23,9 @@ class OTP extends Component {
           OTP
         </div>
         <div className="btn-find">
-          <IonButton>Tìm hiểu thêm</IonButton>
+          <IonButton>
+            <Link to="/getOTP">Tìm hiểu thêm</Link>
+          </IonButton>
         </div>
         <div className="btn-back">
           <IonButton color="light" onClick={() => history.goBack()}>
