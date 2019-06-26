@@ -21,6 +21,7 @@ import ForgotInsurrance from 'container/User/forgotInsurrance';
 import InsBenefit from 'container/Info/Insbenefit';
 import RehabilitationManagement from 'container/Search/RehabilitationManagement';
 import SearcherTheWife from 'container/Search/SearcherTheWife';
+import { UIComponent } from './UI';
 const AppRouter = () => {
   return (
     <Router history={history}>
@@ -45,6 +46,7 @@ const AppRouter = () => {
           <Route path="/insbenefit" component={InsBenefit} />
           <Route path="/rehabilitation" component={RehabilitationManagement} />
           <Route path="/searcherthewife" component={SearcherTheWife} />
+          <Route path="/sis-ui-components" component={UIComponent} />
         </Switch>
       </RootContainer>
     </Router>

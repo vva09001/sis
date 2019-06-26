@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+.sis-input {
+    &-primary {
+        @extend .sis-input;
+    }
+    &-danger {
+        @extend .sis-input;
+    }
+}
