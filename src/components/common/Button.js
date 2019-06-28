@@ -4,7 +4,7 @@ import { IonText } from '@ionic/react';
 import '../../style/buttons.scss';
 
 const Button = props => {
-  const className = `sis-button-${props.type}`;
+  const className = `sis-button-tangle-${props.type}`;
   return (
     <div className={className}>
       <div className="head">

@@ -21,7 +21,7 @@ import ForgotInsurrance from 'container/User/forgotInsurrance';
 import InsBenefit from 'container/Info/Insbenefit';
 import RehabilitationManagement from 'container/Search/RehabilitationManagement';
 import SearcherTheWife from 'container/Search/SearcherTheWife';
-import { UIComponent } from './UI';
+import UIComponent from './UI';
 const AppRouter = () => {
   return (
     <Router history={history}>

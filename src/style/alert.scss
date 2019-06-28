@@ -1,0 +1,96 @@
+@import 'variables';
+.alert-wrapper.sc-ion-alert-md {
+    border-radius: 26px;
+    .alert-head.sc-ion-alert-md {
+      background-image: linear-gradient(to right, #ed1c24, #c1272d);
+      .alert-title.sc-ion-alert-md {
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+    .alert-message.sc-ion-alert-md {
+      font-size: 14px;
+      padding-top: 24px;
+    }
+    .alert-button-group.sc-ion-alert-md {
+      padding-bottom: 15px;
+      .alert-button.sc-ion-alert-md {
+        background-image: linear-gradient(to right, #f3f3f3, #d2d2d2);
+        border-radius: 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 190px;
+        .alert-button-inner.sc-ion-alert-md {
+          font-size: 14px;
+          justify-content: center;
+        }
+      }
+    }
+}
+
+.popup {
+    &.hidden {
+      display: none;
+    }
+    &.visible {
+      display: block;
+    }
+    border-radius: 26px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    padding: 10px;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .header {
+        height: 75px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        color: white;
+        
+        border-top-right-radius: 26px;
+        border-top-left-radius: 26px;
+        &-primary {
+          @extend .header;
+          background-image: $primary-linear-light-1;
+        }
+        &-danger {
+          @extend .header;
+          background-image: $danger-linear-light-1;
+        }
+    }
+    .body {
+        background-color: white;
+        .title {
+          height: auto;
+          font-style: italic;
+          padding: 20px;
+          box-shadow: 0px 2px 5px darkgrey;
+          &.hidden {
+            display: none;
+          }
+        }
+        .content {
+          height: auto;
+          padding: 20px;
+        }
+    }
+    .footer {
+        height: 75px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        color: black;
+        border-bottom-right-radius: 26px;
+        border-bottom-left-radius: 26px;
+        box-shadow: 0px 10px 5px darkgrey;
+    }
+}
