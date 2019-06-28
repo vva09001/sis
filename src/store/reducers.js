@@ -5,11 +5,13 @@ import storage from 'redux-persist/lib/storage';
 import Data from 'store/data/reducer';
 import User from 'store/user/reducer';
 import Error from 'store/error/reducer';
+import Popup from 'store/popup/reducer';
 
 const reducers = combineReducers({
   Data,
   User,
-  Error
+  Error,
+  Popup
 });
 const persistConfig = {
   key: 'root',
@@ -17,4 +19,5 @@ const persistConfig = {
   blacklist: ['Error', 'Data']
 };
 const persistedReducer = persistReducer(persistConfig, reducers);
+
 export default persistedReducer;

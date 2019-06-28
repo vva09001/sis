@@ -1,0 +1,15 @@
+
+#app-example {
+    height: 100vh;
+    text-align: center;
+}
+.popup-container {
+    &-visible:not(.popup) {
+        background-color: darkgray;
+        opacity: 0.2;
+    }
+    &-hidden {
+        background-color: none;
+        opacity: none;
+    }
+}
