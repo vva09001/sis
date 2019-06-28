@@ -1,12 +1,13 @@
 @import 'variables.scss';
 
 .sis-button {
-    &-tangle {
+    &-link {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 15px 10px;
         margin-bottom: 20px;
+        cursor: pointer;
         .head {
             height: 47px;
             width: 47px;
@@ -46,7 +47,7 @@
         }
     
         &-primary {
-            @extend .sis-button-tangle;
+            @extend .sis-button-link;
             .head {
                 background: $ion-sis-btn-primary;
             }
@@ -57,7 +58,7 @@
         }
     
         &-danger {
-            @extend .sis-button-tangle;
+            @extend .sis-button-link;
             .head {
                 background-color: $ion-color-tertiary;
             }

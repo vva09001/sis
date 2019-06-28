@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SisButton from '../../components/common/Button';
+import Links from '../../components/common/Link';
 import Popup from '../../components/Popup/index';
 import popupAct from 'store/popup/actions';
 import { IonButton } from '@ionic/react';
@@ -19,15 +19,22 @@ class UIComponent extends React.Component {
 
   render() {
     const { payload } = this.props.popup;
+    const items = [
+      {
+        label: 'Primary',
+        type: 'primary',
+        to: ''
+      },
+      {
+        label: 'Danger',
+        type: 'danger',
+        to: ''
+      }
+    ];
     return (
       <React.Fragment>
         <div id="app-example" className={`popup-container-${payload.pClass}`}>
-          <SisButton type="primary" number={1}>
-            Primary
-          </SisButton>
-          <SisButton type="danger" number={2}>
-            Danger
-          </SisButton>
+          <Links items={items} />
           <IonButton
             onClick={() => {
               this.onOpenPopup('primary', 'single');
