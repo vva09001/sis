@@ -46,7 +46,7 @@ const AppRouter = () => {
           <Route path="/insbenefit" component={InsBenefit} />
           <Route path="/rehabilitation" component={RehabilitationManagement} />
           <Route path="/searcherthewife" component={SearcherTheWife} />
-          <Route path="/sis-ui-components" component={UIComponent} />
+          <Route path="/sis-components" component={UIComponent} />
         </Switch>
       </RootContainer>
     </Router>

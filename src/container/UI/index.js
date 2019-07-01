@@ -66,7 +66,6 @@ class UIComponent extends React.Component {
             Popup Multi Danger
           </IonButton>
         </div>
-        <Popup options={payload} />
       </React.Fragment>
     );
   }
