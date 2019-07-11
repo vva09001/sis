@@ -12,7 +12,7 @@ import OTP from './User/OTP';
 import GetOTP from './Options/GetOTP';
 import InfoOTP from './Info/InfoOTP';
 import Page1 from 'container/BHXH/Page1';
-import Infomations from 'container/BHXH/WifeParticipatesInInsurance';
+import Infomations from './Info/WifeParticipatesInInsurance';
 import Login from 'container/User/Login';
 import NoParticipation from 'container/Search/NoParticipation';
 import Time from '../container/Time';
@@ -21,6 +21,21 @@ import ForgotInsurrance from 'container/User/forgotInsurrance';
 import InsBenefit from 'container/Info/Insbenefit';
 import RehabilitationManagement from 'container/Search/RehabilitationManagement';
 import SearcherTheWife from 'container/Search/SearcherTheWife';
+import MenWithWivesGiveBirth from './Info/MenWithWivesGiveBirth';
+import RehabilitationService from './Info/RehabilitationService';
+import WifeDoesNotParticipate from './Info/WifeDoesNotParticipate';
+import WifeParticipate from './Info/WifeParticipate';
+import WorkBeforetheEndOfMaternityLeave from './Info/WorkBeforetheEndOfMaternityLeave';
+import LearnRestorative from './Info/LearnRestorative';
+import Miscarriage from './Info/Miscarriage';
+import Adopted from './Info/Adopted';
+import Childbirth from './Info/Childbirth';
+import PregnancyExamination from './Info/PregnancyExamination';
+import Contraceptive from './Info/Contraceptive';
+import BirthBenefits from './Info/BirthBenefits';
+import ThankSurrogacy from './Info/ThankSurrogacy';
+import Surrogacy from './Info/Surrogacy';
+import ManagementOfMiscarriage from './Info/ManagementOfMiscarriage';
 const AppRouter = () => {
   return (
     <Router history={history}>
@@ -45,6 +60,21 @@ const AppRouter = () => {
           <Route path="/insbenefit" component={InsBenefit} />
           <Route path="/rehabilitation" component={RehabilitationManagement} />
           <Route path="/searcherthewife" component={SearcherTheWife} />
+          <Route path="/menWithwivesgivebirth" component={MenWithWivesGiveBirth} />
+          <Route path="/rehabilitationservice" component={RehabilitationService} />
+          <Route path="/wifedoesnotparticipate" component={WifeDoesNotParticipate} />
+          <Route path="/wifeparticipate" component={WifeParticipate} />
+          <Route path="/workbeforematernityleave" component={WorkBeforetheEndOfMaternityLeave} />
+          <Route path="/learnrestorative" component={LearnRestorative} />
+          <Route path="/miscarriage" component={Miscarriage} />
+          <Route path="/adopted" component={Adopted} />
+          <Route path="/childbirth" component={Childbirth} />
+          <Route path="/pregnancyexamination" component={PregnancyExamination} />
+          <Route path="/contraceptive" component={Contraceptive} />
+          <Route path="/birthbenefits" component={BirthBenefits} />
+          <Route path="/thanksurrogacy" component={ThankSurrogacy} />
+          <Route path="/surrogacy" component={Surrogacy} />
+          <Route path="/managementmiscarriage" component={ManagementOfMiscarriage} />
         </Switch>
       </RootContainer>
     </Router>

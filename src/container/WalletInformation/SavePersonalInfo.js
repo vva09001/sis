@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import Layout from '../Layout/LayoutButtons';
 import { IonInput, IonButton } from '@ionic/react';
+import { withTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 class SavePersonalInfo extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Layout
-        title="Lưu thông tin cá nhân"
-        sussget="Hàng tháng, Ví sẽ gửi báo cáo quản lý BHXH cho bạn thông qua  mail hoặc Zalo của bạn, vậy nên bạn đăng ký với Ví một địa chỉ mail, hoặc zalo, hoặc cả hai cho chắc chắn mình luôn nhận được báo cáo. "
+        title={t('save_info')}
+        sussget={t(
+          'Hàng tháng, Ví sẽ gửi báo cáo quản lý BHXH cho bạn thông qua  mail hoặc Zalo của bạn, vậy nên bạn đăng ký với Ví một địa chỉ mail, hoặc zalo, hoặc cả hai cho chắc chắn mình luôn nhận được báo cáo.'
+        )}
         btnColor="light"
-        btnName="Quay về"
+        btnName={t('back')}
         to="optionsregister"
       >
         <div className="from-peson">
@@ -32,11 +37,14 @@ class SavePersonalInfo extends Component {
           </div>
         </div>
         <div className="btn-submit">
-          <IonButton>Hoàn thành</IonButton>
+          <IonButton>{t('finish')}</IonButton>
         </div>
       </Layout>
     );
   }
 }
 
-export default SavePersonalInfo;
+SavePersonalInfo.propTypes = {
+  t: PropTypes.func
+};
+export default withTranslation()(SavePersonalInfo);

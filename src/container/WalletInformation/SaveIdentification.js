@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import Layout from '../Layout/LayoutButtons';
 import { IonButton, IonInput } from '@ionic/react';
 import { Link } from 'react-router-dom';
-
+import { withTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 class SaveWallet extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Layout
-        title="Thông tin định danh Ví"
-        sussget="Thông tin số điện thoại đăng nhập và mật khẩu khi bạn cần sửa lại, sẽ có phần chỉnh sửa thông tin ở cuối cùng của Ví"
+        title={t('Thông tin định danh Ví')}
+        sussget={t(
+          'Thông tin số điện thoại đăng nhập và mật khẩu khi bạn cần sửa lại, sẽ có phần chỉnh sửa thông tin ở cuối cùng của Ví'
+        )}
         btnColor="light"
-        btnName="Quay về"
+        btnName={t('back')}
         to="optionsregister"
       >
         <div className="form">
@@ -19,11 +23,11 @@ class SaveWallet extends Component {
               <IonInput inputmode="numeric" placeholder="Mã số BHXH của bạn" />
             </div>
             <div className="btn-save">
-              <IonButton color="warning">Lưu</IonButton>
+              <IonButton color="warning">{t('save')}</IonButton>
             </div>
             <div className="btn-forget">
               <IonButton>
-                <Link to="/forgotinsurrance">Quên mã số</Link>
+                <Link to="/forgotinsurrance">{t('forgot_code')}</Link>
               </IonButton>
             </div>
           </div>
@@ -32,7 +36,7 @@ class SaveWallet extends Component {
               <IonInput inputmode="numeric" placeholder="Số điện thoại của bạn" />
             </div>
             <div className="btn-save">
-              <IonButton color="warning">Lưu</IonButton>
+              <IonButton color="warning">{t('save')}</IonButton>
             </div>
           </div>
           <div className="text-box">
@@ -40,7 +44,7 @@ class SaveWallet extends Component {
               <IonInput placeholder="Mật khẩu sử dụng" />
             </div>
             <div className="btn-save">
-              <IonButton color="warning">Lưu</IonButton>
+              <IonButton color="warning">{t('save')}</IonButton>
             </div>
           </div>
         </div>
@@ -49,4 +53,7 @@ class SaveWallet extends Component {
   }
 }
 
-export default SaveWallet;
+SaveWallet.propTypes = {
+  t: PropTypes.func
+};
+export default withTranslation()(SaveWallet);
