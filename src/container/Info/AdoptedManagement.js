@@ -1,30 +1,29 @@
-//Đk dv khám thai
+//tìm hiểu QL con nuôi
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
-class PregnancyExamination extends Component {
+class AdoptedManagement extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
         cardName="contentBoder"
-        title={t('Đăng ký dịch vụ thủ tục BHXH Khám thai')}
-        btnColor="primary"
+        title={t('Tìm hiểu quyền lợi thai sản nữ nuôi con nuôi')}
+        btnColor="light"
         to="/noParticipation"
-        btnName={t('continue')}
+        btnName={t('back')}
       >
         <div className="cardInfo">
-          <p>{t('quy định')}</p>
-          <p>{t('các trường hợp')}</p>
-          <p>{t('tự quyết định')}</p>
+          <p>{t('người lao động nhận con nuôi')}</p>
+          <p>{t('mức hưởng mỗi tháng')}</p>
         </div>
       </Layout>
     );
   }
 }
-PregnancyExamination.propTypes = {
+AdoptedManagement.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(PregnancyExamination);
+export default withTranslation()(AdoptedManagement);

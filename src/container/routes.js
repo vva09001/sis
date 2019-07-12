@@ -20,6 +20,7 @@ import ForgotPW from '../container/User/forgotpw';
 import ForgotInsurrance from 'container/User/forgotInsurrance';
 import InsBenefit from 'container/Info/Insbenefit';
 import RehabilitationManagement from 'container/Search/RehabilitationManagement';
+// thông tin
 import SearcherTheWife from 'container/Search/SearcherTheWife';
 import MenWithWivesGiveBirth from './Info/MenWithWivesGiveBirth';
 import RehabilitationService from './Info/RehabilitationService';
@@ -36,6 +37,24 @@ import BirthBenefits from './Info/BirthBenefits';
 import ThankSurrogacy from './Info/ThankSurrogacy';
 import Surrogacy from './Info/Surrogacy';
 import ManagementOfMiscarriage from './Info/ManagementOfMiscarriage';
+import AdoptedManagement from './Info/AdoptedManagement';
+import PregnancyExaminationManagement from './Info/PregnancyExaminationManagement';
+import ContraceptiveManagement from './Info/ContraceptiveManagement';
+//DKDV
+import DKChildbirth from './Options/DKChildbirth';
+import DKSurrogacy from './Options/DKSurrogacy';
+import WifeJoinBHXH from './Options/WifeJoinBHXH';
+import WifeNotParticipating from './Options/WifeNotParticipating';
+import WifeGivingBirthManagement from './Options/WifeGivingBirthManagement';
+import RehabilitationBenefits from './Options/RehabilitationBenefits';
+import MaleParticipation from './Options/MaleParticipation';
+import MaleJoinParticipation from './Options/MaleJoinParticipation';
+import MaternityCase from './Options/MaternityCase';
+import Maternitybenefits from './Options/Maternitybenefits';
+import RegistrationProcedure from './Options/RegistrationProcedure';
+import NotKnowledgeable from './Options/NotKnowledgeable';
+import NotKnowledgeable6 from './Options/NotKnowledgeable6';
+
 const AppRouter = () => {
   return (
     <Router history={history}>
@@ -75,6 +94,28 @@ const AppRouter = () => {
           <Route path="/thanksurrogacy" component={ThankSurrogacy} />
           <Route path="/surrogacy" component={Surrogacy} />
           <Route path="/managementmiscarriage" component={ManagementOfMiscarriage} />
+          <Route path="/adoptedmanagement" component={AdoptedManagement} />
+          <Route
+            path="/pregnancyexaminationmanagement"
+            component={PregnancyExaminationManagement}
+          />
+          <Route path="/contraceptivemanagement" component={ContraceptiveManagement} />
+          <Route path="/register_childbirth" component={DKChildbirth} />
+          <Route path="/register_surrogacy" component={DKSurrogacy} />
+          <Route path="/options_wifejoin" component={WifeJoinBHXH} />
+          <Route path="/options_wifenotparticipating" component={WifeNotParticipating} />
+          <Route
+            path="/management_wifegivingbirthmanagement"
+            component={WifeGivingBirthManagement}
+          />
+          <Route path="/rehabilitationbenefits" component={RehabilitationBenefits} />
+          <Route path="/maleparticipation" component={MaleParticipation} />
+          <Route path="/malejoinparticipation" component={MaleJoinParticipation} />
+          <Route path="/maternitycase" component={MaternityCase} />
+          <Route path="/maternitybenefits" component={Maternitybenefits} />
+          <Route path="/registrationprocedure" component={RegistrationProcedure} />
+          <Route path="/notknowledgeable" component={NotKnowledgeable} />
+          <Route path="/notknowledgeable6" component={NotKnowledgeable6} />
         </Switch>
       </RootContainer>
     </Router>
