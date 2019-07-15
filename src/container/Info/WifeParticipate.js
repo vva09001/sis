@@ -13,7 +13,7 @@ class WifeDoesNotParticipate extends Component {
           'Trường hợp Nam giới có vợ tham gia BHXH được hưởng quyền lợi thai sản theo vợ thế nào ?'
         )}
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('ignore')}
       >
         <div className="cardInfo">

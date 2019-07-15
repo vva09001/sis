@@ -12,7 +12,7 @@ class RehabilitationManagement extends Component {
         title={t('Quyền lợi hưởng BHXH – Phục dưỡng phục hồi sức khỏe sau thai sản')}
         cardName="contentBoder"
         btnColor="primary"
-        to="/insbenefit"
+        to="/search_insbenefit"
         btnName={t('finish')}
       >
         <div className="cardInfo">

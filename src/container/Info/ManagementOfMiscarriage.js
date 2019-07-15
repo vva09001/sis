@@ -14,7 +14,7 @@ class ManagementOfMiscarriage extends Component {
           'Quyền lợi hưởng BHXH – Sảy thai, nạo hút thai, phá thai bệnh lý, thai chết lưu trong thời điểm chưa phải là thời gian nghỉ sinh con'
         )}
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('back')}
       >
         <div className="cardInfo">

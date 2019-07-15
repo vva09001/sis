@@ -11,7 +11,7 @@ class Infomations extends Component {
         cardName="contentBoder"
         title={t('pageTitle_02')}
         btnColor="primary"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName="Thoát"
       >
         <div className="cardInfo">

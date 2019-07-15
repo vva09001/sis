@@ -14,7 +14,7 @@ class Miscarriage extends Component {
           'Đăng ký dịch vụ thủ tục BHXH Sảy thai, nạo hút thai, phá thai bệnh lý, thai chết lưu trong thời điểm chưa phải là thời gian nghỉ sinh con'
         )}
         btnColor="primary"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('continue')}
       >
         <div className="cardInfo">

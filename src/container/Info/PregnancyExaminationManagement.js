@@ -12,7 +12,7 @@ class PregnancyExaminationManagement extends Component {
         cardName="contentBoder"
         title={t('Tìm hiểu quyền lợi thai sản nữ khám thai')}
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('back')}
       >
         <div className="cardInfo">

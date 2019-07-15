@@ -11,7 +11,7 @@ class WorkBeforetheEndOfMaternityLeave extends Component {
         cardName="contentBoder"
         title="Quyền lợi hưởng của lao động nữ đi làm trước khi hết thời hạn nghỉ thai sản theo quy định"
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('ignore')}
       >
         <div className="cardInfo">

@@ -1,21 +1,21 @@
-//người tra cứu là vợ nam giới
+// người tra cứu là nam giới vợ không tham gia
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { CheckBook, ButtonNumber, ButtonDate, CardID } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class SearcherTheWife extends Component {
+class NoParticipation extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
-        title={t(
-          'Người tra cứu là Vợ của Nam giới được hưởng quyền lợi BHXH vợ sinh con. Người vợ tra cứu quyền lợi cho chồng ngay trên App điện thoại của mình'
-        )}
         cardName="contentBoder"
+        title={t(
+          'Người tra cứu quyền lợi này là Nam giới, đang tra cứu quyền lợi BHXH trên chính App cài đặt trên điện thoại của mình'
+        )}
         btnColor="primary"
-        to="/search_insbenefit"
+        to="homepage"
         btnName={t('finish')}
       >
         <div className="cardInfo">
@@ -26,19 +26,19 @@ class SearcherTheWife extends Component {
           </ContentTitle>
           <div className="form">
             <div className="numberChildren">
-              <span>{t('Ngày nghỉ hàng tuần của chồng bạn')}</span>
+              <span>{t('Ngày nghỉ hàng tuần của bạn')}</span>
               <ButtonNumber />
             </div>
             <div>
-              <p>{t('Ngày bắt đầu nghỉ hưởng chế độ của chồng bạn')}</p>
+              <p>{t('Ngày bắt đầu nghỉ hưởng chế độ')}</p>
               <ButtonDate />
             </div>
             <div>
-              <p>{t('Ngày cuối cùng nghỉ hưởng chế độ chồng bạn')}</p>
+              <p>{t('Ngày cuối cùng nghỉ hưởng chế độ')}</p>
               <ButtonDate />
             </div>
             <div>
-              <p>{t('Ngày bạn sinh con')}</p>
+              <p>{t('Ngày vợ sinh')}</p>
               <ButtonDate />
             </div>
             <div>
@@ -47,7 +47,7 @@ class SearcherTheWife extends Component {
               <CheckBook labelName="Sinh con thường" />
             </div>
             <div>
-              <p>{t('Bạn mang thai bao nhiêu tháng thì sinh con')}</p>
+              <p>{t('Vợ mang thai bao nhiêu tháng thì sinh con')}</p>
               <CheckBook labelName="Trên 8 tháng mang thai" />
               <CheckBook labelName="Dưới 8 tháng mang thai" />
             </div>
@@ -61,7 +61,7 @@ class SearcherTheWife extends Component {
     );
   }
 }
-SearcherTheWife.propTypes = {
+NoParticipation.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(SearcherTheWife);
+export default withTranslation()(NoParticipation);

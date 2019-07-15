@@ -109,6 +109,10 @@
     .content-options {
       background: #c0bfbfa4;
       padding: 10px;
+      .icon-arrow {
+        padding: 0;
+        margin: 0 5px;
+      }
       .tittle {
         font-size: 12px;
         font-style: italic;
@@ -117,6 +121,66 @@
       }
       .text-content {
         font-size: 10px;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-text {
+        background: #00a99d;
+        padding: -1px;
+        color: #fff;
+        text-align: center;
+        font-size: 9px;
+        display: flex;
+        height: 42px;
+        align-items: center;
+        max-width: 111px;
+        padding: 0 10px;
+      }
+      .text-small {
+        font-size: 6px;
+      }
+      .text-medium {
+        font-size: 8px;
+      }
+      .font-10 {
+        font-size: 10px;
+      }
+      .form-save {
+        .input {
+          background: #fff;
+          text-align: center;
+          height: 45px;
+          border-radius: 20px;
+          margin: 10px;
+          width: 211px;
+          font-size: 10px;
+          display: flex;
+          margin: auto;
+        }
+        .from-row {
+          padding-top: 20px;
+        }
+      }
+      .btn-save {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        ion-button {
+          width: 210px;
+          height: 38px;
+          font-size: 10px;
+          --border-radius: 20px;
+        }
+      }
+      .img-banner {
+        display: flex;
+        justify-content: center;
+        img {
+          padding: 0;
+        }
       }
     }
     .btn--black {
@@ -154,6 +218,7 @@
         height: 38px;
         width: 221px;
         font-weight: bold;
+        margin-bottom: 30px;
       }
     }
     .content {

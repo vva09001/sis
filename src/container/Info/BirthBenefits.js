@@ -12,7 +12,7 @@ class Childbirth extends Component {
         cardName="contentBoder"
         title={t('Quyền lợi hưởng BHXH – Sinh con')}
         btnColor="primary"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('continue')}
       >
         <div className="cardInfo">

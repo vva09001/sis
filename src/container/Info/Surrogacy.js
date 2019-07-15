@@ -12,7 +12,7 @@ class Surrogacy extends Component {
         cardName="contentBoder"
         title={t('Bạn là người mang thai hộ')}
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('back')}
       >
         <div className="cardInfo">

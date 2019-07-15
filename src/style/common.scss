@@ -72,7 +72,6 @@
     }
     ion-text {
       p {
-        padding: 0 10px;
         font-weight: bold;
         font-size: 16px;
         font-style: italic;
@@ -88,8 +87,8 @@
       box-shadow: 0 8px 6px -2px #9b9b9a;
       color: #f8a63d;
       text-align: center;
-      // max-height: 250px;
-      // height: 200px;
+      max-height: 250px;
+      height: 250px;
     }
   }
   .button-container {
@@ -110,7 +109,7 @@
       }
     }
     .button {
-      background: url('../assets/img/btn.png');
+      background: url('../assets/img/btn.png') 0 0/100% 100% no-repeat;
       box-shadow: 0 8px 6px -2px #9b9b9a;
       width: 277px;
       min-height: 47px;
@@ -118,12 +117,14 @@
       position: relative;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 20px;
-      font-size: 11px;
+      font-size: 9px;
       display: flex;
       align-items: center;
       margin-left: -15px;
       color: #000000;
       padding-left: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       p {
         margin-left: 30px;
         font-size: 11pt;

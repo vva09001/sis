@@ -19,7 +19,7 @@ const LayoutOptions = props => {
                 {props.sussget && <p className="sussget">{props.sussget}</p>}
                 {props.headerTo && (
                   <IonButton>
-                    <Link to={props.headerTo}>Tìm Hiểu Thêm</Link>
+                    <Link to={props.headerTo}>Tìm hiểu thêm</Link>
                   </IonButton>
                 )}
               </div>

@@ -54,6 +54,16 @@ import Maternitybenefits from './Options/Maternitybenefits';
 import RegistrationProcedure from './Options/RegistrationProcedure';
 import NotKnowledgeable from './Options/NotKnowledgeable';
 import NotKnowledgeable6 from './Options/NotKnowledgeable6';
+import NotKnowledgeable3 from './Options/NotKnowledgeable3';
+import NotKnowledgeable7 from './Options/NotKnowledgeable7';
+import NotKnowledgeable4 from './Options/NotKnowledgeable4';
+import NotKnowledgeable5 from './Options/NotKnowledgeable5';
+import NotKnowledgeable8 from './Options/NotKnowledgeable8';
+import NotKnowledgeable9 from './Options/NotKnowledgeable9';
+import NotKnowledgeable10 from './Options/NotKnowledgeable10';
+//Search
+import SearchMen from './Search/SearchMen';
+import ChildDiesAfterBirth from './Search/ChildDiesAfterBirth';
 
 const AppRouter = () => {
   return (
@@ -72,13 +82,9 @@ const AppRouter = () => {
           <Route path="/infoOTP" component={InfoOTP} />
           <Route path="/page1" component={Page1} />
           <Route path="/info" component={Infomations} />
-          <Route path="/noParticipation" component={NoParticipation} />
           <Route path="/time" component={Time} />
           <Route path="/forgotpw" component={ForgotPW} />
           <Route path="/forgotinsurrance" component={ForgotInsurrance} />
-          <Route path="/insbenefit" component={InsBenefit} />
-          <Route path="/rehabilitation" component={RehabilitationManagement} />
-          <Route path="/searcherthewife" component={SearcherTheWife} />
           <Route path="/menWithwivesgivebirth" component={MenWithWivesGiveBirth} />
           <Route path="/rehabilitationservice" component={RehabilitationService} />
           <Route path="/wifedoesnotparticipate" component={WifeDoesNotParticipate} />
@@ -116,6 +122,20 @@ const AppRouter = () => {
           <Route path="/registrationprocedure" component={RegistrationProcedure} />
           <Route path="/notknowledgeable" component={NotKnowledgeable} />
           <Route path="/notknowledgeable6" component={NotKnowledgeable6} />
+          <Route path="/notknowledgeable3" component={NotKnowledgeable3} />
+          <Route path="/notknowledgeable7" component={NotKnowledgeable7} />
+          <Route path="/notknowledgeable4" component={NotKnowledgeable4} />
+          <Route path="/notknowledgeable5" component={NotKnowledgeable5} />
+          <Route path="/notknowledgeable8" component={NotKnowledgeable8} />
+          <Route path="/notknowledgeable9" component={NotKnowledgeable9} />
+          <Route path="/notknowledgeable10" component={NotKnowledgeable10} />
+          {/* search */}
+          <Route path="/search_noParticipation" component={NoParticipation} />
+          <Route path="/search_insbenefit" component={InsBenefit} />
+          <Route path="/search_thewife" component={SearcherTheWife} />
+          <Route path="/search_apparel" component={RehabilitationManagement} />
+          <Route path="/search_searchMen" component={SearchMen} />
+          <Route path="/search_childdiesafterbirth" component={ChildDiesAfterBirth} />
         </Switch>
       </RootContainer>
     </Router>

@@ -13,7 +13,7 @@ class ContraceptiveManagement extends Component {
         cardName="contentBoder"
         title={t('Quyền lợi hưởng BHXH Tránh thai, triệt sản')}
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('back')}
       >
         <div className="cardInfo">

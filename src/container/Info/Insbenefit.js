@@ -15,7 +15,7 @@ class InsBenefit extends Component {
           'Quyền lợi hưởng BHXH - sảy thai, nạo hút thai, phá thai bệnh lý, thai chết trong thời điểm chưa phải là thời điểm sinh con'
         )}
         btnColor="primary"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('finish')}
       >
         <div className="cardInfo">

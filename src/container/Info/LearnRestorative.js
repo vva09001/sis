@@ -11,7 +11,7 @@ class WifeParticipatesInInsurance extends Component {
         cardName="contentBoder"
         title="Quyền lợi hưởng BHXH – Phục dưỡng phục hồi sức khỏe sau thai sản"
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('ignore')}
       >
         <div className="cardInfo">

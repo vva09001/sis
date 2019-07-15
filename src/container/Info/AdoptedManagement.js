@@ -12,7 +12,7 @@ class AdoptedManagement extends Component {
         cardName="contentBoder"
         title={t('Tìm hiểu quyền lợi thai sản nữ nuôi con nuôi')}
         btnColor="light"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('back')}
       >
         <div className="cardInfo">

@@ -12,7 +12,7 @@
       border-bottom-right-radius: 30px;
       border-bottom-left-radius: 30px;
       position: absolute;
-      top: 30%;
+      top: 190px;
       a {
         text-decoration: none;
       }
@@ -29,7 +29,7 @@
           padding: 80px 0 0 0;
         }
         .cardInfo {
-          padding-top: 60px;
+          padding-top: 40px;
         }
         .btn--black {
           position: relative;
@@ -80,6 +80,7 @@
           .numberChildren {
             display: flex;
             align-items: center;
+            font-weight: bold;
           }
           .input {
             margin-top: 5px;

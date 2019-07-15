@@ -1,17 +1,17 @@
-//người tra cứu là vợ nam giới
+//người tra cứu là nam giới
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { CheckBook, ButtonNumber, ButtonDate, CardID } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class SearcherTheWife extends Component {
+class SearcherTheMale extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
         title={t(
-          'Người tra cứu là Vợ của Nam giới được hưởng quyền lợi BHXH vợ sinh con. Người vợ tra cứu quyền lợi cho chồng ngay trên App điện thoại của mình'
+          'Người tra cứu quyền lợi này là Nam giới, đang tra cứu quyền lợi BHXH trên chính App cài đặt trên điện thoại của mình'
         )}
         cardName="contentBoder"
         btnColor="primary"
@@ -61,7 +61,7 @@ class SearcherTheWife extends Component {
     );
   }
 }
-SearcherTheWife.propTypes = {
+SearcherTheMale.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(SearcherTheWife);
+export default withTranslation()(SearcherTheMale);

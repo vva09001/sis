@@ -12,7 +12,7 @@ class PregnancyExamination extends Component {
         cardName="contentBoder"
         title={t('Đăng ký dịch vụ thủ tục BHXH Khám thai')}
         btnColor="primary"
-        to="/noParticipation"
+        to="/search_noParticipation"
         btnName={t('continue')}
       >
         <div className="cardInfo">
