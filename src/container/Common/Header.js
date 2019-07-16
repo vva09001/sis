@@ -11,7 +11,9 @@ const Header = props => {
           <IonText>
             <p>{props.title}</p>
           </IonText>
-          <div>{props.content}</div>
+          <div className="header-sub">
+            <p>{props.content}</p>
+          </div>
         </IonToolbar>
       </IonHeader>
     </div>

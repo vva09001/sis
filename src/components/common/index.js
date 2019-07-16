@@ -5,4 +5,5 @@ import ButtonNumber from './ButtonNumber';
 import CheckBook from './CheckBook';
 import CardID from './InputCardid';
 import Buttons from './Buttons';
-export { Icon, Loading, ButtonDate, ButtonNumber, CheckBook, CardID, Buttons };
+import ButButtonDay from './ButtonDay';
+export { Icon, Loading, ButtonDate, ButtonNumber, CheckBook, CardID, Buttons, ButButtonDay };

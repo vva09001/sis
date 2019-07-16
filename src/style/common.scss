@@ -68,7 +68,7 @@
   --ion-color-light-tint: linear-gradient(to right, #e0e0e0, #cbcac9);
   .header {
     img {
-      padding-top: 50px;
+      padding-top: 30px;
     }
     ion-text {
       p {
@@ -89,6 +89,14 @@
       text-align: center;
       max-height: 250px;
       height: 250px;
+    }
+    .header-sub {
+      margin: 0 20px;
+      p {
+        font-style: italic;
+        text-align: center;
+        color: #000000;
+      }
     }
   }
   .button-container {
@@ -136,6 +144,15 @@
     }
     .button:active {
       background: #d6d6d6c4;
+    }
+  }
+  .btnDay {
+    border: 1px solid #797777;
+    border-radius: 20px;
+    width: 30%;
+    ion-item {
+      --border-radius: 20px;
+      --border-style: solid;
     }
   }
   .date-wapper {

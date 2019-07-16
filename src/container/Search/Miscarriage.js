@@ -1,18 +1,20 @@
-// người tra cứu là nam giới vợ không tham gia
+// kiểm tra quyền lợi sảy thai
+
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
-import { CheckBook, ButtonNumber, ButtonDate, CardID } from 'components/common';
+import { ButtonDate, ButtonNumber } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class NoParticipation extends Component {
+
+class Miscarriage extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
         cardName="contentBoder"
         title={t(
-          'Người tra cứu quyền lợi này là Nam giới, đang tra cứu quyền lợi BHXH trên chính App cài đặt trên điện thoại của mình'
+          'Quyền lợi hưởng BHXH – Sảy thai, nạo hút thai, phá thai bệnh lý, thai chết lưu trong thời điểm chưa phải là thời gian nghỉ sinh con'
         )}
         btnColor="primary"
         to="homepage"
@@ -25,18 +27,17 @@ class NoParticipation extends Component {
             )}
           </ContentTitle>
           <div className="form">
-            <p>{t('Ngày vợ sinh')}</p>
-            <ButtonDate />
-            <p>{t('Phương thức sinh con')}</p>
-            <CheckBook labelName="Phẫu Thuật" />
-            <CheckBook labelName="Sinh con thường" />
-            <div className="numberChildren">
-              <p>{t('Số con sinh')}</p>
-              <ButtonNumber />
+            <div>
+              <p>{t('thời điểm bắt đầu nghỉ tại DN')}</p>
+              <ButtonDate />
             </div>
-            <p>{t('Số chứng minh thư hoặc thẻ căn cước của vợ')}</p>
-            <div className="input">
-              <CardID />
+            <div>
+              <p>{t('thời điểm cuối cùng')}</p>
+              <ButtonDate />
+            </div>
+            <div className="numberChildren">
+              <p>{t('Thai  đã được bao nhiêu tuần tuổi')}</p>
+              <ButtonNumber />
             </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ class NoParticipation extends Component {
     );
   }
 }
-NoParticipation.propTypes = {
+Miscarriage.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(NoParticipation);
+export default withTranslation()(Miscarriage);

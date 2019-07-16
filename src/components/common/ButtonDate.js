@@ -6,7 +6,7 @@ const ButtonDate = () => {
       <IonItem>
         <IonDatetime displayFormat="MM" placeholder="mm /" />
         <IonDatetime displayFormat="DD" placeholder="dd /" />
-        <IonDatetime displayFormat="YY" placeholder="yy /" />
+        <IonDatetime displayFormat="YY" placeholder="yy" />
       </IonItem>
     </div>
   );

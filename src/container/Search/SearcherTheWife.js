@@ -52,7 +52,7 @@ class SearcherTheWife extends Component {
               <CheckBook labelName="Dưới 8 tháng mang thai" />
             </div>
             <div className="input">
-              <p>{t('Số chứng minh thư hoặc thẻ căn cước của vợ')}</p>
+              <p>{t('Số chứng minh thư hoặc thẻ căn cước của bạn')}</p>
               <CardID />
             </div>
           </div>

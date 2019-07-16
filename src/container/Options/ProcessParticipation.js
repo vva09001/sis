@@ -1,32 +1,30 @@
-// tìm hiểu thụ tục đăng ký 1
+//kiểm tra quá trình tham gia
 
 import React, { Component } from 'react';
 import Layout from 'container/Layout/LayoutButtons';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class GetOPT extends Component {
+
+class ProcessParticipation extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
-        title={t(
-          'Tìm hiểu và thực hiện thủ tục đăng ký hội viên để sử dụng đầy đủ chức năng và công dụng của Vi.'
-        )}
+        title={t('Kiểm tra quá trình tham gia BHXH của bạn')}
         btnName={t('back')}
         to="/optionsregister"
         btnColor="light"
       >
         <div className="content-options">
-          <Buttons number={1}>{t('tìm hiểu')}</Buttons>
-          <Buttons number={2}>{t('thủ tục')}</Buttons>
-          <Buttons number={3}>{t('nhu cầu')}</Buttons>
+          <Buttons number={1}>{t('Quá trình tham gia BHXH (thời gian)')}</Buttons>
+          <Buttons number={2}>{t('Quá trình đóng BHXH (việc nộp tiền)')}</Buttons>
         </div>
       </Layout>
     );
   }
 }
-GetOPT.propTypes = {
+ProcessParticipation.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(GetOPT);
+export default withTranslation()(ProcessParticipation);

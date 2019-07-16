@@ -8,7 +8,7 @@ const Layout = props => {
   return (
     <div className="layout">
       <IonContent>
-        <Header title={props.title} />
+        <Header title={props.title} content={props.content} />
         <div className={props.cardName}>
           <div className="card">
             {props.contentTitle === null ? null : <IonCardTitle>{props.contentTitle}</IonCardTitle>}
@@ -33,7 +33,8 @@ Layout.propTypes = {
   t: PropTypes.func,
   cardName: PropTypes.string,
   btnColor: PropTypes.string,
-  btnName: PropTypes.string
+  btnName: PropTypes.string,
+  content: PropTypes.string
 };
 Layout.defaultProps = {
   contentTitle: null,

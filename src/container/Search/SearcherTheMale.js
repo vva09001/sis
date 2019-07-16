@@ -26,19 +26,19 @@ class SearcherTheMale extends Component {
           </ContentTitle>
           <div className="form">
             <div className="numberChildren">
-              <span>{t('Ngày nghỉ hàng tuần của chồng bạn')}</span>
+              <span>{t('Ngày nghỉ hàng tuần của bạn')}</span>
               <ButtonNumber />
             </div>
             <div>
-              <p>{t('Ngày bắt đầu nghỉ hưởng chế độ của chồng bạn')}</p>
+              <p>{t('Ngày bắt đầu nghỉ hưởng chế độ')}</p>
               <ButtonDate />
             </div>
             <div>
-              <p>{t('Ngày cuối cùng nghỉ hưởng chế độ chồng bạn')}</p>
+              <p>{t('Ngày cuối cùng nghỉ hưởng chế độ')}</p>
               <ButtonDate />
             </div>
             <div>
-              <p>{t('Ngày bạn sinh con')}</p>
+              <p>{t('Ngày vợ sinh con')}</p>
               <ButtonDate />
             </div>
             <div>
@@ -47,7 +47,7 @@ class SearcherTheMale extends Component {
               <CheckBook labelName="Sinh con thường" />
             </div>
             <div>
-              <p>{t('Bạn mang thai bao nhiêu tháng thì sinh con')}</p>
+              <p>{t('Vợ mang thai bao nhiêu tháng thì sinh con')}</p>
               <CheckBook labelName="Trên 8 tháng mang thai" />
               <CheckBook labelName="Dưới 8 tháng mang thai" />
             </div>

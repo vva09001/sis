@@ -1,16 +1,17 @@
-//kiểm tra quản lý phục dưỡng
+//kiểm tra quyền lợi bạn là người mang thai hộ
+
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { CheckBook, ButtonNumber, ButtonDate } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class RehabilitationManagement extends Component {
+class Surrogacy extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
-        title={t('Quyền lợi hưởng BHXH – Phục dưỡng phục hồi sức khỏe sau thai sản')}
+        title={t('Bạn là người mang thai hộ')}
         cardName="contentBoder"
         btnColor="primary"
         to="/search_insbenefit"
@@ -24,29 +25,29 @@ class RehabilitationManagement extends Component {
           </ContentTitle>
           <div className="form">
             <div>
-              <p>{t('Bạn thuộc trường hợp nào')}</p>
-              <CheckBook labelName="Trong quá trình sinh con phải phẫu thuật" />
-              <CheckBook labelName="Thuộc trường hợp khác" />
+              <p>{t('thời điểm bắt đầu nghỉ')}</p>
+              <ButtonDate />
+            </div>
+            <div>
+              <p>{t('Thời điểm bạn sinh con')}</p>
+              <ButtonDate />
+            </div>
+            <div>
+              <p>{t('Thời điểm bạn giao con cho người mẹ nhờ mang thai hộ')}</p>
+              <ButtonDate />
+            </div>
+            <div>
+              <p>{t('Thời điểm cuối cùng nghỉ chế độ')}</p>
+              <ButtonDate />
             </div>
             <div className="numberChildren">
-              <span>{t('Số con sinh')}</span>
+              <p>{t('Bạn ở tình trạng sinh bình thường Số lượng con sinh ra')}</p>
               <ButtonNumber />
             </div>
             <div>
-              <p>{t('Thời điểm diễn ra một trong 03 trường hợp nêu trên.')}</p>
-              <ButtonDate />
-            </div>
-            <div>
-              <p>{t('Thời điểm trở lại làm việc sau chế độ nghỉ thai sản')}</p>
-              <ButtonDate />
-            </div>
-            <div>
-              <p>{t('Thời điểm bắt đầu nghỉ dưỡng sức')}</p>
-              <ButtonDate />
-            </div>
-            <div>
-              <p>{t('Thời điểm cuối cùng nghỉ dưỡng sức')}</p>
-              <ButtonDate />
+              <p>{t('Bạn ở tình trạng sinh, nhưng con chết, ở trường hợp nào ?')}</p>
+              <CheckBook labelName="Các con đều chết dưới 60 ngày tuổi" />
+              <CheckBook labelName="Các con đều chết sau 60 ngày tuổi" />
             </div>
           </div>
         </div>
@@ -54,7 +55,7 @@ class RehabilitationManagement extends Component {
     );
   }
 }
-RehabilitationManagement.propTypes = {
+Surrogacy.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(RehabilitationManagement);
+export default withTranslation()(Surrogacy);

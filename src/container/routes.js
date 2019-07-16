@@ -61,9 +61,20 @@ import NotKnowledgeable5 from './Options/NotKnowledgeable5';
 import NotKnowledgeable8 from './Options/NotKnowledgeable8';
 import NotKnowledgeable9 from './Options/NotKnowledgeable9';
 import NotKnowledgeable10 from './Options/NotKnowledgeable10';
+import ProcessParticipation from './Options/ProcessParticipation';
 //Search
 import SearchMen from './Search/SearchMen';
 import ChildDiesAfterBirth from './Search/ChildDiesAfterBirth';
+import SearcherTheMale from './Search/SearcherTheMale';
+import AdoptionBenefits from './Search/AdoptionBenefits';
+import SearchPregnancyExamination from './Search/PregnancyExamination';
+import Contraception from './Search/Contraception';
+import SearchMiscarriage from './Search/Miscarriage';
+import SearchSurrogacy from './Search/Surrogacy';
+import SearchThankSurrogacy from './Search/ThankSurrogacy';
+import SpecialCase from './Search/SpecialCase';
+import NormalChildbirth from './Search/NormalChildbirth';
+import LeaveEarlierThanIndicated from './Search/LeaveEarlierThanIndicated';
 
 const AppRouter = () => {
   return (
@@ -129,13 +140,24 @@ const AppRouter = () => {
           <Route path="/notknowledgeable8" component={NotKnowledgeable8} />
           <Route path="/notknowledgeable9" component={NotKnowledgeable9} />
           <Route path="/notknowledgeable10" component={NotKnowledgeable10} />
+          <Route path="/processparticipation" component={ProcessParticipation} />
           {/* search */}
           <Route path="/search_noParticipation" component={NoParticipation} />
           <Route path="/search_insbenefit" component={InsBenefit} />
           <Route path="/search_thewife" component={SearcherTheWife} />
+          <Route path="/search_themale" component={SearcherTheMale} />
           <Route path="/search_apparel" component={RehabilitationManagement} />
           <Route path="/search_searchMen" component={SearchMen} />
           <Route path="/search_childdiesafterbirth" component={ChildDiesAfterBirth} />
+          <Route path="/search_adoptionbenefits" component={AdoptionBenefits} />
+          <Route path="/search_pregnancyexamination" component={SearchPregnancyExamination} />
+          <Route path="/search_contraception" component={Contraception} />
+          <Route path="/search_miscarriage" component={SearchMiscarriage} />
+          <Route path="/search_searchsurrogacy" component={SearchSurrogacy} />
+          <Route path="/search_thanksurrogacy" component={SearchThankSurrogacy} />
+          <Route path="/search_specialcase" component={SpecialCase} />
+          <Route path="/search_normalchildbirth" component={NormalChildbirth} />
+          <Route path="/search_leaveearlierthanindicated" component={LeaveEarlierThanIndicated} />
         </Switch>
       </RootContainer>
     </Router>

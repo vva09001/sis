@@ -13,6 +13,7 @@
       border-bottom-left-radius: 30px;
       position: absolute;
       top: 190px;
+      width: 100%;
       a {
         text-decoration: none;
       }
@@ -30,6 +31,12 @@
         }
         .cardInfo {
           padding-top: 40px;
+          .font-12 {
+            font-size: 12px;
+          }
+          .text-primary {
+            color: #0071bc;
+          }
         }
         .btn--black {
           position: relative;
@@ -66,6 +73,29 @@
           ion-checkbox {
             width: 16px;
             height: 16px;
+          }
+          .text-input {
+            background-color: #fff;
+            border-radius: 20px;
+            .native-input.sc-ion-input-ios {
+              padding-left: 20px;
+            }
+          }
+          .day-wapper {
+            display: flex;
+            align-items: center;
+            span {
+              margin-right: 10px;
+            }
+            .margin-left {
+              margin-left: 20px;
+            }
+          }
+          .btn-number {
+            .input-number {
+              width: 20%;
+              margin: 0;
+            }
           }
           // .checkBoox {
           //   margin: 0 0 10px 5px;

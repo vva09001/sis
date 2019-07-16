@@ -1,3 +1,4 @@
+//trường hợp bạn chưa hiểu biết gì 2
 import React, { Component } from 'react';
 import Layout from '../Layout/LayoutOptions';
 import { IonButton } from '@ionic/react';
