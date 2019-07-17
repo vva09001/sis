@@ -57,7 +57,7 @@ class SavePersonalInfo extends Component {
         )}
         btnColor="light"
         btnName={t('back')}
-        to="optionsregister"
+        to="/"
       >
         <div className="from-peson">
           {this.state.error ? (
@@ -121,16 +121,16 @@ class SavePersonalInfo extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    loading: state.user.loading
-  };
-};
-
 SavePersonalInfo.propTypes = {
   t: PropTypes.func,
   register: PropTypes.func,
   loading: PropTypes.bool
+};
+
+const mapStateToProps = state => {
+  return {
+    loading: state.user.loading
+  };
 };
 
 const mapDispatchToProps = {

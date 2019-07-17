@@ -1,13 +1,21 @@
 import request from 'utils/request';
 const Register = (params, token) => {
   return request({
-    url: '/v2/users/',
+    url: '/wp/v2/users',
     method: 'post',
     headers: {
-      Authorization: token
+      Authorization: 'Bearer ' + token
     },
-    params: params
+    data: params
   });
 };
 
-export { Register };
+const Login = params => {
+  return request({
+    url: '/jwt-auth/v1/token',
+    method: 'post',
+    params
+  });
+};
+
+export { Register, Login };
