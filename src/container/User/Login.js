@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Authpage from 'container/Layout/Authpage';
-import { IonCardContent, IonInput, IonButton } from '@ionic/react';
+import { IonCardContent, IonInput, IonButton, IonSpinner } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -15,7 +15,8 @@ class HomePage extends Component {
         username: '',
         password: ''
       },
-      show: false
+      show: false,
+      loading: false
     };
   }
   _onChange = e => {
@@ -26,7 +27,34 @@ class HomePage extends Component {
     });
   };
   login = () => {
-    this.props.login(this.state.params);
+    this.setState(
+      {
+        loading: true
+      },
+      () => {
+        this.props.login(this.state.params, this.success, this.fail);
+      }
+    );
+  };
+  success = () => {
+    this.setState(
+      {
+        loading: false
+      },
+      () => {
+        //console.log('success');
+      }
+    );
+  };
+  fail = () => {
+    this.setState(
+      {
+        loading: false
+      },
+      () => {
+        //console.log('fail');
+      }
+    );
   };
   render() {
     const { t } = this.props;
@@ -59,7 +87,11 @@ class HomePage extends Component {
             {/* <Link to="homepage">
               <IonButton>{t('login')}</IonButton>
             </Link> */}
-            <IonButton onClick={this.login}>{t('login')}</IonButton>
+            {this.state.loading ? (
+              <IonSpinner />
+            ) : (
+              <IonButton onClick={this.login}>{t('login')}</IonButton>
+            )}
           </div>
           <div className="register">
             <IonButton class="btn-register">
