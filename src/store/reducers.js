@@ -1,20 +1,17 @@
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-
-import Data from 'store/data/reducer';
-import User from 'store/user/reducer';
-import Error from 'store/error/reducer';
+import user from './user/reducer';
+import error from '../store/error/reducer';
 
 const reducers = combineReducers({
-  Data,
-  User,
-  Error
+  user: user,
+  error: error
 });
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['Error', 'Data']
+  blacklist: ['Error']
 };
 const persistedReducer = persistReducer(persistConfig, reducers);
 export default persistedReducer;

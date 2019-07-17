@@ -75,7 +75,7 @@ import SearchThankSurrogacy from './Search/ThankSurrogacy';
 import SpecialCase from './Search/SpecialCase';
 import NormalChildbirth from './Search/NormalChildbirth';
 import LeaveEarlierThanIndicated from './Search/LeaveEarlierThanIndicated';
-
+import OwnerOfTheWallet from './WalletInformation/OwnerOfTheWallet';
 const AppRouter = () => {
   return (
     <Router history={history}>
@@ -158,6 +158,8 @@ const AppRouter = () => {
           <Route path="/search_specialcase" component={SpecialCase} />
           <Route path="/search_normalchildbirth" component={NormalChildbirth} />
           <Route path="/search_leaveearlierthanindicated" component={LeaveEarlierThanIndicated} />
+
+          <Route path="/owneroftheWallet" component={OwnerOfTheWallet} />
         </Switch>
       </RootContainer>
     </Router>

@@ -5,8 +5,8 @@ import createSagaMiddleware from 'redux-saga';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import reducers from 'store/reducers';
-import saga from 'store/saga';
+import reducers from '../store/reducers';
+import saga from '../store/saga';
 import AppRouter from 'container/routes';
 
 const sagaMiddleware = createSagaMiddleware();

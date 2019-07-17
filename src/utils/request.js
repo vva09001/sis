@@ -4,7 +4,9 @@ const { REACT_APP_BASE_URL } = process.env;
 const request = axios.create({
   baseURL: REACT_APP_BASE_URL,
   timeout: 20000,
-  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+  headers: {
+    'Content-Type': 'multipart/form-data'
+  }
 });
 
 // before send request

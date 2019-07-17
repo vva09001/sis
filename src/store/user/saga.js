@@ -1,25 +1,23 @@
 import actions from './actions';
 import { all, fork, put, takeEvery } from 'redux-saga/effects';
-import { errorActions } from 'store/actions';
+// import { Register } from '../../services/user';
+import { userActions } from '../../store/actions';
+// import token from '../../utils/token';
 
-export function* signInSaga() {
-  yield takeEvery(actions.LOGIN, function*() {
+export function* registerSaga() {
+  yield takeEvery(actions.LOGIN_REQUEST, function*(data) {
     try {
-      yield put({ type: errorActions.ERROR, error: 'error.message' });
+      // console.log(Register(data.params, token));
+      yield put({ type: userActions.REGISTER_LOADING });
+      // const res = yield Register(data);
+      // console.log(res);
+      // yield put({ type: userActions.REGISTER_SUCCESS, error: 'error.message' });
     } catch (error) {
-      yield put({ type: errorActions.ERROR, error: error.message });
+      // yield put({ type: userActions.REGISTER_ERROR, error: error.message });
     }
   });
 }
-export function* logOutSaga() {
-  yield takeEvery(actions.LOGOUT, function*() {
-    try {
-      yield put({ type: errorActions.ERROR, error: '123' });
-    } catch (error) {
-      yield put({ type: errorActions.ERROR, error: error.message });
-    }
-  });
-}
+
 export default function* rootSaga() {
-  yield all([fork(signInSaga), fork(logOutSaga)]);
+  yield all([fork(registerSaga)]);
 }

@@ -30,7 +30,9 @@ class HomePage extends Component {
             </Link>
           </div>
           <div className="register">
-            <IonButton class="btn-register">{t('register')}</IonButton>
+            <IonButton class="btn-register">
+              <Link to="/personalinfo">{t('register')}</Link>
+            </IonButton>
             <IonButton class="btn-pass">{t('forgotPassword')}</IonButton>
           </div>
         </IonCardContent>

@@ -7,7 +7,7 @@ const LayoutOptions = props => {
   return (
     <div className="layout-options">
       <IonContent>
-        <Header title={props.title} />
+        <Header title={props.title} content={props.content} content2={props.content2} />
         <div className="content">{props.children}</div>
       </IonContent>
     </div>
@@ -17,6 +17,7 @@ const LayoutOptions = props => {
 LayoutOptions.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
-  content: PropTypes.node
+  content: PropTypes.node,
+  content2: PropTypes.node
 };
 export default LayoutOptions;

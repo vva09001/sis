@@ -74,6 +74,9 @@
       display: flex;
       justify-items: center;
       justify-content: center;
+      a {
+        text-decoration: none;
+      }
       .btn-register {
         margin-right: 0;
         color: #00a99d;

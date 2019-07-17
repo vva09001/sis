@@ -1,18 +1,20 @@
 const actions = {
-  LOGIN: 'LOGIN',
-  LOGOUT: 'LOGOUT',
+  LOGIN_REQUEST: 'LOGIN_REQUEST',
+  LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+  LOGIN_ERROR: 'LOGIN_ERROR',
+  LOGIN_LOADING: 'LOGIN_LOADING',
 
-  USER_PROFILE: 'USER_PROFILE',
-  TOKEN: 'TOKEN',
+  REGISTER_REQUEST: 'LOGIN_REQUEST',
+  REGISTER_SUCCESS: 'LOGIN_SUCCESS',
+  REGISTER_ERROR: 'LOGIN_ERROR',
+  REGISTER_LOADING: 'REGISTER_LOADING',
 
-  USER_LOADING: 'DATA_LOADING',
-  ERROR: 'ERROR',
-  login: params => ({
-    type: actions.LOGIN,
+  register: params => ({
+    type: actions.REGISTER_REQUEST,
     params
   }),
-  logout: () => ({
-    type: actions.LOGOUT
+  login: () => ({
+    type: actions.LOGIN_REQUEST
   })
 };
 export default actions;

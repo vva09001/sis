@@ -1,16 +1,14 @@
 import actions from './actions';
 
 const initialState = {
-  token: '',
-  profile: {}
+  profile: {},
+  loading: false
 };
 
 const User = (state = initialState, action) => {
   switch (action.type) {
-    case actions.USER_PROFILE:
-      return { ...state, profile: action.payload };
-    case actions.TOKEN:
-      return { ...state, token: action.payload };
+    case actions.REGISTER_LOADING:
+      return { ...state, loading: true };
     default:
       return state;
   }
