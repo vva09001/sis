@@ -27,13 +27,17 @@ export function* registerSaga() {
 
 export function* loginSaga() {
   yield takeEvery(actions.LOGIN_REQUEST, function*(data) {
+    const { params, success, fail } = data;
     try {
-      const res = yield Login(data.params);
+      const res = yield Login(params);
       if (res.status === 200) {
-        yield put({ type: userActions.REGISTER_SUCCESS, auth: res.data });
+        yield put({ type: userActions.LOGIN_SUCCESS, auth: res.data });
+        yield success();
+      } else {
+        yield fail();
       }
     } catch (error) {
-      yield put({ type: userActions.LOGIN_ERROR });
+      yield fail();
     }
   });
 }

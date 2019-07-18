@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Authpage from 'container/Layout/Authpage';
-import { IonCardContent, IonInput, IonButton } from '@ionic/react';
+import { IonCardContent, IonInput, IonButton, IonSpinner } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -15,6 +15,7 @@ class HomePage extends Component {
         username: '',
         password: ''
       },
+      show: false,
       loading: false
     };
   }
@@ -26,10 +27,37 @@ class HomePage extends Component {
     });
   };
   login = () => {
-    history.push('/homepage');
     // history.goBack();
     // this.props.history.push(path);
     // this.props.login(this.state.params);
+    this.setState(
+      {
+        loading: true
+      },
+      () => {
+        this.props.login(this.state.params, this.success, this.fail);
+      }
+    );
+  };
+  success = () => {
+    this.setState(
+      {
+        loading: false
+      },
+      () => {
+        history.push('/homepage');
+      }
+    );
+  };
+  fail = () => {
+    this.setState(
+      {
+        loading: false
+      },
+      () => {
+        //console.log('fail');
+      }
+    );
   };
   render() {
     const { t } = this.props;
@@ -59,11 +87,19 @@ class HomePage extends Component {
             />
           </div>
           <div className="btn-login">
-            <IonButton>
+            {/* <IonButton>
               <Link to="/homepage">{t('login')} </Link>
-            </IonButton>
+            </IonButton> */}
 
             {/* <IonButton onClick={this.login}>{t('login')}</IonButton> */}
+            {/* <Link to="homepage">
+              <IonButton>{t('login')}</IonButton>
+            </Link> */}
+            {this.state.loading ? (
+              <IonSpinner />
+            ) : (
+              <IonButton onClick={this.login}>{t('login')}</IonButton>
+            )}
           </div>
           <div className="register">
             <IonButton class="btn-register">
