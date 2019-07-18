@@ -5,6 +5,7 @@ import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { userActions } from '../../store/actions';
+import history from 'utils/history';
 class SavePersonalInfo extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +58,7 @@ class SavePersonalInfo extends Component {
         )}
         btnColor="light"
         btnName={t('back')}
-        to="/"
+        _onClick={() => history.goBack()}
       >
         <div className="from-peson">
           {this.state.error ? (

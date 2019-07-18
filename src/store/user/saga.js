@@ -7,6 +7,8 @@ import token from '../../utils/token';
 export function* registerSaga() {
   yield takeEvery(actions.REGISTER_REQUEST, function*(data) {
     try {
+      yield put({ type: userActions.REGISTER_LOADING });
+
       // let formBody = [];
       // for (let property in data.params) {
       //     let encodedKey = encodeURIComponent(property);
@@ -15,8 +17,8 @@ export function* registerSaga() {
       // }
       // formBody = formBody.join(“&”);
       // console.log(Register(data.params, token));
-      Register(data.params, token);
-      yield put({ type: userActions.REGISTER_LOADING });
+      const res = yield Register(data.params, token);
+      yield put({ type: userActions.REGISTER_SUCCESS, data: res });
     } catch (error) {
       yield put({ type: userActions.REGISTER_ERROR });
     }
@@ -30,7 +32,6 @@ export function* loginSaga() {
       if (res.status === 200) {
         yield put({ type: userActions.REGISTER_SUCCESS, auth: res.data });
       }
-      // console.log(res.status);
     } catch (error) {
       yield put({ type: userActions.LOGIN_ERROR });
     }

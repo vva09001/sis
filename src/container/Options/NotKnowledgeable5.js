@@ -4,7 +4,7 @@ import Layout from 'container/Layout/LayoutButtons';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-
+import history from 'utils/history';
 class NotKnowledgeable5 extends Component {
   render() {
     const { t } = this.props;
@@ -15,10 +15,12 @@ class NotKnowledgeable5 extends Component {
         )}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
+        _onClick={() => history.goBack()}
         btnColor="light"
       >
-        <Buttons number={2}>{t('đăng ký số điện thoại vẫn đang làm việc')}</Buttons>
+        <Buttons number={1} click={() => history.push('/notknowledgeable6')}>
+          {t('đăng ký số điện thoại vẫn đang làm việc')}
+        </Buttons>
         <div className="content-options">
           <p className="tittle">{t('thực hiện quyền giám sát')}</p>
           <p className="font-10">{t('bộ phận phụ trách')}</p>

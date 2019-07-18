@@ -3,6 +3,7 @@ import Layout from 'container/Layout/LayoutButtons';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class GetOPT extends Component {
   render() {
     const { t } = this.props;
@@ -14,16 +15,16 @@ class GetOPT extends Component {
         buttonName={t('looking_for_more_information')}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
         btnColor="light"
+        _onClick={() => history.push('/optionsregister')}
       >
         <div className="btn-options">
-          <Buttons number={1}>
+          <Buttons number={1} click={() => history.push('/notknowledgeable3')}>
             {t(
               'Bạn cần đăng ký số điện thoại với BHXH trong trường hợp bạn vẫn đang làm việc tại DN(đơnvị)'
             )}
           </Buttons>
-          <Buttons number={2}>
+          <Buttons number={2} click={() => history.push('/notknowledgeable7')}>
             {t(
               'Bạn cần đăng ký số điện thoại với BHXH trong trường hợp bạn đã nghỉ việc, hiện tại chưa làm việc ở đâu. Thời gian này bạn đang đóng bảo hiểm tự nguyện'
             )}

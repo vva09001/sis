@@ -5,7 +5,7 @@ import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import arrow from '../../assets/img/right-arrow.png';
-
+import history from 'utils/history';
 class NotKnowledgeable7 extends Component {
   render() {
     const { t } = this.props;
@@ -16,10 +16,12 @@ class NotKnowledgeable7 extends Component {
         )}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
+        _onClick={() => history.push('/getOTP')}
         btnColor="light"
       >
-        <Buttons number={2}>{t('đóng bảo hiểm tự nguyện')}</Buttons>
+        <Buttons number={2} click={() => history.push('/notknowledgeable8')}>
+          {t('đóng bảo hiểm tự nguyện')}
+        </Buttons>
         <div className="content-options">
           <p className="tittle">{t('làm theo thứ tự')}</p>
           <div className="box">

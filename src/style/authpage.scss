@@ -68,7 +68,7 @@
       margin-top: -2px;
     }
     input.native-input.sc-ion-input-ios {
-      margin-left: 20px;
+      margin-left: 25px;
     }
     .register {
       display: flex;
@@ -76,6 +76,7 @@
       justify-content: center;
       a {
         text-decoration: none;
+        font-size: 12px !important;
       }
       .btn-register {
         margin-right: 0;

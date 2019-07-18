@@ -5,7 +5,8 @@ import Layout from 'container/Layout/LayoutButtons';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class GetOPT extends Component {
+import history from 'utils/history';
+class RegistrationProcedure extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -14,19 +15,23 @@ class GetOPT extends Component {
           'Tìm hiểu và thực hiện thủ tục đăng ký hội viên để sử dụng đầy đủ chức năng và công dụng của Vi.'
         )}
         btnName={t('back')}
-        to="/optionsregister"
+        _onClick={() => history.push('/optionsregister')}
         btnColor="light"
       >
         <div className="content-options">
-          <Buttons number={1}>{t('tìm hiểu')}</Buttons>
-          <Buttons number={2}>{t('thủ tục')}</Buttons>
+          <Buttons number={1} click={() => history.push('/registrationprocedure2')}>
+            {t('tìm hiểu')}
+          </Buttons>
+          <Buttons number={2} click={() => history.push('/registrationprocedure3')}>
+            {t('thủ tục')}
+          </Buttons>
           <Buttons number={3}>{t('nhu cầu')}</Buttons>
         </div>
       </Layout>
     );
   }
 }
-GetOPT.propTypes = {
+RegistrationProcedure.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(GetOPT);
+export default withTranslation()(RegistrationProcedure);

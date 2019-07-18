@@ -4,6 +4,7 @@ import { IonButton, IonInput } from '@ionic/react';
 import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class SaveWallet extends Component {
   render() {
     const { t } = this.props;
@@ -15,7 +16,7 @@ class SaveWallet extends Component {
         )}
         btnColor="light"
         btnName={t('back')}
-        to="optionsregister"
+        _onClick={() => history.goBack()}
       >
         <div className="form">
           <div className="text-box">

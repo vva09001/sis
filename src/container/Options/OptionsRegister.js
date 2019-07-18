@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import LayoutButtons from '../Layout/LayoutButtons';
 import { Buttons } from 'components/common';
-import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class Register extends Component {
   render() {
     const { t } = this.props;
@@ -15,24 +15,24 @@ class Register extends Component {
         )}
         btnColor="primary"
         btnName={t('next')}
-        to="info"
+        _onClick={() => history.push('/info')}
       >
         <div className="button-wapper">
-          <Buttons number={1}>
-            <Link to="/savewallet">{t('Lưu thông tin định danh Ví')}</Link>
+          <Buttons number={1} click={() => history.push('/savewallet')}>
+            {t('Lưu thông tin định danh Ví')}
           </Buttons>
-          <Buttons number={2} click={this.click}>
-            <Link to="/personalinfo">{t('Lưu thông tin cá nhân cho Ví')}</Link>
+          <Buttons number={2} click={() => history.push('/personalinfo')}>
+            {t('Lưu thông tin cá nhân cho Ví')}
           </Buttons>
-          <Buttons number={3}>
-            <Link to="/otp">{t('Lưu số điện thoại đã đăng ký với BHXH nhận mã tra cứu OTP')}</Link>
+          <Buttons number={3} click={() => history.push('/otp')}>
+            {t('Lưu số điện thoại đã đăng ký với BHXH nhận mã tra cứu OTP')}
           </Buttons>
-          <Buttons number={4}>
+          <Buttons number={4} click={() => history.push('/registrationprocedure')}>
             {t(
               'Tìm hiểu và thực hiện thủ tục đăng ký hội viên để sử dụng đầy đủ chức năng và công dụng của Vi.'
             )}
           </Buttons>
-          <Buttons number={5}>
+          <Buttons number={5} click={() => history.push('/savewallet')}>
             {t(
               'Công việc quan trọng nhất mỗi tháng bạn phải thực hiện để Ví có cơ sở dữ liệu hoạt động'
             )}

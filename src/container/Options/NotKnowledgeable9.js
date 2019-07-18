@@ -5,7 +5,7 @@ import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { IonButton, IonInput } from '@ionic/react';
-
+import history from 'utils/history';
 class NotKnowledgeable9 extends Component {
   render() {
     const { t } = this.props;
@@ -16,7 +16,7 @@ class NotKnowledgeable9 extends Component {
         )}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
+        _onClick={() => history.goBack()}
         btnColor="light"
       >
         <Buttons number={2}>{t('đăng ký số điện thoại đã nghỉ việc')}</Buttons>
@@ -33,7 +33,9 @@ class NotKnowledgeable9 extends Component {
             </div>
           </div>
           <div className="btn-save">
-            <IonButton>{t('save_Infon')}</IonButton>
+            <IonButton onClick={() => history.push('/notknowledgeable10')}>
+              {t('save_Infon')}
+            </IonButton>
           </div>
         </div>
       </Layout>

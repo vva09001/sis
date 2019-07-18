@@ -84,7 +84,7 @@
       border-radius: 173px/30px;
       border-top-right-radius: 0px;
       border-top-left-radius: 0px;
-      box-shadow: 0 8px 6px -2px #9b9b9a;
+      box-shadow: 0 8px 6px -2px #00000060;
       color: #f8a63d;
       text-align: center;
       height: 265px;
@@ -138,7 +138,7 @@
         font-size: 11pt;
       }
       a {
-        font-size: 11px;
+        font-size: 9px;
         text-decoration: none;
       }
     }
@@ -207,5 +207,21 @@
       position: absolute;
       left: 50px;
     }
+  }
+  .btnRectang {
+    height: 35px;
+    width: 35px;
+    background: linear-gradient(to right, #28adce, #23b480);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+    z-index: 999;
+    margin: auto;
+    top: -21px;
+    border-radius: 20px;
+    color: #ffffff;
   }
 }

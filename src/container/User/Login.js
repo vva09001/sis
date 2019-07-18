@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { userActions } from '../../store/actions';
-
+import history from 'utils/history';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +15,7 @@ class HomePage extends Component {
         username: '',
         password: ''
       },
-      show: false
+      loading: false
     };
   }
   _onChange = e => {
@@ -26,7 +26,10 @@ class HomePage extends Component {
     });
   };
   login = () => {
-    this.props.login(this.state.params);
+    history.push('/homepage');
+    // history.goBack();
+    // this.props.history.push(path);
+    // this.props.login(this.state.params);
   };
   render() {
     const { t } = this.props;
@@ -56,16 +59,19 @@ class HomePage extends Component {
             />
           </div>
           <div className="btn-login">
-            {/* <Link to="homepage">
-              <IonButton>{t('login')}</IonButton>
-            </Link> */}
-            <IonButton onClick={this.login}>{t('login')}</IonButton>
+            <IonButton>
+              <Link to="/homepage">{t('login')} </Link>
+            </IonButton>
+
+            {/* <IonButton onClick={this.login}>{t('login')}</IonButton> */}
           </div>
           <div className="register">
             <IonButton class="btn-register">
               <Link to="/personalinfo">{t('register')}</Link>
             </IonButton>
-            <IonButton class="btn-pass">{t('forgotPassword')}</IonButton>
+            <IonButton class="btn-pass">
+              <Link to="/forgotpw">{t('forgotPassword')}</Link>
+            </IonButton>
           </div>
         </IonCardContent>
       </Authpage>

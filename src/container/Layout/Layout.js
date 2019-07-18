@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from 'container/Common/Header';
 import { IonContent, IonButton, IonCardTitle } from '@ionic/react';
-import { Link } from 'react-router-dom';
 
 const Layout = props => {
   return (
@@ -14,9 +13,9 @@ const Layout = props => {
             {props.contentTitle === null ? null : <IonCardTitle>{props.contentTitle}</IonCardTitle>}
             {props.children}
             <div className="btn--black">
-              <Link to={props.to}>
-                <IonButton color={props.btnColor}>{props.btnName}</IonButton>
-              </Link>
+              <IonButton color={props.btnColor} onClick={props._onClick}>
+                {props.btnName}
+              </IonButton>
             </div>
           </div>
         </div>
@@ -34,7 +33,8 @@ Layout.propTypes = {
   cardName: PropTypes.string,
   btnColor: PropTypes.string,
   btnName: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  _onClick: PropTypes.func
 };
 Layout.defaultProps = {
   contentTitle: null,

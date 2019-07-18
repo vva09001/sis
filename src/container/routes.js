@@ -52,6 +52,8 @@ import MaleJoinParticipation from './Options/MaleJoinParticipation';
 import MaternityCase from './Options/MaternityCase';
 import Maternitybenefits from './Options/Maternitybenefits';
 import RegistrationProcedure from './Options/RegistrationProcedure';
+import RegistrationProcedure2 from './Options/RegistrationProcedure2';
+import RegistrationProcedure3 from './Options/RegistrationProcedure3';
 import NotKnowledgeable from './Options/NotKnowledgeable';
 import NotKnowledgeable6 from './Options/NotKnowledgeable6';
 import NotKnowledgeable3 from './Options/NotKnowledgeable3';
@@ -131,6 +133,8 @@ const AppRouter = () => {
           <Route path="/maternitycase" component={MaternityCase} />
           <Route path="/maternitybenefits" component={Maternitybenefits} />
           <Route path="/registrationprocedure" component={RegistrationProcedure} />
+          <Route path="/registrationprocedure2" component={RegistrationProcedure2} />
+          <Route path="/registrationprocedure3" component={RegistrationProcedure3} />
           <Route path="/notknowledgeable" component={NotKnowledgeable} />
           <Route path="/notknowledgeable6" component={NotKnowledgeable6} />
           <Route path="/notknowledgeable3" component={NotKnowledgeable3} />

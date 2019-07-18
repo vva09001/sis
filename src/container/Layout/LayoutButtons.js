@@ -29,9 +29,9 @@ const LayoutOptions = props => {
         <div className="content">
           {props.children}
           <div className="btn--black">
-            <Link to={props.to}>
-              <IonButton color={props.btnColor}>{props.btnName}</IonButton>
-            </Link>
+            <IonButton onClick={props._onClick} color={props.btnColor}>
+              {props.btnName}
+            </IonButton>
           </div>
         </div>
       </IonContent>
@@ -46,6 +46,7 @@ LayoutOptions.propTypes = {
   to: PropTypes.string,
   btnColor: PropTypes.string,
   btnName: PropTypes.string,
-  headerTo: PropTypes.string
+  headerTo: PropTypes.string,
+  _onClick: PropTypes.func
 };
 export default LayoutOptions;

@@ -65,6 +65,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        top: -25px;
         ion-button {
           height: 39px;
           width: 188px;
@@ -72,9 +74,95 @@
           font-weight: bold;
         }
       }
+      .btnBack-rectang {
+        top: -45px !important;
+      }
+      .btn-save {
+        top: 30px !important;
+      }
       .btn-position {
         position: relative;
         top: -65px;
+      }
+      .text-contentRectang {
+        top: -80px !important;
+        z-index: 10;
+      }
+      .shadow {
+        box-shadow: 0 8px 6px -2px #9b9b9a;
+      }
+      .marginTop {
+        margin-top: 40px !important;
+      }
+      .text-contentRectang2 {
+        top: -112px !important;
+        z-index: 8;
+        .form {
+          ion-input {
+            background: #fff;
+            margin: 5px 10px;
+            border-radius: 20px;
+          }
+          span {
+            font-size: 11px;
+            color: #000000;
+            margin-left: 10px;
+          }
+          .phone {
+            border: 2px solid #6e7274;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border-right: unset;
+            width: 95%;
+            margin-bottom: -2px;
+            display: flex;
+            align-items: center;
+          }
+          .user {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            color: #000000;
+            .text-mid {
+              margin-right: 50px;
+            }
+            ion-input {
+              margin-right: 50px;
+            }
+            // input.native-input.sc-ion-input-ios {
+            //   // margin-left: 50px !important;
+            //   margin-right: 50px;
+            // }
+          }
+          .user:after {
+            content: '';
+            width: 10%;
+            border: 2px solid #6e7274;
+            height: 38px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-left: unset;
+            border-radius: 0px 20px 20px 0px;
+          }
+          .pass {
+            border: 2px solid #6e7274;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border-right: unset;
+            width: 95%;
+            margin-top: -2px;
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            color: #000000;
+          }
+          input.native-input.sc-ion-input-ios {
+            margin-left: 5px;
+          }
+        }
       }
       .text-content {
         position: relative;
@@ -127,6 +215,12 @@
         .text-bottom {
           margin-bottom: 25px;
         }
+        .text-title-content {
+          font-style: italic;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 40px;
+        }
       }
     }
   }
@@ -142,7 +236,7 @@
       text-decoration: none;
     }
     .content-options {
-      background: #c0bfbfa4;
+      background: #f2f1f0cb;
       padding: 10px;
       .icon-arrow {
         padding: 0;
@@ -171,7 +265,7 @@
         display: flex;
         height: 42px;
         align-items: center;
-        max-width: 111px;
+        width: 111px;
         padding: 0 10px;
       }
       .text-small {

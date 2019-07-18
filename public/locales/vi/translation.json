@@ -290,5 +290,19 @@
   "Trường hợp con chết sau khi sinh, (mà trước đó nghỉ sinh sớm hơn theo quy định BHXH theo chỉ định của Bác sỹ)": "Trường hợp con chết sau khi sinh, (mà trước đó nghỉ sinh sớm hơn theo quy định BHXH theo chỉ định của Bác sỹ)",
   "Kiểm tra quá trình tham gia BHXH của bạn": "Kiểm tra quá trình tham gia BHXH của bạn",
   "Quá trình tham gia BHXH (thời gian)": "Quá trình tham gia BHXH (thời gian)",
-  "Quá trình đóng BHXH (việc nộp tiền)": "Quá trình đóng BHXH (việc nộp tiền)"
+  "Quá trình đóng BHXH (việc nộp tiền)": "Quá trình đóng BHXH (việc nộp tiền)",
+  "ví sử dụng": "Ví sử dụng trí tuệ nhân tạo thông minh để tự biến mình thành công cụ tra cứu, tính toán đầy đủ quyền lợi BHXH được hưởng cho NLĐ. Cũng giống như các App tra cứu khác, cần trả phí để duy trì công năng tiện dụng. Mỗi App sẽ có cách thu phí duy trì khác nhau, như App của ngân hàng thì thu phí chuyển tiền thông qua trừ tiền phí vào số tiền chuyển, còn Ví Sis&M sẽ thu phí duy trì thông qua việc NLĐ  nộp phí hàng năm.",
+  "việc nộp": "Việc nôp phí duy trì của Ví để giúp NLĐ 03 lợi ích: tra cứu và tính toán thành tiền đối với  tất cả mức hưởng quyền lợi BHXH của NLĐ; thông tin chính sách BHXH mới nhất áp dụng đối với NLĐ, báo cáo hàng tháng việc người sử dụng LĐ (DN, đơn vị) đã đóng BHXH cho NLĐ thế nào và có ảnh hưởng ra sao nếu NLĐ có nhu cầu giải quyết quyền lợi BHXH ngay tại thời điểm tra cứu",
+  "Biểu phí duy trì hàng năm": "Biểu phí duy trì hàng năm",
+  "duy trì 1": "- Nếu NLĐ nộp phí duy trì 1 năm; phí là 150,000 VNĐ/năm",
+  "duy trì 2": "- Nếu NLĐ nộp phí duy trì 2 năm; phí là 120,000 VNĐ/năm",
+  "duy trì 3": "- Nếu NLĐ nộp phí duy trì 3 năm;phí là 100,000 VNĐ/năm",
+  "ngoài ra": "Ngoài ra, vì nhu cầu mỗi NLĐ có khác nhau, có người cần , có người không cần dịch vụ hỗ trợ các thủt ục để  giải quyết quyền lợi BHXH. Vậy nên đối với mỗi trường hợp NLĐ tra cứu quyền lợi xong, nếu có nhu cầu này, Ví sẽ thu phí dịch vụ là: 50.000 VNĐ/vụ việc hỗ trợ thủ tục và hướng dẫn thực hiện",
+  "Hướng dẫn bạn nộp phí duy trì ví": "Hướng dẫn bạn nộp phí duy trì ví",
+  "lần đâu tiên": "(1) Với lần đầu tiên bạn đăng ký phí duy trì Ví, bạn sẽ đăng ký trực tiếp tại mục này. Tới năm duy trì Ví tiếp theo, bạn về phần cuối của Ví sẽ có phần đăng ký duy trì Ví hằng năm.",
+  "ví chập nhận": "(2) Ví chấp nhận nộp phí duy trì thông qua việc chuyển khoản online trực tiếp từ tài khoản ngân hàng cá nhân của bạn vào tài khoản của Ví",
+  "Thực hiện thao tác nộp phí duy trì ví": "Thực hiện thao tác nộp phí duy trì ví",
+  "Thời hạn đăng kí duy trì ví": "Thời hạn đăng kí duy trì ví",
+  "Thành tiền": "Thành tiền",
+  "Bạn thực hiện thao tác chuyển khoản phí": "Bạn thực hiện thao tác chuyển khoản phí"
 }

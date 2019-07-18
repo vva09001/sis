@@ -4,6 +4,7 @@ import Layout from 'container/Layout/LayoutButtons';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class NotKnowledgeable6 extends Component {
   render() {
     const { t } = this.props;
@@ -14,7 +15,7 @@ class NotKnowledgeable6 extends Component {
         )}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
+        _onClick={() => history.push('/getOTP')}
         btnColor="light"
       >
         <Buttons number={1}>{t('đăng ký số điện thoại')}</Buttons>

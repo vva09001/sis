@@ -5,7 +5,7 @@ import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import declaration from 'assets/img/to-khai.png';
-
+import history from 'utils/history';
 class NotKnowledgeable9 extends Component {
   render() {
     const { t } = this.props;
@@ -16,7 +16,7 @@ class NotKnowledgeable9 extends Component {
         )}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
+        _onClick={() => history.push('/getOTP')}
         btnColor="light"
       >
         <Buttons number={2}>{t('đăng ký số điện thoại đã nghỉ việc')}</Buttons>

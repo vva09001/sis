@@ -3,6 +3,7 @@ import AuthPage from '../Layout/Authpage';
 import { IonButton } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 class ForgotPW extends Component {
   render() {
     const { t } = this.props;
@@ -23,7 +24,9 @@ class ForgotPW extends Component {
               </IonButton>
             </div>
             <div className="btn-login">
-              <IonButton color="light">{t('login')}</IonButton>
+              <IonButton color="light">
+                <Link to="/">{t('login')}</Link>
+              </IonButton>
             </div>
           </div>
         </div>
