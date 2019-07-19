@@ -4,10 +4,11 @@ import Header from 'container/Common/Header';
 import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-
+import { connect } from 'react-redux';
 class HomePage extends Component {
   render() {
     const { t } = this.props;
+    // console.log(this.props.fullName);
     return (
       <div className="homePage">
         <IonContent>
@@ -18,7 +19,7 @@ class HomePage extends Component {
             </div>
             <div className="img">
               <img src="img/user.png" alt="icon_user" />
-              <h5>Trần Hoài Bác</h5>
+              <h5>{this.props.fullName}</h5>
             </div>
             <div className="btn">
               <Link to="awareness">
@@ -32,6 +33,16 @@ class HomePage extends Component {
   }
 }
 HomePage.propTypes = {
-  t: PropTypes.func
+  t: PropTypes.func,
+  fullName: PropTypes.string
 };
-export default withTranslation()(HomePage);
+
+const mapSateToProps = state => {
+  return {
+    fullName: state.user.profile.user_display_name
+  };
+};
+export default connect(
+  mapSateToProps,
+  null
+)(withTranslation()(HomePage));

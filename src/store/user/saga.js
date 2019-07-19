@@ -8,15 +8,8 @@ export function* registerSaga() {
   yield takeEvery(actions.REGISTER_REQUEST, function*(data) {
     try {
       yield put({ type: userActions.REGISTER_LOADING });
-
-      // let formBody = [];
-      // for (let property in data.params) {
-      //     let encodedKey = encodeURIComponent(property);
-      //     let encodedValue = encodeURIComponent(params[property]);
-      //     formBody.push(encodedKey + “=” + encodedValue);
-      // }
-      // formBody = formBody.join(“&”);
-      // console.log(Register(data.params, token));
+      // yield formData.append('username', 'vanh');
+      // console.log(formData);
       const res = yield Register(data.params, token);
       yield put({ type: userActions.REGISTER_SUCCESS, data: res });
     } catch (error) {
@@ -34,7 +27,7 @@ export function* loginSaga() {
         yield put({ type: userActions.LOGIN_SUCCESS, auth: res.data });
         yield success();
       } else {
-        yield fail();
+        yield fail(res.data.message);
       }
     } catch (error) {
       yield fail();

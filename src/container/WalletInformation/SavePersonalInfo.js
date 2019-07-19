@@ -46,6 +46,12 @@ class SavePersonalInfo extends Component {
     // } else {
     //   this.props.register(this.state.params);
     // }
+    const from = new FormData();
+    // const item = this.state.params;
+    from.set('username', 'Chris');
+    // console.log(from);
+    // Object.keys(item).forEach(key => from.append(key, item[key]));
+
     this.props.register(this.state.params);
   };
   render() {
@@ -102,6 +108,7 @@ class SavePersonalInfo extends Component {
             <IonInput
               placeholder="Số điện thoại Zalo"
               name="username"
+              type="number"
               onInput={e => this._onChange(e)}
             />
           </div>

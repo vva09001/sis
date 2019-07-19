@@ -12,7 +12,6 @@ import AppRouter from 'container/routes';
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
 const persistor = persistStore(store);
-
 sagaMiddleware.run(saga);
 
 const App = () => {

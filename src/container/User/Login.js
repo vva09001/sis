@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Authpage from 'container/Layout/Authpage';
-import { IonCardContent, IonInput, IonButton, IonSpinner } from '@ionic/react';
+import { IonCardContent, IonInput, IonButton, IonLoading } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -15,8 +15,8 @@ class HomePage extends Component {
         username: '',
         password: ''
       },
-      show: false,
-      loading: false
+      loading: false,
+      mess: ''
     };
   }
   _onChange = e => {
@@ -27,9 +27,20 @@ class HomePage extends Component {
     });
   };
   login = () => {
-    // history.goBack();
-    // this.props.history.push(path);
-    // this.props.login(this.state.params);
+    if (this.state.params.username === '' || this.state.params.password === '') {
+      if (this.state.params.username === '') {
+        this.setState({
+          mess: 'Tên người dùng là bắt buộc không được để trống'
+        });
+        return;
+      }
+      if (this.state.params.password === '') {
+        this.setState({
+          mess: 'Mật khẩu là bắt buộc không được để trống'
+        });
+        return;
+      }
+    }
     this.setState(
       {
         loading: true
@@ -49,10 +60,11 @@ class HomePage extends Component {
       }
     );
   };
-  fail = () => {
+  fail = mess => {
     this.setState(
       {
-        loading: false
+        loading: false,
+        mess: mess
       },
       () => {
         //console.log('fail');
@@ -86,20 +98,16 @@ class HomePage extends Component {
               onInput={e => this._onChange(e)}
             />
           </div>
+          <div className="mess-error">
+            <p>{this.state.mess}</p>
+          </div>
           <div className="btn-login">
-            {/* <IonButton>
-              <Link to="/homepage">{t('login')} </Link>
-            </IonButton> */}
-
-            {/* <IonButton onClick={this.login}>{t('login')}</IonButton> */}
-            {/* <Link to="homepage">
-              <IonButton>{t('login')}</IonButton>
-            </Link> */}
-            {this.state.loading ? (
-              <IonSpinner />
-            ) : (
-              <IonButton onClick={this.login}>{t('login')}</IonButton>
-            )}
+            <IonLoading
+              isOpen={this.state.loading}
+              message={'Đang đăng nhập...'}
+              onDidDismiss={() => this.setState({ loading: false })}
+            />
+            <IonButton onClick={this.login}>{t('login')}</IonButton>
           </div>
           <div className="register">
             <IonButton class="btn-register">

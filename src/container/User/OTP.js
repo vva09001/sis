@@ -29,7 +29,7 @@ class OTP extends Component {
             <Link to="/getOTP">{t('looking_for_more_information')}</Link>
           </IonButton>
         </div>
-        <div className="btn-back">
+        <div className="btn-back btnBackNo">
           <IonButton color="light" onClick={() => history.goBack()}>
             {t('back')}
           </IonButton>

@@ -32,7 +32,7 @@ class Register extends Component {
               'Tìm hiểu và thực hiện thủ tục đăng ký hội viên để sử dụng đầy đủ chức năng và công dụng của Vi.'
             )}
           </Buttons>
-          <Buttons number={5} click={() => history.push('/savewallet')}>
+          <Buttons number={5} click={() => history.push('/importantwork')}>
             {t(
               'Công việc quan trọng nhất mỗi tháng bạn phải thực hiện để Ví có cơ sở dữ liệu hoạt động'
             )}
