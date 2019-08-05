@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Authpage from 'container/Layout/Authpage';
-import { IonCardContent, IonInput, IonButton, IonLoading } from '@ionic/react';
+import { IonCardContent, IonInput, IonButton } from '@ionic/react';
+import Loading from 'components/Loading';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -18,6 +19,12 @@ class HomePage extends Component {
       loading: false,
       mess: ''
     };
+  }
+  componentDidMount() {
+    const size = Object.keys(this.props.profile).length;
+    if (size < 0) {
+      history.push('/homepage');
+    }
   }
   _onChange = e => {
     const newparams = this.state.params;
@@ -61,6 +68,7 @@ class HomePage extends Component {
     );
   };
   fail = mess => {
+    // console.log(typeof mess);
     this.setState(
       {
         loading: false,
@@ -82,7 +90,7 @@ class HomePage extends Component {
         <IonCardContent>
           <div className="phone">
             <IonInput
-              placeholder={t('phoneNumber')}
+              placeholder={t('username')}
               name="username"
               onInput={e => this._onChange(e)}
             />
@@ -102,12 +110,9 @@ class HomePage extends Component {
             <p>{this.state.mess}</p>
           </div>
           <div className="btn-login">
-            <IonLoading
-              isOpen={this.state.loading}
-              message={'Đang đăng nhập...'}
-              onDidDismiss={() => this.setState({ loading: false })}
-            />
-            <IonButton onClick={this.login}>{t('login')}</IonButton>
+            <IonButton onClick={this.login}>
+              {this.state.loading ? <Loading /> : t('login')}
+            </IonButton>
           </div>
           <div className="register">
             <IonButton class="btn-register">
@@ -124,11 +129,12 @@ class HomePage extends Component {
 }
 HomePage.propTypes = {
   t: PropTypes.func,
-  login: PropTypes.func
+  login: PropTypes.func,
+  profile: PropTypes.object
 };
 const mapStateToProps = state => {
   return {
-    loading: state.user.loading
+    profile: state.user.profile
   };
 };
 

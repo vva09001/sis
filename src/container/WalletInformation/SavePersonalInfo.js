@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../Layout/LayoutButtons';
-import { IonInput, IonButton } from '@ionic/react';
+import { IonInput, IonButton, IonDatetime, IonSelect, IonSelectOption } from '@ionic/react';
+import Loading from 'components/Loading';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -14,13 +15,14 @@ class SavePersonalInfo extends Component {
         username: '',
         email: '',
         password: '',
-        gioi_tinh: '',
-        ngay_sinh: '',
-        the_can_cuoc: '',
-        ma_so: '',
-        nickname: ''
+        gender: null,
+        DOB: '',
+        CMND: '',
+        bhxh: '',
+        fullname: ''
       },
-      error: false
+      loading: false,
+      mess: ''
     };
   }
   _onChange = e => {
@@ -31,28 +33,32 @@ class SavePersonalInfo extends Component {
     });
   };
   register = () => {
-    // if (
-    //   this.state.params.username === '' ||
-    //   this.state.params.email === '' ||
-    //   this.state.params.password === '' ||
-    //   this.state.params.gioi_tinh === '' ||
-    //   this.state.params.ngay_sinh === '' ||
-    //   this.state.params.the_can_cuoc === '' ||
-    //   this.state.params.nickname === ''
-    // ) {
-    //   this.setState({
-    //     error: true
-    //   });
-    // } else {
-    //   this.props.register(this.state.params);
-    // }
-    const from = new FormData();
-    // const item = this.state.params;
-    from.set('username', 'Chris');
-    // console.log(from);
-    // Object.keys(item).forEach(key => from.append(key, item[key]));
-
-    this.props.register(this.state.params);
+    const { username, email, password } = this.state.params;
+    if (username === '' || email === '' || password === '') {
+      if (username === '') {
+        this.setState({ mess: 'Tên người dùng là bắt buộc không được để chống' });
+        return;
+      }
+      if (email === '') {
+        this.setState({ mess: 'Địa chỉ email là bắt buộc không được để chống' });
+        return;
+      }
+      if (password === '') {
+        this.setState({ mess: 'Mật khẩu là bắt buộc không được để chống' });
+        return;
+      }
+    } else {
+      this.setState({ loading: true });
+      this.props.register(this.state.params, this.success, this.fail);
+    }
+  };
+  success = () => {
+    this.setState({ loading: false }, () => {
+      history.push('/');
+    });
+  };
+  fail = res => {
+    this.setState({ loading: false, mess: res });
   };
   render() {
     const { t } = this.props;
@@ -67,31 +73,39 @@ class SavePersonalInfo extends Component {
         _onClick={() => history.goBack()}
       >
         <div className="from-peson">
-          {this.state.error ? (
-            <p className="text-error">{t('Các trường là bắt buộc không được để trống')}</p>
-          ) : null}
-
+          <p className="text-error">{this.state.mess}</p>
           <div className="phone">
             <IonInput
               placeholder="Họ và tên (có dấu)"
               onInput={e => this._onChange(e)}
-              name="nickname"
+              name="fullname"
             />
           </div>
           <div className="user marginbottom">
-            <IonInput placeholder="Giới tính" name="gioi_tinh" onInput={e => this._onChange(e)} />
+            <IonSelect
+              placeholder="Giới tính"
+              okText="Chọn"
+              cancelText="Hủy"
+              name="gender"
+              interface="action-sheet"
+              onIonChange={e => this._onChange(e)}
+            >
+              <IonSelectOption value={true}>Nữ</IonSelectOption>
+              <IonSelectOption value={false}>Nam</IonSelectOption>
+            </IonSelect>
           </div>
           <div className="pass marginbottom">
-            <IonInput
+            <IonDatetime
+              display-format="YYYY-MM-DD"
               placeholder="Ngày tháng năm sinh"
-              name="ngay_sinh"
-              onInput={e => this._onChange(e)}
+              name="DOB"
+              onIonChange={e => this._onChange(e)}
             />
           </div>
           <div className="user marginbottom">
             <IonInput
               placeholder="CMND/ Thẻ căn cước"
-              name="the_can_cuoc"
+              name="CMND"
               type="number"
               onInput={e => this._onChange(e)}
             />
@@ -106,9 +120,8 @@ class SavePersonalInfo extends Component {
           </div>
           <div className="user-bootom">
             <IonInput
-              placeholder="Số điện thoại Zalo"
+              placeholder="Tên đăng nhập"
               name="username"
-              type="number"
               onInput={e => this._onChange(e)}
             />
           </div>
@@ -122,7 +135,9 @@ class SavePersonalInfo extends Component {
           </div>
         </div>
         <div className="btn-submit">
-          <IonButton onClick={this.register}>{t('finish')}</IonButton>
+          <IonButton onClick={this.register}>
+            {this.state.loading ? <Loading /> : t('finish')}
+          </IonButton>
         </div>
       </Layout>
     );

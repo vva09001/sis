@@ -2,18 +2,20 @@ import actions from './actions';
 import { all, fork, put, takeEvery } from 'redux-saga/effects';
 import { Register, Login } from '../../services/user';
 import { userActions } from '../../store/actions';
-import token from '../../utils/token';
 
 export function* registerSaga() {
   yield takeEvery(actions.REGISTER_REQUEST, function*(data) {
+    const { params, success, fail } = data;
     try {
       yield put({ type: userActions.REGISTER_LOADING });
-      // yield formData.append('username', 'vanh');
-      // console.log(formData);
-      const res = yield Register(data.params, token);
-      yield put({ type: userActions.REGISTER_SUCCESS, data: res });
+      const res = yield Register(params);
+      if (res.status === 200) {
+        yield success();
+      } else {
+        yield fail(res.data.error.message);
+      }
     } catch (error) {
-      yield put({ type: userActions.REGISTER_ERROR });
+      yield fail();
     }
   });
 }
@@ -24,10 +26,10 @@ export function* loginSaga() {
     try {
       const res = yield Login(params);
       if (res.status === 200) {
-        yield put({ type: userActions.LOGIN_SUCCESS, auth: res.data });
+        yield put({ type: userActions.LOGIN_SUCCESS, token: res.data.token });
         yield success();
       } else {
-        yield fail(res.data.message);
+        yield fail(res.data.error.message);
       }
     } catch (error) {
       yield fail();

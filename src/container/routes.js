@@ -64,6 +64,7 @@ import NotKnowledgeable8 from './Options/NotKnowledgeable8';
 import NotKnowledgeable9 from './Options/NotKnowledgeable9';
 import NotKnowledgeable10 from './Options/NotKnowledgeable10';
 import ProcessParticipation from './Options/ProcessParticipation';
+import AntenatalCareBenefits from './Options/AntenatalCareBenefits';
 //Search
 import SearchMen from './Search/SearchMen';
 import ChildDiesAfterBirth from './Search/ChildDiesAfterBirth';
@@ -146,6 +147,7 @@ const AppRouter = () => {
           <Route path="/notknowledgeable9" component={NotKnowledgeable9} />
           <Route path="/notknowledgeable10" component={NotKnowledgeable10} />
           <Route path="/processparticipation" component={ProcessParticipation} />
+          <Route path="/antenatalcarebenefits" component={AntenatalCareBenefits} />
           {/* search */}
           <Route path="/search_noParticipation" component={NoParticipation} />
           <Route path="/search_insbenefit" component={InsBenefit} />

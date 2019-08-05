@@ -5,7 +5,7 @@ const request = axios.create({
   baseURL: REACT_APP_BASE_URL,
   timeout: 20000,
   headers: {
-    'Content-Type': 'multipart/form-data'
+    'Content-Type': 'application/json'
   }
 });
 

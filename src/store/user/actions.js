@@ -3,9 +3,11 @@ const actions = {
   REGISTER_SUCCESS: 'REGISTER_SUCCESS',
   REGISTER_ERROR: 'REGISTER_ERROR',
   REGISTER_LOADING: 'REGISTER_LOADING',
-  register: params => ({
+  register: (params, success, fail) => ({
     type: actions.REGISTER_REQUEST,
-    params
+    params,
+    success,
+    fail
   }),
 
   LOGIN_REQUEST: 'LOGIN_REQUEST',

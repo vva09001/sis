@@ -1,20 +1,17 @@
 import request from 'utils/request';
-const Register = (params, token) => {
+const Register = params => {
   return request({
-    url: '/wp/v2/users',
+    url: '/register',
     method: 'post',
-    headers: {
-      Authorization: 'Bearer ' + token
-    },
     data: params
   });
 };
 
 const Login = params => {
   return request({
-    url: '/jwt-auth/v1/token',
+    url: '/login',
     method: 'post',
-    params
+    data: params
   });
 };
 
