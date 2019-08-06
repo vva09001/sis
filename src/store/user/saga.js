@@ -15,7 +15,7 @@ export function* registerSaga() {
         yield fail(res.data.error.message);
       }
     } catch (error) {
-      yield fail();
+      yield fail('Không thể kết nối đến Sever');
     }
   });
 }
@@ -26,13 +26,13 @@ export function* loginSaga() {
     try {
       const res = yield Login(params);
       if (res.status === 200) {
-        yield put({ type: userActions.LOGIN_SUCCESS, token: res.data.token });
+        yield put({ type: userActions.LOGIN_SUCCESS, profile: res.data });
         yield success();
       } else {
         yield fail(res.data.error.message);
       }
     } catch (error) {
-      yield fail();
+      yield fail('Không thể kết nối đến Sever');
     }
   });
 }

@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
 class HomePage extends Component {
   render() {
     const { t } = this.props;
-    // console.log(this.props.fullName);
     return (
       <div className="homePage">
         <IonContent>
@@ -39,7 +39,7 @@ HomePage.propTypes = {
 
 const mapSateToProps = state => {
   return {
-    fullName: state.user.profile.user_display_name
+    fullName: state.user.profile.fullname
   };
 };
 export default connect(
