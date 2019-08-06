@@ -3,5 +3,8 @@
   "appName": "SISHaNoi",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "build"
+  "webDir": "build",
+  "android": {
+    "allowMixedContent": true
+  }
 }
