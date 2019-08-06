@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from '../Layout/LayoutButtons';
+import Authpage from 'container/Layout/Authpage';
 import { IonInput, IonButton, IonDatetime, IonSelect, IonSelectOption } from '@ionic/react';
 import Loading from 'components/Loading';
 import { withTranslation } from 'react-i18next';
@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { userActions } from '../../store/actions';
 import history from 'utils/history';
 
-class SavePersonalInfo extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,7 +64,7 @@ class SavePersonalInfo extends Component {
   render() {
     const { t } = this.props;
     return (
-      <Layout
+      <Authpage
         title={t('save_info')}
         sussget={t(
           'Hàng tháng, Ví sẽ gửi báo cáo quản lý BHXH cho bạn thông qua  mail hoặc Zalo của bạn, vậy nên bạn đăng ký với Ví một địa chỉ mail, hoặc zalo, hoặc cả hai cho chắc chắn mình luôn nhận được báo cáo.'
@@ -73,6 +73,10 @@ class SavePersonalInfo extends Component {
         btnName={t('back')}
         _onClick={() => history.goBack()}
       >
+        <img src="img/user.png" alt="icon_user" />
+        <div className="header">
+          <h1>{t('register')}</h1>
+        </div>
         <div className="from-peson">
           <p className="text-error">{this.state.mess}</p>
           <div className="phone">
@@ -140,12 +144,17 @@ class SavePersonalInfo extends Component {
             {this.state.loading ? <Loading /> : t('finish')}
           </IonButton>
         </div>
-      </Layout>
+        <div className="btn-submit">
+          <IonButton color="light" onClick={() => history.goBack()}>
+            {t('back')}
+          </IonButton>
+        </div>
+      </Authpage>
     );
   }
 }
 
-SavePersonalInfo.propTypes = {
+Register.propTypes = {
   t: PropTypes.func,
   register: PropTypes.func,
   loading: PropTypes.bool
@@ -163,4 +172,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(SavePersonalInfo));
+)(withTranslation()(Register));

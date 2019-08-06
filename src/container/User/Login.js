@@ -22,7 +22,7 @@ class HomePage extends Component {
   }
   componentDidMount() {
     const size = Object.keys(this.props.profile).length;
-    if (size < 0) {
+    if (size > 0) {
       history.push('/homepage');
     }
   }
@@ -37,7 +37,7 @@ class HomePage extends Component {
     if (this.state.params.username === '' || this.state.params.password === '') {
       if (this.state.params.username === '') {
         this.setState({
-          mess: 'Tên người dùng là bắt buộc không được để trống'
+          mess: 'Tên người đăng là bắt buộc không được để trống'
         });
         return;
       }
@@ -116,7 +116,7 @@ class HomePage extends Component {
           </div>
           <div className="register">
             <IonButton class="btn-register">
-              <Link to="/personalinfo">{t('register')}</Link>
+              <Link to="/register">{t('register')}</Link>
             </IonButton>
             <IonButton class="btn-pass">
               <Link to="/forgotpw">{t('forgotPassword')}</Link>

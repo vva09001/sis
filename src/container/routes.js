@@ -20,6 +20,8 @@ import ForgotPW from '../container/User/forgotpw';
 import ForgotInsurrance from 'container/User/forgotInsurrance';
 import InsBenefit from 'container/Info/Insbenefit';
 import RehabilitationManagement from 'container/Search/RehabilitationManagement';
+import Register from 'container/User/Register';
+
 // thông tin
 import SearcherTheWife from 'container/Search/SearcherTheWife';
 import MenWithWivesGiveBirth from './Info/MenWithWivesGiveBirth';
@@ -86,6 +88,7 @@ const AppRouter = () => {
       <RootContainer>
         <Switch>
           <Route exact path="/" component={Login} />
+          <Route path="/register" component={Register} />
           <Route exact path="/homepage" component={HomePage} />
           <Route path="/awareness" component={Awareness} />
           <Route path="/action" component={Action} />

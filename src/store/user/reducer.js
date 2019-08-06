@@ -1,14 +1,13 @@
 import actions from './actions';
 
 const initialState = {
-  profile: {},
-  token: ''
+  profile: {}
 };
 
 const User = (state = initialState, action) => {
   switch (action.type) {
     case actions.LOGIN_SUCCESS:
-      return { ...state, token: action.token };
+      return { ...state, profile: action.profile };
     default:
       return state;
   }
