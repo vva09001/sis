@@ -1,6 +1,6 @@
 {
-  "appId": "com.SISHaNoi.app",
-  "appName": "SISHaNoi",
+  "appId": "com.Sis.app",
+  "appName": "Sis",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",

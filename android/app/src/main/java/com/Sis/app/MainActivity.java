@@ -1,4 +1,4 @@
-package com.SISHaNoi.app;
+package com.Sis.app;
 
 import android.os.Bundle;
 
