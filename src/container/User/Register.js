@@ -78,7 +78,6 @@ class Register extends Component {
           <h1>{t('register')}</h1>
         </div>
         <div className="from-peson">
-          <p className="text-error">{this.state.mess}</p>
           <div className="phone">
             <IonInput
               placeholder="Họ và tên (có dấu)"
@@ -125,8 +124,9 @@ class Register extends Component {
           </div>
           <div className="user-bootom">
             <IonInput
-              placeholder="Tên đăng nhập"
+              placeholder="Tên đăng nhập (Số điện thoại)"
               name="username"
+              inputMode="numeric"
               onInput={e => this._onChange(e)}
             />
           </div>
@@ -138,6 +138,7 @@ class Register extends Component {
               onInput={e => this._onChange(e)}
             />
           </div>
+          <p className="text-error">{this.state.mess}</p>
         </div>
         <div className="btn-submit">
           <IonButton onClick={this.register}>

@@ -92,6 +92,7 @@ class HomePage extends Component {
             <IonInput
               placeholder={t('username')}
               name="username"
+              inputMode="numeric"
               onInput={e => this._onChange(e)}
             />
           </div>
