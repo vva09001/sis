@@ -68,7 +68,6 @@ class HomePage extends Component {
     );
   };
   fail = mess => {
-    // console.log(typeof mess);
     this.setState(
       {
         loading: false,
@@ -90,7 +89,7 @@ class HomePage extends Component {
         <IonCardContent>
           <div className="phone">
             <IonInput
-              placeholder={t('username')}
+              placeholder="Tên đăng nhập (Số điện thoại)"
               name="username"
               inputMode="numeric"
               onInput={e => this._onChange(e)}

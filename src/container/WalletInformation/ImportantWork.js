@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import Layout from '../Layout/LayoutOptions';
 import { IonButton } from '@ionic/react';
-// import history from 'utils/history';
+import history from 'utils/history';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
@@ -34,7 +34,9 @@ class ImportantWork extends Component {
           <IonButton color="primary">{t('update')}</IonButton>
         </div>
         <div className="btn-back btn-position">
-          <IonButton color="primary">{t('Tiện ích của ví')}</IonButton>
+          <IonButton color="primary" onClick={() => history.push('/processparticipation')}>
+            {t('Tiện ích của ví')}
+          </IonButton>
         </div>
       </Layout>
     );

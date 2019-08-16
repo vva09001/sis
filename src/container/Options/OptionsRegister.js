@@ -15,7 +15,7 @@ class Register extends Component {
         )}
         btnColor="primary"
         btnName={t('next')}
-        _onClick={() => history.push('/info')}
+        _onClick={() => history.push('/mbenefits')}
       >
         <div className="button-wapper">
           <Buttons number={1} click={() => history.push('/savewallet')}>

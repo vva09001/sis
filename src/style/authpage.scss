@@ -2,7 +2,7 @@
   .auth-page {
     height: 100vh;
     ion-content {
-      --background: url('../assets//img/login-backgroud.png') 0 0/100% 100% no-repeat;
+      --background: url('../assets//img/login-backgroud.png') 0 0/100% no-repeat;
     }
     .header {
       h1 {
@@ -77,9 +77,6 @@
         margin-left: 30px;
       }
     }
-    // input.native-input.sc-ion-input-ios {
-    //   margin-left: 30px;
-    // }
     .mess-error {
       text-align: center;
       color: red;
