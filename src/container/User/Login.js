@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Authpage from 'container/Layout/Authpage';
-import { IonCardContent, IonInput, IonButton } from '@ionic/react';
+import { IonInput, IonButton } from '@ionic/react';
 import Loading from 'components/Loading';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { userActions } from '../../store/actions';
 import history from 'utils/history';
@@ -86,7 +85,7 @@ class HomePage extends Component {
         <div className="header">
           <h1>{t('login')}</h1>
         </div>
-        <IonCardContent>
+        <div className="from-peson">
           <div className="phone">
             <IonInput
               placeholder="Tên đăng nhập (Số điện thoại)"
@@ -115,14 +114,14 @@ class HomePage extends Component {
             </IonButton>
           </div>
           <div className="register">
-            <IonButton class="btn-register">
-              <Link to="/register">{t('register')}</Link>
-            </IonButton>
-            <IonButton class="btn-pass">
-              <Link to="/forgotpw">{t('forgotPassword')}</Link>
-            </IonButton>
+            <div className="btn-register">
+              <IonButton onClick={() => history.push('/register')}>{t('register')}</IonButton>
+            </div>
+            <div className="btn-pass">
+              <IonButton onClick={() => history.push('/forgotpw')}>{t('forgotPassword')}</IonButton>
+            </div>
           </div>
-        </IonCardContent>
+        </div>
       </Authpage>
     );
   }

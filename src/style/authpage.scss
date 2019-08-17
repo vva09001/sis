@@ -12,9 +12,6 @@
         margin-top: 0;
       }
     }
-    ion-card-content {
-      padding: 40px;
-    }
     img {
       height: 169px;
       display: block;
@@ -52,14 +49,14 @@
       z-index: 10;
       ion-input {
         margin-left: 30px;
-        margin-bottom: 1px;
+        margin-bottom: 3px;
       }
     }
     .user:after {
       content: '';
-      width: 10%;
+      width: 5%;
       border: 2px solid #6e7274;
-      height: 36px;
+      height: 35px;
       position: absolute;
       right: 0;
       top: 0;
@@ -86,43 +83,38 @@
       display: flex;
       justify-items: center;
       justify-content: center;
-      a {
-        text-decoration: none;
-        font-size: 12px !important;
-      }
       .btn-register {
-        margin-right: 0;
-        color: #00a99d;
-        --border-radius: 15px 0px 0px 15px;
-        --background: #f0f0f1;
-        --background-activated: rgba(238, 237, 237, 0.76);
-        --color-activated: #00a99d;
-        font-size: 12px;
+        ion-button {
+          margin-right: 0;
+          color: #00a99d;
+          --border-radius: 15px 0px 0px 15px;
+          --background: #f0f0f1;
+          --background-activated: rgba(238, 237, 237, 0.76);
+          font-size: x-small;
+          font-weight: bold;
+        }
         width: 50%;
       }
       .btn-pass {
-        margin-left: 0;
-        --color: #c1272d;
-        --border-radius: 0 15px 15px 0;
-        --backgroud: #cdcece;
-        --background-activated: rgba(238, 237, 237, 0.795);
-        --color-activated: #c1272d;
-        font-size: 12px;
+        ion-button {
+          margin-left: 0;
+          --color: #c1272d;
+          --border-radius: 0 15px 15px 0;
+          --backgroud: #cdcece;
+          --background-activated: rgba(238, 237, 237, 0.795);
+          font-size: x-small;
+          font-weight: bold;
+        }
         width: 50%;
       }
       ion-button {
         --background: linear-gradient(to right, #f0f0f1, #cdcece);
         width: 100%;
         height: 39px;
-        font-size: 12px;
       }
     }
     .from-peson {
-      // background: #f2f2f29a;
       padding: 20px;
-      // input.native-input.sc-ion-input-ios {
-      //   margin-left: 30px;
-      // }
       .text-error {
         color: #ff1a1a;
         font-weight: bold;
@@ -192,11 +184,6 @@
         margin-bottom: -2px;
         ion-datetime {
           margin-left: 15px;
-        }
-      }
-      .marginbottom {
-        input.native-input.sc-ion-input-ios {
-          margin-bottom: 3px;
         }
       }
     }

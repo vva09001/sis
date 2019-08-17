@@ -23,11 +23,12 @@ const actions = {
   SAVE_CODE_SUCCESS: 'SAVE_CODE_SUCCESS',
 
   saveCodeInsurance: (params, success, fail) => ({
-    type: actions.Save_Code_REQUEST,
+    type: actions.SAVE_CODE_REQUEST,
     params,
     success,
     fail
   }),
+
   SAVE_INFO_REQUEST: 'SAVE_INFO_REQUEST',
   SAVE_INFO_SUCCESS: ' SAVE_INFO_SUCCESS',
 
