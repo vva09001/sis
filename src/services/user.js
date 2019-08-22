@@ -15,16 +15,19 @@ const Login = params => {
   });
 };
 
-const SaveCodeInsurance = params => {
+const SaveCodeInsurance = (params, token) => {
   return request({
-    url: '/users',
+    url: '/user',
     method: 'patch',
+    headers: {
+      Authorization: 'Bearer ' + token
+    },
     data: params
   });
 };
 const SaveInfo = (params, id, token) => {
   return request({
-    url: '/users/' + id,
+    url: '/user/' + id,
     method: 'put',
     headers: {
       Authorization: 'Bearer ' + token
@@ -32,4 +35,13 @@ const SaveInfo = (params, id, token) => {
     data: params
   });
 };
-export { Register, Login, SaveCodeInsurance, SaveInfo };
+const getUserByID = (id, token) => {
+  return request({
+    url: '/user/' + id,
+    method: 'get',
+    headers: {
+      Authorization: 'Bearer ' + token
+    }
+  });
+};
+export { Register, Login, SaveCodeInsurance, SaveInfo, getUserByID };

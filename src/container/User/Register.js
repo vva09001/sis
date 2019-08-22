@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Authpage from 'container/Layout/Authpage';
 import { IonInput, IonButton, IonDatetime, IonSelect, IonSelectOption } from '@ionic/react';
 import Loading from 'components/Loading';
+import { PopupSuccess } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -17,13 +18,14 @@ class Register extends Component {
         email: '',
         password: '',
         gender: null,
-        DOB: '',
-        CMND: '',
+        dob: '',
+        cmnd: '',
         bhxh: '',
         fullname: ''
       },
       loading: false,
-      mess: ''
+      mess: '',
+      showAlert: false
     };
   }
   _onChange = e => {
@@ -54,12 +56,15 @@ class Register extends Component {
     }
   };
   success = () => {
-    this.setState({ loading: false }, () => {
-      history.push('/');
-    });
+    this.setState({ loading: false, showAlert: true });
   };
   fail = res => {
     this.setState({ loading: false, mess: res });
+  };
+  closeAlert = () => {
+    this.setState({ showAlert: false }, () => {
+      history.push('/');
+    });
   };
   render() {
     const { t } = this.props;
@@ -102,14 +107,14 @@ class Register extends Component {
             <IonDatetime
               display-format="YYYY-MM-DD"
               placeholder="Ngày tháng năm sinh"
-              name="DOB"
+              name="dob"
               onIonChange={e => this._onChange(e)}
             />
           </div>
           <div className="user marginbottom">
             <IonInput
               placeholder="CMND/ Thẻ căn cước"
-              name="CMND"
+              name="cmnd"
               type="number"
               onInput={e => this._onChange(e)}
             />
@@ -150,6 +155,11 @@ class Register extends Component {
             {t('back')}
           </IonButton>
         </div>
+        <PopupSuccess
+          isOpen={this.state.showAlert}
+          setShowAlert={this.closeAlert}
+          message="Đăng ký thành công"
+        />
       </Authpage>
     );
   }

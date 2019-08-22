@@ -14,6 +14,8 @@ class OTP extends Component {
     super(props);
     this.state = {
       newUsername: '',
+      username: '',
+      password: '',
       error: '',
       showAlert: false,
       loading: false
@@ -28,8 +30,8 @@ class OTP extends Component {
       return;
     }
     const params = {
-      username: this.props.profile.username,
-      password: '',
+      username: this.state.username,
+      password: this.state.password,
       newUsername: this.state.newUsername
     };
     this.setState(
@@ -71,14 +73,32 @@ class OTP extends Component {
           <div className="input">
             <IonInput
               name="newUsername"
-              placeholder="Nhập sđt đã đăng kí BHXH"
+              placeholder="Nhập sđt mới"
               inputmode="numeric"
               onInput={e => this.setState({ newUsername: e.target.value })}
             />
           </div>
-          <IonButton onClick={this.savePhone}>
-            {this.state.loading ? <Loading /> : t('save_Infon')}
-          </IonButton>
+          <div className="input">
+            <IonInput
+              name="username"
+              placeholder="Nhập sđt đã đăng kí BHXH"
+              inputmode="numeric"
+              onInput={e => this.setState({ username: e.target.value })}
+            />
+          </div>
+          <div className="input">
+            <IonInput
+              name="password"
+              placeholder="Nhập sđt đã đăng kí BHXH"
+              inputmode="password"
+              onInput={e => this.setState({ password: e.target.value })}
+            />
+          </div>
+          <div className="btn-find">
+            <IonButton onClick={this.savePhone}>
+              {this.state.loading ? <Loading /> : t('save_Infon')}
+            </IonButton>
+          </div>
         </div>
         <p className="text-error">{this.state.error}</p>
         <div className="text-box">

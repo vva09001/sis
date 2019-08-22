@@ -32,11 +32,9 @@ const actions = {
   SAVE_INFO_REQUEST: 'SAVE_INFO_REQUEST',
   SAVE_INFO_SUCCESS: ' SAVE_INFO_SUCCESS',
 
-  saveInfo: (params, id, token, success, fail) => ({
+  saveInfo: (params, success, fail) => ({
     type: actions.SAVE_INFO_REQUEST,
     params,
-    id,
-    token,
     success,
     fail
   }),

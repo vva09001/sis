@@ -49,7 +49,8 @@ class HomePage extends Component {
     }
     this.setState(
       {
-        loading: true
+        loading: true,
+        mess: ''
       },
       () => {
         this.props.login(this.state.params, this.success, this.fail);

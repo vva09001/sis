@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../Layout/LayoutButtons';
 import { IonInput, IonButton, IonDatetime, IonSelect, IonSelectOption } from '@ionic/react';
+import { PopupSuccess } from 'components/common';
 import Loading from 'components/Loading';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
@@ -16,12 +17,13 @@ class SavePersonalInfo extends Component {
       email: this.props.profile.email,
       password: '',
       gender: this.props.profile.gender,
-      DOB: this.props.profile.DOB,
-      CMND: this.props.profile.CMND,
+      dob: this.props.profile.dob,
+      cmnd: this.props.profile.cmnd,
       bhxh: this.props.profile.bhxh,
       fullname: this.props.profile.fullname,
       loading: false,
-      mess: ''
+      mess: '',
+      showAlert: false
     };
   }
   _onChange = event => {
@@ -58,14 +60,12 @@ class SavePersonalInfo extends Component {
         bhxh: bhxh,
         fullname: fullname
       };
-      const id = this.props.profile.id;
-      const token = this.props.profile.token;
       this.setState({ loading: true });
-      this.props.save_info(params, id, token, this.success, this.fail);
+      this.props.save_info(params, this.success, this.fail);
     }
   };
   success = () => {
-    this.setState({ loading: false }, () => {
+    this.setState({ loading: false, mess: '', showAlert: true }, () => {
       // history.push('/');
     });
   };
@@ -111,17 +111,17 @@ class SavePersonalInfo extends Component {
             <IonDatetime
               display-format="YYYY-MM-DD"
               placeholder="Ngày tháng năm sinh"
-              name="DOB"
-              value={this.state.DOB}
+              name="dob"
+              value={this.state.dob}
               onIonChange={e => this._onChange(e)}
             />
           </div>
           <div className="user marginbottom">
             <IonInput
               placeholder="CMND/ Thẻ căn cước"
-              name="CMND"
+              name="cmnd"
               type="number"
-              value={this.state.CMND}
+              value={this.state.cmnd}
               onInput={e => this._onChange(e)}
             />
           </div>
@@ -157,6 +157,11 @@ class SavePersonalInfo extends Component {
             {this.state.loading ? <Loading /> : t('finish')}
           </IonButton>
         </div>
+        <PopupSuccess
+          isOpen={this.state.showAlert}
+          setShowAlert={() => this.setState({ showAlert: false })}
+          message="Lưu thông tin cá nhân thành công"
+        />
       </Layout>
     );
   }
