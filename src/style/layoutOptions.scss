@@ -305,9 +305,15 @@
       }
       .wapper-flex {
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         ion-button {
           --background: #2ab4aa;
           --background-activated: #2ac5bb;
+          --border-radius: 10px;
+          width: 45%;
+          font-size: 12px;
         }
       }
       .form-save {
@@ -467,26 +473,22 @@
             margin-left: 30px;
           }
         }
-        .inp-custom {
-          ion-input {
-            margin-bottom: 2px;
-          }
-        }
         .user {
           position: relative;
           z-index: 10;
-          ion-input {
-            margin-left: 30px;
-          }
           ion-select {
             margin-left: 15px;
+          }
+          ion-input {
+            margin-left: 30px;
+            margin-bottom: 3px;
           }
         }
         .user:after {
           content: '';
           width: 5%;
           border: 2px solid #6e7274;
-          height: 34px;
+          height: 35px;
           position: absolute;
           right: 0;
           top: 0;
@@ -506,7 +508,7 @@
         }
         .user-bootom:after {
           content: '';
-          width: 10%;
+          width: 5%;
           border: 2px solid #6e7274;
           height: 35px;
           position: absolute;
@@ -523,16 +525,11 @@
           width: 95%;
           margin-top: -2px;
           margin-bottom: -2px;
-          ion-input {
-            margin-left: 30px;
-          }
           ion-datetime {
             margin-left: 15px;
           }
-        }
-        .marginbottom {
-          input.native-input.sc-ion-input-ios {
-            margin-bottom: 2px;
+          ion-input {
+            margin-left: 30px;
           }
         }
       }

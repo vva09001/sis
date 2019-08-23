@@ -136,7 +136,7 @@ class SavePersonalInfo extends Component {
           </div>
           <div className="user-bootom">
             <IonInput
-              placeholder="Tên đăng nhập"
+              placeholder="Tên đăng nhập (Số điện thoại)"
               name="username"
               value={this.state.username}
               onInput={e => this._onChange(e)}

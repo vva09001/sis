@@ -227,4 +227,42 @@
   .header-md:after {
     height: 0 !important;
   }
+  .btn-table {
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 20%;
+    ion-button {
+      width: 60%;
+    }
+  }
+  .table {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    background: #ffffffa8;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+      background: #ffffff;
+      td {
+        font-size: 12px;
+        border: 1px solid grey;
+      }
+      th {
+        border: 1px solid grey;
+        padding: 1px;
+      }
+      tr {
+        border: 1px solid grey;
+      }
+    }
+  }
 }
