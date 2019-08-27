@@ -20,15 +20,15 @@ class RootContainer extends React.Component {
     this.state = {
       loading: false
     };
-    this.app = Plugins.App; 
-    this.app.addListener('backButton', (url) => {
-      history.goBack()
+    this.app = Plugins.App;
+    this.app.addListener('backButton', () => {
+      history.goBack();
     });
   }
   render() {
     const { children } = this.props;
-    if(this.state.loading) {
-      return <Loading />
+    if (this.state.loading) {
+      return <Loading />;
     }
     return (
       <IonApp>
@@ -36,8 +36,8 @@ class RootContainer extends React.Component {
       </IonApp>
     );
   }
-  
-};
+}
+
 RootContainer.propTypes = {
   children: PropTypes.node
 };
