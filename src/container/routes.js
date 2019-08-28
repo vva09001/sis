@@ -83,6 +83,12 @@ import NormalChildbirth from './Search/NormalChildbirth';
 import LeaveEarlierThanIndicated from './Search/LeaveEarlierThanIndicated';
 import OwnerOfTheWallet from './WalletInformation/OwnerOfTheWallet';
 import ImportantWork from './WalletInformation/ImportantWork';
+import HealthCheck from './HealthCheck/HealthCheck';
+import HealthCheckResult from './HealthCheck/HealthCheckResult';
+import Menu from './Menu';
+import ServiceCharge from './Info/ServiceCharge';
+import Transfer from './Info/Transfer';
+
 const AppRouter = () => {
   return (
     <Router history={history}>
@@ -173,6 +179,11 @@ const AppRouter = () => {
 
           <Route path="/owneroftheWallet" component={OwnerOfTheWallet} />
           <Route path="/importantwork" component={ImportantWork} />
+          <Route path="/healthcheck" component={HealthCheck} />
+          <Route path="/healthcheckresult" component={HealthCheckResult} />
+          <Route path="/menu" component={Menu} />
+          <Route path="/servicecharge" component={ServiceCharge} />
+          <Route path="/transfer" component={Transfer} />
         </Switch>
       </RootContainer>
     </Router>

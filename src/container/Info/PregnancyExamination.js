@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 
 class PregnancyExamination extends Component {
   render() {
@@ -12,7 +13,7 @@ class PregnancyExamination extends Component {
         cardName="contentBoder"
         title={t('Đăng ký dịch vụ thủ tục BHXH Khám thai')}
         btnColor="primary"
-        to="/search_noParticipation"
+        _onClick={() => history.push('/servicecharge')}
         btnName={t('continue')}
       >
         <div className="cardInfo">

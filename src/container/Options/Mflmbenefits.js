@@ -32,7 +32,6 @@ class Mflmbenefits extends Component {
           <Buttons number={8}>
             {t('Quyền lợi của LĐ nữ đi làm trước khi hết thời hạn nghỉ thai sản theo quy định')}
           </Buttons>
-          <Buttons number={9}>{t('Quyền lợi hưởng BHXH – Nam giới vợ sinh con')}</Buttons>
         </div>
       </Layout>
     );

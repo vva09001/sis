@@ -8,8 +8,8 @@ const LayoutAwareness = props => {
     <div className="awarenessPage">
       <IonContent>
         <div className="header">
-          <div className="wapperImg">
-            <img src="img/LOGOSIS.png" alt="logo" />
+          <div>
+            <img src="img/LOGOSIS.png" alt="logo" width="170" />
           </div>
         </div>
         <div className="contentAwareness">

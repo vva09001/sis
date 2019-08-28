@@ -51,9 +51,9 @@ class ProcessParticipation extends Component {
         />
         <Layout
           title={t('Kiểm tra quá trình tham gia BHXH của bạn')}
-          btnName={t('ignore')}
-          _onClick={() => history.goBack()}
-          btnColor="light"
+          btnName={t('continue')}
+          _onClick={() => history.push('/healthcheck')}
+          btnColor="primary"
         >
           <div className="content-options">
             <Buttons number={1}>{t('Quá trình tham gia BHXH (thời gian)')}</Buttons>

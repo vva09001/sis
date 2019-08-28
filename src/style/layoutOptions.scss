@@ -261,12 +261,92 @@
     a {
       text-decoration: none;
     }
+    .btn-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ion-button {
+        --border-radius: 15px;
+        width: 188px;
+        height: 39px;
+      }
+    }
+    .content-position {
+      background: #f2f1f0cb;
+      position: relative;
+      top: -45px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      .health-title {
+        // margin-top: 10px;
+        border-bottom: 1px solid #9b9b9a;
+        padding: 10px;
+        box-shadow: 0 8px 6px -6px #9b9b9a;
+        p {
+          text-align: center;
+        }
+        .no-mt {
+          margin-top: 0px;
+        }
+        .no-mb {
+          margin-bottom: 0px;
+        }
+        .text-blue {
+          color: #12b3e9;
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+      .health-content {
+        border-bottom: 1px solid #9b9b9a;
+        padding: 10px;
+        box-shadow: 0 8px 6px -6px #9b9b9a;
+        span {
+          color: #f7931e;
+        }
+      }
+      .health-footter {
+        padding: 10px;
+      }
+      .text-blue {
+        color: #12b3e9;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+      }
+      .health-banner {
+        margin-top: 40px;
+      }
+      .no-mt {
+        margin-top: 0px;
+      }
+      .no-mb {
+        margin-bottom: 0px;
+      }
+      .mt-40 {
+        margin-top: 40px;
+      }
+    }
     .content-options {
       background: #f2f1f0cb;
       padding: 10px;
       .icon-arrow {
         padding: 0;
         margin: 0 5px;
+      }
+      .btn-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ion-button {
+          --background: linear-gradient(to right, #28acd8, #22b47a);
+          --background-activated: #2ac5bb;
+          --border-radius: 20px;
+          width: 204px;
+          height: 50px;
+          // text-align: center;
+          font-size: 11px;
+        }
       }
       .tittle {
         font-size: 12px;

@@ -21,8 +21,12 @@ class AntenatalCareBenefits extends Component {
           <Buttons number={1} click={() => history.push('/pregnancyexaminationmanagement')}>
             {t('Tìm hiểu quyền lợi')}
           </Buttons>
-          <Buttons number={2}>{t('Kiểm tra quyền lợi')}</Buttons>
-          <Buttons number={3}>{t('Đăng kí dịch vụ')}</Buttons>
+          <Buttons number={2} click={() => history.push('/search_pregnancyexamination')}>
+            {t('Kiểm tra quyền lợi')}
+          </Buttons>
+          <Buttons number={3} click={() => history.push('/pregnancyexamination')}>
+            {t('Đăng kí dịch vụ')}
+          </Buttons>
         </div>
       </Layout>
     );

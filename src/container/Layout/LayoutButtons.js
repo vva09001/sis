@@ -29,9 +29,11 @@ const LayoutOptions = props => {
         <div className="content">
           {props.children}
           <div className="btn--black">
-            <IonButton onClick={props._onClick} color={props.btnColor}>
-              {props.btnName}
-            </IonButton>
+            {props.btnName && (
+              <IonButton onClick={props._onClick} color={props.btnColor}>
+                {props.btnName}
+              </IonButton>
+            )}
           </div>
         </div>
       </IonContent>

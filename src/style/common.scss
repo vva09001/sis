@@ -149,7 +149,6 @@
   .btnDay {
     border: 1px solid #797777;
     border-radius: 20px;
-    width: 30%;
     ion-item {
       --border-radius: 20px;
       --border-style: solid;
@@ -235,6 +234,7 @@
     left: 20%;
     ion-button {
       width: 60%;
+      --border-radius: 15px;
     }
   }
   .table {
@@ -243,10 +243,9 @@
     z-index: 999;
     background: #ffffffa8;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
+    padding: 10px;
+    overflow: scroll;
+    padding-bottom: 50px;
     table {
       border-collapse: collapse;
       width: 100%;
