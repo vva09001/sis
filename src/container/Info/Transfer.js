@@ -43,7 +43,7 @@ class Transfer extends Component {
         </div>
         <PopupSuccess
           isOpen={this.state.showAlert}
-          setShowAlert={this.closeAlert}
+          setShowAlert={() => this.setState({ showAlert: false })}
           message="Toàn bộ tài liệu và hướng dẫn đã được Ví soạn sẵn và gửi vào địa chỉ mail/zalo của bạn"
         />
       </Layout>
