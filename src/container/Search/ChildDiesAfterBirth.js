@@ -1,4 +1,4 @@
-// con chết sau sinh
+//con chết sau sinh (sinh con thông thường)
 import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
@@ -13,7 +13,7 @@ class ChildDiesAfterBirth extends Component {
       <Layout
         cardName="contentBoder"
         title={t(
-          'Người tra cứu quyền lợi này là Nam giới, đang tra cứu quyền lợi BHXH trên chính App cài đặt trên điện thoại của mình'
+          'Trường hợp con chết sau khi sinh, (mà trước đó nghỉ sinh sớm hơn theo trường hợp sinh con thông thường)'
         )}
         btnColor="primary"
         to="homepage"

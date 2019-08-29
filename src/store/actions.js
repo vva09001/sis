@@ -1,3 +1,4 @@
 import userActions from '../store/user/actions';
+import maternityActions from '../store/maternity/actions';
 
-export { userActions };
+export { userActions, maternityActions };

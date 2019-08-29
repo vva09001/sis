@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from 'container/Common/Header';
+import Loading from 'components/Loading';
 import { IonContent, IonButton, IonCardTitle } from '@ionic/react';
 
 const Layout = props => {
@@ -14,7 +15,7 @@ const Layout = props => {
             {props.children}
             <div className="btn--black">
               <IonButton color={props.btnColor} onClick={props._onClick}>
-                {props.btnName}
+                {props.loading ? <Loading /> : props.btnName}
               </IonButton>
             </div>
           </div>
@@ -34,11 +35,13 @@ Layout.propTypes = {
   btnColor: PropTypes.string,
   btnName: PropTypes.string,
   content: PropTypes.string,
-  _onClick: PropTypes.func
+  _onClick: PropTypes.func,
+  loading: PropTypes.bool
 };
 Layout.defaultProps = {
   contentTitle: null,
-  cardName: 'content'
+  cardName: 'content',
+  loading: false
 };
 
 export default Layout;

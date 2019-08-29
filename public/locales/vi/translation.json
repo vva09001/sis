@@ -359,5 +359,18 @@
   "Kiểm tra và tính toán quyền lợi BHXH được hưởng khi thân nhân tử tuất": "Kiểm tra và tính toán quyền lợi BHXH được hưởng khi thân nhân tử tuất",
   "Cảm ơn": "Cám ơn bạn đã quan tâm đến dịch vụ tiếp theo của Ví",
   "với dịch vụ": "Với dịch vụ thủ tục này, Ví sẽ gửi đến địa chỉ mail, hoặc zalo của bạn các thủ tục BHXH đã soạn sẵn (đơn, công văn, mẫu biểu…) cùng một bản hướng dẫn chi tiết các bước bạn yêu cầu và giám sát cán bộ phụ trách BHXH giải quyết quyền lợi cho bạn",
-  "phí dịch vụ": "Phí dịch vụ hỗ trợ thủ tục này là"
+  "phí dịch vụ": "Phí dịch vụ hỗ trợ thủ tục này là",
+  "Thời điểm bạn khám thai": "Thời điểm bạn khám thai trước khi sinh, phát hiện thai chết lưu",
+  "Số lượng thai chết": "Số lượng thai chết lưu phát hiện khi khám",
+  "Trường hợp con chết sau khi sinh, (mà trước đó nghỉ sinh sớm hơn theo trường hợp sinh con thông thường)": "Trường hợp con chết sau khi sinh, (mà trước đó nghỉ sinh sớm hơn theo trường hợp sinh con thông thường)",
+  "vì đây là trường hợp đặc biệt": "Vì đây là trường hợp đặc biệt, chỉ có chồng LĐ nữ hoặc người thân mới có thể kiểm tra và nhận quyền lợi được khi sự việc sảy ra, nên Ví đã để tiện ích kiểm tra, tính toán quyền lợi này trong phần tiện ích BHXH - TỬ TUẤT",
+  "tuy nhiên": "Tuy nhiên Ví sẽ cung cấp thông tin quyền lợi theo quy định để LĐ nữ hiểu biết.",
+  "1.": "1. Trường hợp 1: Cha không tham ra BHXH, Mẹ có tham ra, thì:",
+  "thời gian nghỉ làm việc": "+ Thời gian nghỉ làm việc để chăm con của Cha(người thân) là thời gian nghỉ thai sản còn lại của Mẹ",
+  "mức tiền hưởng": "+ Mức tiền hưởng: Mức bình quân tiền lương tháng đóng BHXH 6 tháng của  Mẹ",
+  "2.": "2. Trường hợp 2: Cha có tham ra BHXH, Mẹ có tham ra, thì:",
+  "mức tiền hưởng của cha": "+ Mức tiền hưởng: Mức bình quân tiền lương tháng đóng BHXH 6 tháng của  Cha",
+  "3.": "3. Trường hợp 3: Cha không tham ra BHXH, Mẹ có tham ra nhưng",
+  "4.": "4. Trường hợp 4: Cha có  tham ra BHXH, Mẹ có tham ra nhưng không đủ điều kiện, thì:",
+  "5.": "5. Trường hợp 5: Cha có  tham ra BHXH, Mẹ  không  tham ra , thì:"
 }

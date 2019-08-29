@@ -21,7 +21,9 @@ class Mflmbenefits extends Component {
           <Buttons number={1} click={() => history.push('/antenatalcarebenefits')}>
             {t('Quyền lợi hưởng BHXH - Khám thai')}
           </Buttons>
-          <Buttons number={2}>{t('Quyền lợi hưởng BHXH – Sinh con')}</Buttons>
+          <Buttons number={2} click={() => history.push('/maternitybenefits')}>
+            {t('Quyền lợi hưởng BHXH – Sinh con')}
+          </Buttons>
           <Buttons number={3}>{t('Quyền lợi hưởng BHXH – Con nuôi')}</Buttons>
           <Buttons number={4}>
             {t('Quyền lợi hưởng BHXH – Sảy thai, nạo hút thai, thai chết lưu, phá thai bệnh lý.')}

@@ -82,12 +82,14 @@ import SpecialCase from './Search/SpecialCase';
 import NormalChildbirth from './Search/NormalChildbirth';
 import LeaveEarlierThanIndicated from './Search/LeaveEarlierThanIndicated';
 import OwnerOfTheWallet from './WalletInformation/OwnerOfTheWallet';
+import StillBirth from './Search/StillBirth';
 import ImportantWork from './WalletInformation/ImportantWork';
 import HealthCheck from './HealthCheck/HealthCheck';
 import HealthCheckResult from './HealthCheck/HealthCheckResult';
 import Menu from './Menu';
 import ServiceCharge from './Info/ServiceCharge';
 import Transfer from './Info/Transfer';
+import MotherDiedAfterChildbirth from './Info/MotherDiedAfterChildbirth';
 
 const AppRouter = () => {
   return (
@@ -176,6 +178,7 @@ const AppRouter = () => {
           <Route path="/search_specialcase" component={SpecialCase} />
           <Route path="/search_normalchildbirth" component={NormalChildbirth} />
           <Route path="/search_leaveearlierthanindicated" component={LeaveEarlierThanIndicated} />
+          <Route path="/search_stillbirth" component={StillBirth} />
 
           <Route path="/owneroftheWallet" component={OwnerOfTheWallet} />
           <Route path="/importantwork" component={ImportantWork} />
@@ -184,6 +187,7 @@ const AppRouter = () => {
           <Route path="/menu" component={Menu} />
           <Route path="/servicecharge" component={ServiceCharge} />
           <Route path="/transfer" component={Transfer} />
+          <Route path="/motherdieddfterchildbirth" component={MotherDiedAfterChildbirth} />
         </Switch>
       </RootContainer>
     </Router>

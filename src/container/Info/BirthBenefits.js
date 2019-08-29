@@ -3,17 +3,18 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 
-class Childbirth extends Component {
+class BirthBenefits extends Component {
   render() {
     const { t } = this.props;
     return (
       <Layout
         cardName="contentBoder"
         title={t('Quyền lợi hưởng BHXH – Sinh con')}
-        btnColor="primary"
-        to="/search_noParticipation"
-        btnName={t('continue')}
+        btnColor="light"
+        _onClick={() => history.goBack()}
+        btnName={t('back')}
       >
         <div className="cardInfo">
           <p>{t('quy định thời gian nghỉ sinh con')}</p>
@@ -30,7 +31,7 @@ class Childbirth extends Component {
     );
   }
 }
-Childbirth.propTypes = {
+BirthBenefits.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(Childbirth);
+export default withTranslation()(BirthBenefits);
