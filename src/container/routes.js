@@ -90,6 +90,33 @@ import Menu from './Menu';
 import ServiceCharge from './Info/ServiceCharge';
 import Transfer from './Info/Transfer';
 import MotherDiedAfterChildbirth from './Info/MotherDiedAfterChildbirth';
+import AdoptedChild from './Options/AdoptedChild';
+import ManagerMiscarriage from './Options/Miscarriage';
+import ManagerContraception from './Options/Contraception';
+import MangagerSurrogacy from './Options/Surrogacy';
+import SurrogateMother from './Options/SurrogateMother';
+import ThanksSurrogacy from './Options/ThanksSurrogacy';
+import SickOption from './Sick/Option/index';
+import SickInterest from './Sick/Option/Interest';
+import SickShortDay from './Sick/Info/ShortDay';
+import SickLongDay from './Sick/Info/LongDay';
+import AfterSick from './Sick/Info/AfterSick';
+import SickChildren from './Sick/Info/SickChildren';
+import ManagerSearchSick from './Sick/Option/Search';
+import SearchSickShortDay from './Sick/Search/ShortDay';
+import SearchSickLongDay from './Sick/Search/LongDay';
+import SearchSickRecuperate from './Sick/Search/Recuperate';
+import SearchSickChildren from './Sick/Search/SickChildren';
+import SickRegister from './Sick/Register';
+import OccupationalDiseaseOption from './OccupationalDisease/Option';
+import OccapationalDiseaseInterest from './OccupationalDisease/Option/Interest';
+import LaborAccident from './OccupationalDisease/Info/LaborAccident';
+import Sick from './OccupationalDisease/Info/Sick';
+import AfterTheAccident from './OccupationalDisease/Info/AfterTheAccident';
+import Help from './OccupationalDisease/Info/Help';
+import Allowance from './OccupationalDisease/Info/Allowance';
+import SearchOccupationalDisease from './OccupationalDisease/Search';
+import Accident from './OccupationalDisease/Search/Accident';
 
 const AppRouter = () => {
   return (
@@ -188,6 +215,37 @@ const AppRouter = () => {
           <Route path="/servicecharge" component={ServiceCharge} />
           <Route path="/transfer" component={Transfer} />
           <Route path="/motherdieddfterchildbirth" component={MotherDiedAfterChildbirth} />
+          <Route path="/adoptedchild" component={AdoptedChild} />
+          <Route path="/managermiscarriage" component={ManagerMiscarriage} />
+          <Route path="/contraception" component={ManagerContraception} />
+          <Route path="/mangagersurrogacy" component={MangagerSurrogacy} />
+          <Route path="/surrogatemother" component={SurrogateMother} />
+          <Route path="/thankssurrogacy" component={ThanksSurrogacy} />
+
+          {/* ốm đau */}
+          <Route path="/sickoption" component={SickOption} />
+          <Route path="/sickinterest" component={SickInterest} />
+          <Route path="/managersearchsick" component={ManagerSearchSick} />
+          <Route path="/sickshortday" component={SickShortDay} />
+          <Route path="/sicklongDay" component={SickLongDay} />
+          <Route path="/aftersick" component={AfterSick} />
+          <Route path="/sickchildren" component={SickChildren} />
+          <Route path="/search_sickshortday" component={SearchSickShortDay} />
+          <Route path="/search_sicklongday" component={SearchSickLongDay} />
+          <Route path="/search_sickrecuperate" component={SearchSickRecuperate} />
+          <Route path="/search_sickchildren" component={SearchSickChildren} />
+          <Route path="/sickregister" component={SickRegister} />
+
+          {/* bệnh nghề nghiệp */}
+          <Route path="/occupationaldiseaseoption" component={OccupationalDiseaseOption} />
+          <Route path="/occapationaldiseaseinterest" component={OccapationalDiseaseInterest} />
+          <Route path="/laboraccident" component={LaborAccident} />
+          <Route path="/occupationaldiseasesick" component={Sick} />
+          <Route path="/aftertheaccident" component={AfterTheAccident} />
+          <Route path="/help" component={Help} />
+          <Route path="/allowance" component={Allowance} />
+          <Route path="/searchoccupationaldisease" component={SearchOccupationalDisease} />
+          <Route path="/search_accident" component={Accident} />
         </Switch>
       </RootContainer>
     </Router>

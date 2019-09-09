@@ -4,10 +4,94 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { ButtonNumber, ButtonDate, CheckBook } from 'components/common';
-import { withTranslation } from 'react-i18next';
+import { PopupSuccess } from 'components/common';
+import moment from 'moment';
 import PropTypes from 'prop-types';
+import { childbirthActions } from '../../store/actions';
+import { withTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
 
 class LeaveEarlierThanIndicated extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      startDay: '',
+      startMonth: '',
+      startYear: '',
+      birthDay: '',
+      birthMonth: '',
+      birthYear: '',
+      endDay: '',
+      endMonth: '',
+      endYear: '',
+      qty: '',
+      loading: false,
+      mess: '',
+      show: false
+    };
+  }
+  send = () => {
+    const {
+      startDay,
+      startMonth,
+      startYear,
+      birthDay,
+      birthMonth,
+      birthYear,
+      endDay,
+      endMonth,
+      endYear,
+      qty
+    } = this.state;
+
+    if (
+      startDay === '' ||
+      startMonth === '' ||
+      startYear === '' ||
+      birthDay === '' ||
+      birthMonth === '' ||
+      birthYear === '' ||
+      endDay === '' ||
+      endMonth === '' ||
+      endYear === '' ||
+      qty === ''
+    ) {
+      this.setState({ mess: 'Các trường là bắt buộc không được để trống' });
+      return;
+    }
+    this.setState({ loading: true, mess: '' });
+    const params = {
+      startDate: {
+        day: startDay,
+        month: startMonth,
+        year: startYear
+      },
+      birthDate: {
+        day: birthDay,
+        month: birthMonth,
+        year: birthYear
+      },
+      endDate: {
+        day: endDay,
+        month: endMonth,
+        year: endYear
+      },
+      qty: qty
+    };
+    this.props.check(params, this.success, this.fail);
+  };
+  success = () => {
+    this.setState({
+      loading: false,
+      show: true
+    });
+  };
+  fail = mess => {
+    this.setState({
+      loading: false,
+      mess: mess
+    });
+  };
   render() {
     const { t } = this.props;
     return (
@@ -17,7 +101,8 @@ class LeaveEarlierThanIndicated extends Component {
         )}
         cardName="contentBoder"
         btnColor="primary"
-        to="/search_insbenefit"
+        _onClick={this.send}
+        loading={this.state.loading}
         btnName={t('finish')}
       >
         <div className="cardInfo">
@@ -29,19 +114,31 @@ class LeaveEarlierThanIndicated extends Component {
           <div className="form">
             <div>
               <p>{t('thời điểm bắt đầu nghỉ')}</p>
-              <ButtonDate />
+              <ButtonDate
+                pickDay={e => this.setState({ startDay: moment(e.target.value).format('D') })}
+                pickMonth={e => this.setState({ startMonth: moment(e.target.value).format('M') })}
+                pickYear={e => this.setState({ startYear: moment(e.target.value).format('YYYY') })}
+              />
             </div>
             <div className="numberChildren">
               <p>{t('Thời điểm bạn sinh con')}</p>
-              <ButtonDate />
+              <ButtonDate
+                pickDay={e => this.setState({ birthDay: moment(e.target.value).format('D') })}
+                pickMonth={e => this.setState({ birthMonth: moment(e.target.value).format('M') })}
+                pickYear={e => this.setState({ birthYear: moment(e.target.value).format('YYYY') })}
+              />
             </div>
             <div>
               <p>{t('Thời điểm cuối cùng nghỉ chế độ sinh con')}</p>
-              <ButtonDate />
+              <ButtonDate
+                pickDay={e => this.setState({ endDay: moment(e.target.value).format('D') })}
+                pickMonth={e => this.setState({ endMonth: moment(e.target.value).format('M') })}
+                pickYear={e => this.setState({ endYear: moment(e.target.value).format('YYYY') })}
+              />
             </div>
             <div className="numberChildren">
               <p>{t('Số lượng con khi sinh')}</p>
-              <ButtonNumber />
+              <ButtonNumber changeNumber={e => this.setState({ qty: e.target.value })} />
             </div>
             <div className="numberChildren">
               <p>{t('Số lượng con còn sống')}</p>
@@ -56,13 +153,74 @@ class LeaveEarlierThanIndicated extends Component {
               <CheckBook labelName="Dưới 2 tháng tuổi" />
               <CheckBook labelName="Trong khoảng thời gian từ 2 tháng đến 6 tháng" />
             </div>
+            <div className="mess-error">
+              <p>{this.state.mess}</p>
+            </div>
           </div>
         </div>
+        <PopupSuccess
+          isOpen={this.state.show}
+          setShowAlert={() => this.setState({ show: false })}
+          message={
+            '<div class="text-bule">' +
+            'Tổng số tiền được nhận:' +
+            '<span class="momney">' +
+            parseInt(this.props.data.tongtien) +
+            ' vnđ' +
+            '</span>' +
+            '</div>' +
+            '<div>' +
+            ' Trong đó : tiền thai sản:' +
+            '<span class="momney">' +
+            parseInt(this.props.data.tienthaisan) +
+            ' VNĐ' +
+            '</span>' +
+            '</div>' +
+            '<div>' +
+            'tiền trợ cấp: ' +
+            '<span class="momney">' +
+            parseInt(this.props.data.tientrocap) +
+            ' VNĐ' +
+            '</span>' +
+            '</div>' +
+            '<div class="text-bule">' +
+            'Thời gian nghỉ' +
+            '</div' +
+            '<div>' +
+            'Theo quy định BHXH :' +
+            '</div>' +
+            '<div>' +
+            'Con dưới 02 tháng tuổi bị chết thị mẹ được nghỉ việc 04 tháng tính từ ngày sinh con' +
+            '</div>' +
+            '<div>' +
+            'Con dưới 02 tháng tuổi bị chết thị mẹ được nghỉ việc 04 tháng tính từ ngày sinh con' +
+            '</div>' +
+            '<div>' +
+            'Cả hai trường hợp trên theo quy định thời gian nghỉ việc không vượt quá 06 tháng (bao gồm tính cả các tháng nghỉ việc trước khi sinh)' +
+            '</div>'
+          }
+        />
       </Layout>
     );
   }
 }
 LeaveEarlierThanIndicated.propTypes = {
-  t: PropTypes.func
+  t: PropTypes.func,
+  check: PropTypes.func,
+  data: PropTypes.object
 };
-export default withTranslation()(LeaveEarlierThanIndicated);
+
+const mapStateToProps = state => {
+  return {
+    data: state.childbirth.maternityLeave
+  };
+};
+
+const mapDispatchToProps = {
+  check: childbirthActions.maternityLeave
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withTranslation()(LeaveEarlierThanIndicated));

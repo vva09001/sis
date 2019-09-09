@@ -120,6 +120,45 @@
               font-weight: bold;
             }
           }
+          .checkbox {
+            display: flex;
+            p {
+              margin: 0;
+              color: black !important;
+            }
+            input {
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+          }
+          .input-sick {
+            ion-input {
+              --background: #fff;
+              border: 1px solid rgb(124, 124, 124);
+              border-radius: 15px;
+              width: 35%;
+              height: 30px;
+              outline: none;
+              --padding-start: 20px;
+            }
+          }
+          ion-select {
+            border: 1px solid rgb(124, 124, 124);
+            border-radius: 15px;
+            width: 35%;
+            height: 40px;
+            outline: none;
+            padding-left: 20px;
+            background: #fff;
+          }
+          ion-input {
+            --background: #fff;
+            border: 1px solid rgb(124, 124, 124);
+            border-radius: 15px;
+            height: 30px;
+            outline: none;
+            --padding-start: 20px;
+          }
           ion-list {
             margin: 0;
           }
@@ -212,6 +251,11 @@
           }
         }
       }
+    }
+  }
+  .SickLayout {
+    ion-content {
+      --background: url('../assets//img/sick.png') 0 0/100% no-repeat !important;
     }
   }
 }

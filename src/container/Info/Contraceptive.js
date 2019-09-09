@@ -4,7 +4,7 @@ import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
-class Childbirth extends Component {
+class Contraceptive extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -24,7 +24,7 @@ class Childbirth extends Component {
     );
   }
 }
-Childbirth.propTypes = {
+Contraceptive.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(Childbirth);
+export default withTranslation()(Contraceptive);

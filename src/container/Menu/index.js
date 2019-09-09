@@ -16,8 +16,10 @@ class Mflmbenefits extends Component {
           <Buttons number={1} click={() => history.push('/mbenefits')}>
             {t('Kiểm tra và tính toán quyền lợi BHXH thai sản')}
           </Buttons>
-          <Buttons number={2}>{t('Kiểm tra và tính toán quyền lợi BHXH ốm đau')}</Buttons>
-          <Buttons number={3}>
+          <Buttons number={2} click={() => history.push('/sickoption')}>
+            {t('Kiểm tra và tính toán quyền lợi BHXH ốm đau')}
+          </Buttons>
+          <Buttons number={3} click={() => history.push('/occupationaldiseaseoption')}>
             {t('Kiểm tra và tính toán quyền lợi BHXH tai nạn bệnh nghề nghiệp')}
           </Buttons>
           <Buttons number={4}>{t('Kiểm tra và tính toán quyền lợi Bảo Hiểm thất nghiệp')}</Buttons>

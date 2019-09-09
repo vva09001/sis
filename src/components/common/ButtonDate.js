@@ -1,15 +1,23 @@
 import React from 'react';
 import { IonItem, IonDatetime } from '@ionic/react';
-const ButtonDate = () => {
+import PropTypes from 'prop-types';
+
+const ButtonDate = props => {
   return (
     <div className="date-wapper">
       <IonItem>
-        <IonDatetime displayFormat="MM" placeholder="mm /" />
-        <IonDatetime displayFormat="DD" placeholder="dd /" />
-        <IonDatetime displayFormat="YY" placeholder="yy" />
+        <IonDatetime displayFormat="D" placeholder="dd /" onIonChange={props.pickDay} />
+        <IonDatetime displayFormat="M" placeholder="mm /" onIonChange={props.pickMonth} />
+        <IonDatetime displayFormat="YYYY" placeholder="yy" onIonChange={props.pickYear} />
       </IonItem>
     </div>
   );
+};
+
+ButtonDate.propTypes = {
+  pickMonth: PropTypes.func,
+  pickDay: PropTypes.func,
+  pickYear: PropTypes.func
 };
 
 export default ButtonDate;

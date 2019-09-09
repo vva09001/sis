@@ -24,16 +24,26 @@ class Mflmbenefits extends Component {
           <Buttons number={2} click={() => history.push('/maternitybenefits')}>
             {t('Quyền lợi hưởng BHXH – Sinh con')}
           </Buttons>
-          <Buttons number={3}>{t('Quyền lợi hưởng BHXH – Con nuôi')}</Buttons>
-          <Buttons number={4}>
+          <Buttons number={3} click={() => history.push('/adoptedchild')}>
+            {t('Quyền lợi hưởng BHXH – Con nuôi')}
+          </Buttons>
+          <Buttons number={4} click={() => history.push('/managermiscarriage')}>
             {t('Quyền lợi hưởng BHXH – Sảy thai, nạo hút thai, thai chết lưu, phá thai bệnh lý.')}
           </Buttons>
-          <Buttons number={5}>{t('Quyền lợi hưởng BHXH – Tránh thai, triệt sản')}</Buttons>
-          <Buttons number={6}>{t('Quyền lợi hưởng BHXH – Mang thai hộ')}</Buttons>
-          <Buttons number={7}>{t('Quyền lợi hưởng BHXH – Hồi phục sức khỏe sau sinh')}</Buttons>
+          <Buttons number={5} click={() => history.push('/contraception')}>
+            {t('Quyền lợi hưởng BHXH – Tránh thai, triệt sản')}
+          </Buttons>
+          <Buttons number={6} click={() => history.push('/mangagersurrogacy')}>
+            {t('Quyền lợi hưởng BHXH – Mang thai hộ')}
+          </Buttons>
+          <Buttons number={7} click={() => history.push('/rehabilitationbenefits')}>
+            {t('Quyền lợi hưởng BHXH – Hồi phục sức khỏe sau sinh')}
+          </Buttons>
+          {/* h25 */}
           <Buttons number={8}>
             {t('Quyền lợi của LĐ nữ đi làm trước khi hết thời hạn nghỉ thai sản theo quy định')}
           </Buttons>
+          <Buttons number={9}>{t('Quyền lợi hưởng BHXH - Nam giới vợ sinh con')}</Buttons>
         </div>
       </Layout>
     );

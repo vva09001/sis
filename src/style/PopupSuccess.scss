@@ -9,7 +9,7 @@
     }
   }
   .alert-message.sc-ion-alert-md {
-    font-size: 14px;
+    font-size: 13px;
     padding-top: 24px;
   }
   .alert-button-group.sc-ion-alert-md {
@@ -21,7 +21,7 @@
       width: 100%;
       max-width: 190px;
       .alert-button-inner.sc-ion-alert-md {
-        font-size: 14px;
+        font-size: 13px;
         justify-content: center;
       }
     }
@@ -37,3 +37,19 @@
   font-size: 12px;
   font-style: italic;
 }
+div {
+  text-align: left;
+  // margin: 5px 0;
+}
+.alert-input-group.sc-ion-alert-ios,
+.alert-message.sc-ion-alert-ios {
+  padding-left: unset;
+  padding-right: unset;
+  -webkit-padding-start: 10px;
+  padding-inline-start: 10px;
+  -webkit-padding-end: 10px;
+  padding-inline-end: 10px;
+}
+// p {
+//   margin: 0 5px;
+// }

@@ -25,7 +25,7 @@ const TablePayInsurance = props => {
 
                 {_.map(props.data, (item, index) => {
                   const tem = item[5].replace(/,/g, '.');
-                  total = total + parseFloat(tem);
+                  total = parseInt(total) + parseInt(tem);
                   return (
                     <tr key={index}>
                       <td> {item[0]}</td>

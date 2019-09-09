@@ -1,7 +1,10 @@
 import actions from './actions';
 
 const initialState = {
-  checkBenefits: {}
+  checkBenefits: {
+    thoidiem1: {},
+    thoidiem2: {}
+  }
 };
 
 const Maternity = (state = initialState, action) => {

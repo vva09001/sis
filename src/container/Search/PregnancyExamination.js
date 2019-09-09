@@ -157,7 +157,7 @@ class PregnancyExamination extends Component {
           message={
             '<p class="text-bule">Kết quả quyền lợi BHXH - Khám thai </br> được hưởng của bạn là<p>' +
             '<p class="momney">' +
-            parseFloat(this.props.data.value1) +
+            parseInt(this.props.data.thoidiem1.tongtien) +
             ' VNĐ' +
             '</p>' +
             '<p class="note">(lưu ý: các ngày nghỉ làm việc đi khám của bạn vẫn được DN(đợn vị) trả đủ lương 100% theo luật lao động)</p>'

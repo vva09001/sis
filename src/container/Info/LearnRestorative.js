@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-class WifeParticipatesInInsurance extends Component {
+import history from 'utils/history';
+
+class LearnRestorative extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -11,7 +13,7 @@ class WifeParticipatesInInsurance extends Component {
         cardName="contentBoder"
         title="Quyền lợi hưởng BHXH – Phục dưỡng phục hồi sức khỏe sau thai sản"
         btnColor="light"
-        to="/search_noParticipation"
+        _onClick={() => history.goBack()}
         btnName={t('ignore')}
       >
         <div className="cardInfo">
@@ -42,7 +44,7 @@ class WifeParticipatesInInsurance extends Component {
   }
 }
 
-WifeParticipatesInInsurance.propTypes = {
+LearnRestorative.propTypes = {
   t: PropTypes.func
 };
-export default withTranslation()(WifeParticipatesInInsurance);
+export default withTranslation()(LearnRestorative);
