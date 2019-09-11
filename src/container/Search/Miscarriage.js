@@ -7,6 +7,7 @@ import { ButtonDate, ButtonNumber } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { PopupSuccess } from 'components/common';
+import { currency } from 'utils/currency';
 import moment from 'moment';
 import { miscarriageActions } from '../../store/actions';
 import { connect } from 'react-redux';
@@ -122,7 +123,7 @@ class Miscarriage extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận:' +
             '<span class="momney">' +
-            parseInt(this.props.data.tiennhanduoc) +
+            currency(parseInt(this.props.data.tiennhanduoc)) +
             ' vnđ' +
             '</span>' +
             '</div>' +

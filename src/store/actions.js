@@ -8,6 +8,7 @@ import surrogacyActions from './surrogacy/actions';
 import maintenanceActions from './maintenance/actions';
 import sickActions from './sick/actions';
 import occupationalDisease from './occupationalDisease/actions';
+import unemployedActions from './unemployed/actions';
 
 export {
   userActions,
@@ -19,5 +20,6 @@ export {
   surrogacyActions,
   maintenanceActions,
   sickActions,
-  occupationalDisease
+  occupationalDisease,
+  unemployedActions
 };

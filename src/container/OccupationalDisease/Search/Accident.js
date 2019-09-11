@@ -6,6 +6,7 @@ import ContentTitle from 'container/Common/ContentTitle';
 import { IonInput } from '@ionic/react';
 import { ButtonDate } from 'components/common';
 import { PopupSuccess } from 'components/common';
+import { currency } from 'utils/currency';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import { occupationalDisease } from '../../../store/actions';
@@ -69,18 +70,18 @@ class Accident extends Component {
     });
   };
   checkBox = e => {
-    if (e.target.value === '1' && e.target.checked) {
+    if (e.target.value === 'true' && e.target.checked) {
       this.setState({
         check2: false,
         check1: !this.state.check1,
-        type: 1
+        type: true
       });
     }
-    if (e.target.value === '2' && e.target.checked) {
+    if (e.target.value === 'false' && e.target.checked) {
       this.setState({
         check1: false,
         check2: !this.state.check2,
-        type: 2
+        type: false
       });
     }
   };
@@ -115,7 +116,7 @@ class Accident extends Component {
               <div className="checkbox">
                 <input
                   type="checkBox"
-                  value={1}
+                  value={true}
                   onChange={e => this.checkBox(e)}
                   checked={this.state.check1}
                 />
@@ -124,7 +125,7 @@ class Accident extends Component {
               <div className="checkbox">
                 <input
                   type="checkBox"
-                  value={2}
+                  value={false}
                   onChange={e => this.checkBox(e)}
                   checked={this.state.check2}
                 />
@@ -139,6 +140,7 @@ class Accident extends Component {
               </p>
               <IonInput
                 placeholder="Tiền"
+                type="number"
                 onIonChange={e => this.setState({ money: parseInt(e.target.value) })}
               />
             </div>
@@ -150,6 +152,7 @@ class Accident extends Component {
               </p>
               <IonInput
                 placeholder="Tỷ lệ"
+                type="number"
                 onIonChange={e => this.setState({ percent: parseInt(e.target.value) })}
               />
             </div>
@@ -158,30 +161,96 @@ class Accident extends Component {
             </div>
           </div>
         </div>
-        <PopupSuccess
-          isOpen={this.state.show}
-          setShowAlert={() => this.setState({ show: false })}
-          message={
-            '<div class="text-bule">' +
-            'Tổng số tiền được nhận: ' +
-            '<span class="momney">' +
-            parseInt(this.props.data.tiennhanduoc) +
-            ' vnđ' +
-            '</span>' +
-            '</div>' +
-            '<div class="text-bule">' +
-            'Sự liên quan thời gian: ' +
-            '</div>' +
-            '<div>' +
-            'Thời gian Bạn tham gia đóng BHXH ' +
-            '<span class="momney">' +
-            parseInt(this.props.data.sothangdongbaohiem) +
-            ' tháng' +
-            '</span>' +
-            '</div>' +
-            '<div>'
-          }
-        />
+        {this.state.type && (
+          <PopupSuccess
+            isOpen={this.state.show}
+            setShowAlert={() => this.setState({ show: false })}
+            message={
+              '<div>' +
+              'Trường hợp tai nạn lao động của bạn là không phải do lỗi của bạn, nên bạn được hưởng đầy đủ quyền lợi theo quy định' +
+              '</div>' +
+              '<div class="text-bule">' +
+              'Tổng số tiền được nhận từ phía BHXH chi trả: ' +
+              '<span class="momney">' +
+              currency(this.props.data.baohiemchitra) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'Trong đó : Trợ cấp hàng tháng ' +
+              '<span class="momney">' +
+              currency(this.props.data.trocaphangthang) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'Trợ cấp một lần' +
+              '<span class="momney">' +
+              currency(this.props.data.trocap1lan) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div class="text-bule">' +
+              'Tổng số tiền trợ cấp DN (đơn vị) bạn có trách nghiệm chi trả cho bạn ' +
+              '<span class="momney">' +
+              currency(this.props.data.doannghiechitra) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'Ngoài số tiền trợ cấp này, DN đơn vị bạn có trách nghiệm thanh toán đầy đủ tiền lươn cho bạn trong thời gian điều trị, cũng như những chi phí điều trị không nằm trong danh mục chi trả của BHYT' +
+              '</div>'
+            }
+          />
+        )}
+
+        {!this.state.type && (
+          <PopupSuccess
+            isOpen={this.state.show}
+            setShowAlert={() => this.setState({ show: false })}
+            message={
+              '<div>' +
+              'Trường hợp tai nạn lao động của bạn do lỗi của bạn, thì quy định việc hưởng quyền lợi như sau' +
+              '</div>' +
+              '<div>' +
+              'Bạn vẫn nhận đầy đủ quyền lợi BHXH chi trả theo quy định.' +
+              '</div>' +
+              '<div class="text-bule">' +
+              'Tổng số tiền là: ' +
+              '<span class="momney">' +
+              currency(this.props.data.baohiemchitra) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'Trong đó : Trợ cấp hàng tháng' +
+              '<span class="momney">' +
+              currency(this.props.data.trocaphangthang) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'Trợ cấp một lần' +
+              '<span class="momney">' +
+              currency(this.props.data.trocap1lan) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'DN (đơn vị bạn) chỉ có trách nghiệm thanh toán số tiền trợ cấp tối thiểu bằng 30% mức trợ cấp đã đủ của trường hợp tai nạn lao động không phải do lỗi của bạn.' +
+              '<span class="text-bule">' +
+              'Số tiền là: ' +
+              '</span>' +
+              '<span class="momney">' +
+              currency(this.props.data.doannghiechitra) +
+              ' vnđ' +
+              '</span>' +
+              '</div>' +
+              '<div>' +
+              'Ngoài số tiền trợ cấp này, DN(đơn vị bạn) không có trách nghiệm bồi thường gì nữa cho bạn. '
+            }
+          />
+        )}
       </Layout>
     );
   }

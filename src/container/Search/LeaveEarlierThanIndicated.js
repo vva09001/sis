@@ -6,6 +6,7 @@ import ContentTitle from 'container/Common/ContentTitle';
 import { ButtonNumber, ButtonDate, CheckBook } from 'components/common';
 import { PopupSuccess } from 'components/common';
 import moment from 'moment';
+import { currency } from 'utils/currency';
 import PropTypes from 'prop-types';
 import { childbirthActions } from '../../store/actions';
 import { withTranslation } from 'react-i18next';
@@ -165,21 +166,21 @@ class LeaveEarlierThanIndicated extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận:' +
             '<span class="momney">' +
-            parseInt(this.props.data.tongtien) +
+            currency(parseInt(this.props.data.tongtien)) +
             ' vnđ' +
             '</span>' +
             '</div>' +
             '<div>' +
             ' Trong đó : tiền thai sản:' +
             '<span class="momney">' +
-            parseInt(this.props.data.tienthaisan) +
+            currency(parseInt(this.props.data.tienthaisan)) +
             ' VNĐ' +
             '</span>' +
             '</div>' +
             '<div>' +
             'tiền trợ cấp: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tientrocap) +
+            currency(parseInt(this.props.data.tientrocap)) +
             ' VNĐ' +
             '</span>' +
             '</div>' +

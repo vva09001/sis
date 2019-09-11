@@ -4,7 +4,9 @@ import {
   specialBirth,
   stillBirth,
   childDiedAfterBirth,
-  maternityLeave
+  maternityLeave,
+  menSearchParticipation,
+  menSearchNoParticipation
 } from '../../services/childbirth';
 import { id } from '../selectors';
 import { put, all, takeLatest, select, fork } from 'redux-saga/effects';
@@ -98,12 +100,50 @@ export function* maternityLeaveSaga() {
   });
 }
 
+export function* menSearchParticipationSaga() {
+  yield takeLatest(actions.MEN_SEARCH_PARTICIPATION_REQUEST, function*(data) {
+    const { params, success, fail } = data;
+    try {
+      const userid = yield select(id);
+      const res = yield menSearchParticipation(params, userid);
+      if (res.status === 200) {
+        yield put({ type: actions.MEN_SEARCH_PARTICIPATION_SUCCESS, data: res.data });
+        yield success();
+      } else {
+        yield fail(res.data.message);
+      }
+    } catch (error) {
+      yield fail('Không thể kết nối đến server');
+    }
+  });
+}
+
+export function* menSearchNoParticipationSaga() {
+  yield takeLatest(actions.MEN_SEARCH_NO_PARTICIPATION_REQUEST, function*(data) {
+    const { params, success, fail } = data;
+    try {
+      const userid = yield select(id);
+      const res = yield menSearchNoParticipation(params, userid);
+      if (res.status === 200) {
+        yield put({ type: actions.MEN_SEARCH_NO_PARTICIPATION_SUCCESS, data: res.data });
+        yield success();
+      } else {
+        yield fail(res.data.message);
+      }
+    } catch (error) {
+      yield fail('Không thể kết nối đến server');
+    }
+  });
+}
+
 export default function* rootSaga() {
   yield all([
     fork(normalBirthSaga),
     fork(specialBirthSaga),
     fork(stillBirthSaga),
     fork(childDiedAfterBirthSaga),
-    fork(maternityLeaveSaga)
+    fork(maternityLeaveSaga),
+    fork(menSearchParticipationSaga),
+    fork(menSearchNoParticipationSaga)
   ]);
 }

@@ -37,6 +37,33 @@
           .text-primary {
             color: #0071bc;
           }
+          .note {
+            font-style: italic;
+          }
+          .btn-submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ion-button {
+              font-weight: bold;
+              --border-radius: 15px;
+            }
+          }
+          .btn-comfirm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ion-button {
+              width: 60%;
+              height: 38.88px;
+              max-height: 38.88px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              font-weight: bold;
+              --border-radius: 15px;
+            }
+          }
         }
         .card-border {
           border-bottom: 1px solid #9b9b9a;
@@ -203,6 +230,9 @@
             display: flex;
             align-items: center;
             font-weight: bold;
+            ion-select {
+              margin-left: 10px;
+            }
           }
           .input {
             margin-top: 5px;

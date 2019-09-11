@@ -117,6 +117,25 @@ import Help from './OccupationalDisease/Info/Help';
 import Allowance from './OccupationalDisease/Info/Allowance';
 import SearchOccupationalDisease from './OccupationalDisease/Search';
 import Accident from './OccupationalDisease/Search/Accident';
+import SearchSick from './OccupationalDisease/Search/Sick';
+import Rehibilitate from './OccupationalDisease/Search/Rehibilitate';
+import SearchHelp from './OccupationalDisease/Search/Help';
+import SearchAllowance from './OccupationalDisease/Search/Allowance';
+import ODRegister from './OccupationalDisease/Register';
+import RegisterService from './OccupationalDisease/Register/RegisterService';
+import Unemployed from './Unemployed/Options';
+import UnemployedInterest from './Unemployed/Options/Interest';
+import InfoUnemployed from './Unemployed/Info/Unemployed';
+import Severance from './Unemployed/Info/Severance';
+import LostMyJob from './Unemployed/Info/LostMyJob';
+import UnemployedSearch from './Unemployed/Options/Search';
+import SearchUnemployed from './Unemployed/Search/Unemployed';
+import SearchSeverance from './Unemployed/Search/Severance';
+import OPLostMyJob from './Unemployed/Options/LostMyJob';
+import SearchLostMyJob from './Unemployed/Search/LostMyJob';
+import SearchTemporary from './Unemployed/Search/Temporary';
+import MenChildren from './MenChildren/Options';
+import MenNoParticipate from './MenChildren/Options/NoParticipate';
 
 const AppRouter = () => {
   return (
@@ -246,6 +265,30 @@ const AppRouter = () => {
           <Route path="/allowance" component={Allowance} />
           <Route path="/searchoccupationaldisease" component={SearchOccupationalDisease} />
           <Route path="/search_accident" component={Accident} />
+          <Route path="/search_sick" component={SearchSick} />
+          <Route path="/search_rehibilitate" component={Rehibilitate} />
+          <Route path="/search_help" component={SearchHelp} />
+          <Route path="/search_allowance" component={SearchAllowance} />
+          <Route path="/odregister" component={ODRegister} />
+          <Route path="/register_service" component={RegisterService} />
+
+          {/* thất nghiệp */}
+
+          <Route path="/unemployed" component={Unemployed} />
+          <Route path="/unemployed_interest" component={UnemployedInterest} />
+          <Route path="/info_unemployed" component={InfoUnemployed} />
+          <Route path="/info_severance" component={Severance} />
+          <Route path="/info_lostmyjob" component={LostMyJob} />
+          <Route path="/unemployed_search" component={UnemployedSearch} />
+          <Route path="/search_unemployed" component={SearchUnemployed} />
+          <Route path="/search_severance" component={SearchSeverance} />
+          <Route path="/unemployed_lostmyjob" component={OPLostMyJob} />
+          <Route path="/search_lostmyJob" component={SearchLostMyJob} />
+          <Route path="/search_temporary" component={SearchTemporary} />
+
+          {/* Nam giới có vợ sinh con */}
+          <Route path="/menchildren" component={MenChildren} />
+          <Route path="/menchildren_noparticipate" component={MenNoParticipate} />
         </Switch>
       </RootContainer>
     </Router>

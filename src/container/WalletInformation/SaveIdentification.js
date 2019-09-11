@@ -19,7 +19,9 @@ class SaveWallet extends Component {
       },
       error: '',
       loading: null,
-      showAlert: false
+      showAlert: false,
+      messPhone: '',
+      ckeckPhone: false
     };
   }
 
@@ -35,13 +37,23 @@ class SaveWallet extends Component {
     const { bhxh, username, password } = this.state.params;
     if (bhxh === '' || username === '' || password === '') {
       this.setState({
-        error: 'Các trường là bắt buộc không được để chống'
+        error: 'Các trường là bắt buộc không được để trống'
       });
       return;
     }
-    this.setState({ loading: true }, () => {
-      this.props.save(this.state.params, this.success, this.fail);
-    });
+    if (!this.state.ckeckPhone) {
+      this.setState({ loading: true }, () => {
+        this.props.save(this.state.params, this.success, this.fail);
+      });
+    }
+  };
+  validatePhone = e => {
+    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    if (!regex.test(e.target.value)) {
+      this.setState({ messPhone: 'Số điện thoại không đúng định dạng', ckeckPhone: true });
+    } else {
+      this.setState({ messPhone: '', ckeckPhone: false });
+    }
   };
   success = () => {
     this.setState(
@@ -90,6 +102,7 @@ class SaveWallet extends Component {
               placeholder="Số điện thoại của bạn (Tên đăng nhập)"
               name="username"
               inputMode="numeric"
+              onBlur={e => this.validatePhone(e)}
               onInput={e => this._onChange(e)}
             />
           </div>
@@ -102,6 +115,7 @@ class SaveWallet extends Component {
             />
           </div>
           <p className="text-error">{this.state.error}</p>
+          <p className="text-error">{this.state.messPhone}</p>
         </div>
         <div className="btn-submit">
           <IonButton onClick={this.submit}>

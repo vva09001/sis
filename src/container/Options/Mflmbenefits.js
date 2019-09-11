@@ -40,10 +40,12 @@ class Mflmbenefits extends Component {
             {t('Quyền lợi hưởng BHXH – Hồi phục sức khỏe sau sinh')}
           </Buttons>
           {/* h25 */}
-          <Buttons number={8}>
+          <Buttons number={8} click={() => history.push('/workbeforematernityleave')}>
             {t('Quyền lợi của LĐ nữ đi làm trước khi hết thời hạn nghỉ thai sản theo quy định')}
           </Buttons>
-          <Buttons number={9}>{t('Quyền lợi hưởng BHXH - Nam giới vợ sinh con')}</Buttons>
+          <Buttons number={9} click={() => history.push('/menchildren')}>
+            {t('Quyền lợi hưởng BHXH - Nam giới vợ sinh con')}
+          </Buttons>
         </div>
       </Layout>
     );

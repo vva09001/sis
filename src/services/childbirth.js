@@ -40,4 +40,28 @@ const maternityLeave = (params, id) => {
   });
 };
 
-export { normalBirth, specialBirth, stillBirth, childDiedAfterBirth, maternityLeave };
+const menSearchParticipation = (params, id) => {
+  return request({
+    url: `/calculate/nam-gioi-co-vo-tham-gia/${id}`,
+    method: 'post',
+    data: params
+  });
+};
+
+const menSearchNoParticipation = (params, id) => {
+  return request({
+    url: `/calculate/nam-gioi-co-vo-khong-tham-gia/${id}`,
+    method: 'post',
+    data: params
+  });
+};
+
+export {
+  normalBirth,
+  specialBirth,
+  stillBirth,
+  childDiedAfterBirth,
+  maternityLeave,
+  menSearchParticipation,
+  menSearchNoParticipation
+};

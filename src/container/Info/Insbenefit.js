@@ -5,6 +5,8 @@ import InputNumber from 'components/common/ButtonNumber';
 import ContentTitle from 'container/Common/ContentTitle';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
+
 class InsBenefit extends Component {
   render() {
     const { t } = this.props;
@@ -15,7 +17,7 @@ class InsBenefit extends Component {
           'Quyền lợi hưởng BHXH - sảy thai, nạo hút thai, phá thai bệnh lý, thai chết trong thời điểm chưa phải là thời điểm sinh con'
         )}
         btnColor="primary"
-        to="/search_noParticipation"
+        _onClick={() => history.goBack()}
         btnName={t('finish')}
       >
         <div className="cardInfo">

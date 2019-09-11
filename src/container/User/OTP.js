@@ -18,14 +18,18 @@ class OTP extends Component {
       password: '',
       error: '',
       showAlert: false,
-      loading: false
+      loading: false,
+      messPhone: '',
+      messPhone2: '',
+      ckeckPhone: false,
+      ckeckPhone2: false
     };
   }
 
   savePhone = () => {
-    if (this.state.newUsername === '') {
+    if (this.state.newUsername === '' || this.state.username === '' || this.state.password === '') {
       this.setState({
-        error: 'Số điện thoại là bắt buộc không được để chống'
+        error: 'Số điện thoại là bắt buộc không được để trống'
       });
       return;
     }
@@ -34,14 +38,32 @@ class OTP extends Component {
       password: this.state.password,
       newUsername: this.state.newUsername
     };
-    this.setState(
-      {
-        loading: true
-      },
-      () => {
-        this.props.save(params, this.success, this.fail);
-      }
-    );
+    if (!this.state.ckeckPhone && !this.state.ckeckPhone2) {
+      this.setState(
+        {
+          loading: true
+        },
+        () => {
+          this.props.save(params, this.success, this.fail);
+        }
+      );
+    }
+  };
+  validatePhone = e => {
+    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    if (!regex.test(e.target.value)) {
+      this.setState({ messPhone: 'Số điện thoại không đúng định dạng', ckeckPhone: true });
+    } else {
+      this.setState({ messPhone: '', ckeckPhone: false });
+    }
+  };
+  validatePhone2 = e => {
+    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    if (!regex.test(e.target.value)) {
+      this.setState({ messPhone2: 'Số điện thoại không đúng định dạng', ckeckPhone2: true });
+    } else {
+      this.setState({ messPhone2: '', ckeckPhone2: false });
+    }
   };
   success = () => {
     this.setState(
@@ -75,6 +97,7 @@ class OTP extends Component {
               name="newUsername"
               placeholder="Nhập sđt mới"
               inputmode="numeric"
+              onBlur={e => this.validatePhone2(e)}
               onInput={e => this.setState({ newUsername: e.target.value })}
             />
           </div>
@@ -83,13 +106,14 @@ class OTP extends Component {
               name="username"
               placeholder="Nhập sđt đã đăng kí BHXH"
               inputmode="numeric"
+              onBlur={e => this.validatePhone(e)}
               onInput={e => this.setState({ username: e.target.value })}
             />
           </div>
           <div className="input">
             <IonInput
               name="password"
-              placeholder="Nhập sđt đã đăng kí BHXH"
+              placeholder="Mật khẩu"
               inputmode="password"
               onInput={e => this.setState({ password: e.target.value })}
             />
@@ -101,6 +125,8 @@ class OTP extends Component {
           </div>
         </div>
         <p className="text-error">{this.state.error}</p>
+        <p className="text-error">{this.state.messPhone}</p>
+        <p className="text-error">{this.state.messPhone2}</p>
         <div className="text-box">
           {t(
             'Trường hợp nếu bạn chưa hiểu, chưa đăng ký với cơ quan BHXH số điện thoại nhận mã tra cứu OTP'

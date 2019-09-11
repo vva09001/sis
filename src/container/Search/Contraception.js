@@ -7,6 +7,7 @@ import { ButtonDate } from 'components/common';
 import { PopupSuccess } from 'components/common';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import { currency } from 'utils/currency';
 import { contraceptionActions } from '../../store/actions';
 import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
@@ -155,7 +156,7 @@ class Contraception extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tienthaisan) +
+            currency(parseInt(this.props.data.tienthaisan)) +
             ' vnđ' +
             '</span>' +
             '</div>' +

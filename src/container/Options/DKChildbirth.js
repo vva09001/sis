@@ -5,6 +5,7 @@ import Layout from 'container/Layout/Layout';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 
 class DKChildbirth extends Component {
   render() {
@@ -16,7 +17,7 @@ class DKChildbirth extends Component {
           'Bạn đăng ký dịch vụ hỗ trợ thủ tục BHXH nam giới có vợ sinh con trường hợp nào ?'
         )}
         btnColor="light"
-        to="homepage"
+        _onClick={() => history.goBack()}
         btnName={t('back')}
       >
         <div className="btn-options">

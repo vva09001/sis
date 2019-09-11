@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
+import history from 'utils/history';
 import PropTypes from 'prop-types';
 
 class WifeGivingBirthManagement extends Component {
@@ -13,7 +14,7 @@ class WifeGivingBirthManagement extends Component {
       <Layout
         title={t('Quyền lợi hưởng BHXH – Nam giới vợ sinh con')}
         btnColor="light"
-        to="homepage"
+        _onClick={() => history.goBack()}
         btnName={t('back')}
       >
         <div className="btn-options">

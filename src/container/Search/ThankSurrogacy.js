@@ -7,6 +7,7 @@ import { ButtonNumber, ButtonDate } from 'components/common';
 import { PopupSuccess } from 'components/common';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import { currency } from 'utils/currency';
 import { surrogacyActions } from '../../store/actions';
 import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
@@ -193,21 +194,21 @@ class ThankSurrogacy extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tongtien) +
+            currency(parseInt(this.props.data.tongtien)) +
             ' vnđ' +
             '</span>' +
             '</div>' +
             '<div>' +
             'Trong đó tiền thai sản: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tienthaisan) +
+            currency(parseInt(this.props.data.tienthaisan)) +
             ' vnđ' +
             '</span>' +
             '</div>' +
             '<div>' +
             'tiền trợ cấp: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tientrocap) +
+            currency(parseInt(this.props.data.tientrocap)) +
             ' vnđ' +
             '</span>' +
             '</div>' +

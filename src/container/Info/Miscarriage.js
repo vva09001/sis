@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 
 class Miscarriage extends Component {
   render() {
@@ -14,7 +15,7 @@ class Miscarriage extends Component {
           'Đăng ký dịch vụ thủ tục BHXH Sảy thai, nạo hút thai, phá thai bệnh lý, thai chết lưu trong thời điểm chưa phải là thời gian nghỉ sinh con'
         )}
         btnColor="primary"
-        to="/search_noParticipation"
+        _onClick={() => history.goBack()}
         btnName={t('continue')}
       >
         <div className="cardInfo">

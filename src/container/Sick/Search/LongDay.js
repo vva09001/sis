@@ -5,6 +5,7 @@ import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { IonInput } from '@ionic/react';
 import { ButtonDate } from 'components/common';
+import { currency } from 'utils/currency';
 import { PopupSuccess } from 'components/common';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -130,7 +131,7 @@ class ShortDay extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tiennhanduoc) +
+            currency(this.props.data.tiennhanduoc) +
             ' vnđ' +
             '</span>' +
             '</div>' +

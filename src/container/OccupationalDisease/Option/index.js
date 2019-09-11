@@ -23,7 +23,7 @@ class OccupationalDiseaseOption extends Component {
           <Buttons number={2} click={() => history.push('/searchoccupationaldisease')}>
             {t('Kiểm tra quyền lợi')}
           </Buttons>
-          <Buttons number={3} click={() => history.push('/sickregister')}>
+          <Buttons number={3} click={() => history.push('/odregister')}>
             {t('Đăng kí dịch vụ')}
           </Buttons>
         </div>

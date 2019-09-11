@@ -40,5 +40,5 @@ export function* thanksurrogacySaga() {
 }
 
 export default function* rootSaga() {
-  yield all([fork(thanksurrogacySaga)]);
+  yield all([fork(thanksurrogacySaga), fork(surrogacySaga)]);
 }

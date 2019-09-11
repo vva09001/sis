@@ -5,6 +5,7 @@ import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { ButtonNumber, ButtonDate } from 'components/common';
 import { PopupSuccess } from 'components/common';
+import { currency } from 'utils/currency';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import { childbirthActions } from '../../store/actions';
@@ -150,21 +151,21 @@ class SpecialCase extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận:' +
             '<span class="momney">' +
-            parseInt(this.props.data.tongtien) +
+            currency(parseInt(this.props.data.tongtien)) +
             ' vnđ' +
             '</span>' +
             '</div>' +
             '<div>' +
             ' Trong đó : tiền thai sản:' +
             '<span class="momney">' +
-            parseInt(this.props.data.tienthaisan) +
+            currency(parseInt(this.props.data.tienthaisan)) +
             ' VNĐ' +
             '</span>' +
             '</div>' +
             '<div>' +
             'tiền trợ cấp thai sản: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tientrocap) +
+            currency(parseInt(this.props.data.tientrocap)) +
             ' VNĐ' +
             '</span>' +
             '</div>' +

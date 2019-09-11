@@ -4,6 +4,7 @@ import Layout from 'container/Layout/Layout';
 import { ButButtonDay } from 'components/common';
 import { IonInput } from '@ionic/react';
 import { PopupSuccess } from 'components/common';
+import { currency } from 'utils/currency';
 import moment from 'moment';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
@@ -48,7 +49,7 @@ class PregnancyExamination extends Component {
       toMonth1 === '' ||
       toMonth2 === ''
     ) {
-      this.setState({ mess: 'Từ ngày đến ngày là bắt buộc không được để chống' });
+      this.setState({ mess: 'Từ ngày đến ngày là bắt buộc không được để trống' });
       return;
     }
     this.setState({ loading: true, mess: '' });
@@ -157,7 +158,7 @@ class PregnancyExamination extends Component {
           message={
             '<p class="text-bule">Kết quả quyền lợi BHXH - Khám thai </br> được hưởng của bạn là<p>' +
             '<p class="momney">' +
-            parseInt(this.props.data.thoidiem1.tongtien) +
+            currency(parseInt(this.props.data.thoidiem1.tongtien)) +
             ' VNĐ' +
             '</p>' +
             '<p class="note">(lưu ý: các ngày nghỉ làm việc đi khám của bạn vẫn được DN(đợn vị) trả đủ lương 100% theo luật lao động)</p>'

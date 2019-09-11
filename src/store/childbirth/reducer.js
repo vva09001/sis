@@ -5,7 +5,9 @@ const initialState = {
   specailBirth: {},
   stillBirth: {},
   childDiedAfterBirth: {},
-  maternityLeave: {}
+  maternityLeave: {},
+  menSearchParticipation: {},
+  menSearchNoParticipation: {}
 };
 
 const childBirth = (state = initialState, action) => {
@@ -35,7 +37,16 @@ const childBirth = (state = initialState, action) => {
         ...state,
         maternityLeave: action.data
       };
-
+    case actions.MEN_SEARCH_PARTICIPATION_SUCCESS:
+      return {
+        ...state,
+        menSearchParticipation: action.data
+      };
+    case actions.MEN_SEARCH_NO_PARTICIPATION_SUCCESS:
+      return {
+        ...state,
+        menSearchNoParticipation: action.data
+      };
     default:
       return state;
   }

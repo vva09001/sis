@@ -4,6 +4,7 @@ import Layout from 'container/Layout/Layout';
 import ContentTitle from 'container/Common/ContentTitle';
 import { ButtonNumber, ButtonDate } from 'components/common';
 import { PopupSuccess } from 'components/common';
+import { currency } from 'utils/currency';
 import moment from 'moment';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
@@ -217,7 +218,7 @@ class RehabilitationManagement extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tiennhanduoc) +
+            currency(parseInt(this.props.data.tiennhanduoc)) +
             ' vnđ' +
             '</span>' +
             '</div>' +

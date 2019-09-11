@@ -5,6 +5,7 @@ import Layout from 'container/Layout/LayoutButtons';
 import { Buttons } from 'components/common';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class NotKnowledgeable extends Component {
   render() {
     const { t } = this.props;
@@ -15,7 +16,7 @@ class NotKnowledgeable extends Component {
         )}
         btnName={t('back')}
         headerTo="/infoOTP"
-        to="/optionsregister"
+        _onClick={() => history.goBack()}
         btnColor="light"
       >
         <div className="btn-options">

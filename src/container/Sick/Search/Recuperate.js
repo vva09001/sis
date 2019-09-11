@@ -6,6 +6,7 @@ import ContentTitle from 'container/Common/ContentTitle';
 import { ButtonDate } from 'components/common';
 import { PopupSuccess } from 'components/common';
 import moment from 'moment';
+import { currency } from 'utils/currency';
 import PropTypes from 'prop-types';
 import { sickActions } from '../../../store/actions';
 import { withTranslation } from 'react-i18next';
@@ -204,7 +205,7 @@ class Recuperate extends Component {
             '<div class="text-bule">' +
             'Tổng số tiền được nhận: ' +
             '<span class="momney">' +
-            parseInt(this.props.data.tiennhanduoc) +
+            currency(this.props.data.tiennhanduoc) +
             ' vnđ' +
             '</span>' +
             '</div>' +

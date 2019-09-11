@@ -47,6 +47,26 @@ const actions = {
     params,
     success,
     fail
+  }),
+
+  MEN_SEARCH_PARTICIPATION_REQUEST: 'MEN_SEARCH_PARTICIPATION_REQUEST',
+  MEN_SEARCH_PARTICIPATION_SUCCESS: 'MEN_SEARCH_PARTICIPATION_SUCCESS',
+
+  menSearchParticipation: (params, success, fail) => ({
+    type: actions.MEN_SEARCH_PARTICIPATION_REQUEST,
+    params,
+    success,
+    fail
+  }),
+
+  MEN_SEARCH_NO_PARTICIPATION_REQUEST: 'MEN_SEARCH_NO_PARTICIPATION_REQUEST',
+  MEN_SEARCH_NO_PARTICIPATION_SUCCESS: 'MEN_SEARCH_NO_PARTICIPATION_SUCCESS',
+
+  menSearchNoParticipation: (params, success, fail) => ({
+    type: actions.MEN_SEARCH_NO_PARTICIPATION_REQUEST,
+    params,
+    success,
+    fail
   })
 };
 

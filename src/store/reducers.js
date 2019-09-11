@@ -11,6 +11,7 @@ import surrogacy from './surrogacy/reducer';
 import maintenance from './maintenance/reducer';
 import sick from './sick/reducer';
 import occupationalDisease from './occupationalDisease/reducer';
+import unemployed from './unemployed/reducer';
 
 const reducers = combineReducers({
   user: user,
@@ -22,7 +23,8 @@ const reducers = combineReducers({
   surrogacy: surrogacy,
   maintenance: maintenance,
   sick: sick,
-  occupationalDisease: occupationalDisease
+  occupationalDisease: occupationalDisease,
+  unemployed: unemployed
 });
 const persistConfig = {
   key: 'root',

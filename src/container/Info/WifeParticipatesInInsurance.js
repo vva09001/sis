@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class WifeParticipatesInInsurance extends Component {
   render() {
     const { t } = this.props;
@@ -10,7 +11,7 @@ class WifeParticipatesInInsurance extends Component {
         cardName="contentBoder"
         title="Trường hợp Nam giới có vợ tham gia BHXH được hưởng quyền lợi thai sản theo vợ thế nào ?"
         btnColor="light"
-        to="/search_noParticipation"
+        _onClick={() => history.goBack()}
         btnName={t('ignore')}
       >
         <div className="cardInfo">

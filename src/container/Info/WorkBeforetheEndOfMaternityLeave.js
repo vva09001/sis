@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Layout from 'container/Layout/Layout';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import history from 'utils/history';
 class WorkBeforetheEndOfMaternityLeave extends Component {
   render() {
     const { t } = this.props;
@@ -11,7 +12,7 @@ class WorkBeforetheEndOfMaternityLeave extends Component {
         cardName="contentBoder"
         title="Quyền lợi hưởng của lao động nữ đi làm trước khi hết thời hạn nghỉ thai sản theo quy định"
         btnColor="light"
-        to="/search_noParticipation"
+        _onClick={() => history.goBack()}
         btnName={t('ignore')}
       >
         <div className="cardInfo">

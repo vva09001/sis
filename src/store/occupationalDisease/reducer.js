@@ -1,7 +1,10 @@
 import actions from './actions';
 
 const innitialState = {
-  accident: {}
+  accident: {},
+  sick: {},
+  rehibilitate: {},
+  allowance: {}
 };
 
 const OccupationalDisease = (state = innitialState, action) => {
@@ -10,6 +13,21 @@ const OccupationalDisease = (state = innitialState, action) => {
       return {
         ...state,
         accident: action.data
+      };
+    case actions.SICK_SUCCESS:
+      return {
+        ...state,
+        sick: action.data
+      };
+    case actions.REHIBILITATE_SUCCESS:
+      return {
+        ...state,
+        rehibilitate: action.data
+      };
+    case actions.ALLOWANCE_SUCCESS:
+      return {
+        ...state,
+        allowance: action.data
       };
 
     default:

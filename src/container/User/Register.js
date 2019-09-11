@@ -23,8 +23,12 @@ class Register extends Component {
         bhxh: '',
         fullname: ''
       },
+      ckeckMail: false,
+      ckeckPhone: false,
       loading: false,
       mess: '',
+      messMail: '',
+      messPhone: '',
       showAlert: false
     };
   }
@@ -36,27 +40,26 @@ class Register extends Component {
     });
   };
   register = () => {
-    const { username, email, password } = this.state.params;
-    if (username === '' || email === '' || password === '') {
-      if (username === '') {
-        this.setState({ mess: 'Tên người dùng là bắt buộc không được để chống' });
-        return;
-      }
-      if (email === '') {
-        this.setState({ mess: 'Địa chỉ email là bắt buộc không được để chống' });
-        return;
-      }
-      if (password === '') {
-        this.setState({ mess: 'Mật khẩu là bắt buộc không được để chống' });
-        return;
-      }
-    } else {
+    const { username, email, password, gender, dob, cmnd, fullname } = this.state.params;
+    if (
+      username === '' ||
+      email === '' ||
+      password === '' ||
+      gender === '' ||
+      dob === '' ||
+      cmnd === '' ||
+      fullname === ''
+    ) {
+      this.setState({ mess: 'Tất cả các trường là bắt buộc không được để trống' });
+      return;
+    }
+    if (!this.state.ckeckMail && !this.state.ckeckPhone) {
       this.setState({ loading: true });
       this.props.register(this.state.params, this.success, this.fail);
     }
   };
   success = () => {
-    this.setState({ loading: false, showAlert: true });
+    this.setState({ loading: false, showAlert: true, mess: '' });
   };
   fail = res => {
     this.setState({ loading: false, mess: res });
@@ -65,6 +68,23 @@ class Register extends Component {
     this.setState({ showAlert: false }, () => {
       history.push('/');
     });
+  };
+  validateEmail = e => {
+    const regex = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+
+    if (!regex.test(e.target.value)) {
+      this.setState({ messMail: 'Email không đúng định dạng', ckeckMail: true });
+    } else {
+      this.setState({ messMail: '', ckeckMail: false });
+    }
+  };
+  validatePhone = e => {
+    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    if (!regex.test(e.target.value)) {
+      this.setState({ messPhone: 'Số điện thoại không đúng định dạng', ckeckPhone: true });
+    } else {
+      this.setState({ messPhone: '', ckeckPhone: false });
+    }
   };
   render() {
     const { t } = this.props;
@@ -124,14 +144,16 @@ class Register extends Component {
               placeholder="Địa chỉ email"
               name="email"
               type="email"
+              onBlur={e => this.validateEmail(e)}
               onInput={e => this._onChange(e)}
             />
           </div>
           <div className="user-bootom">
             <IonInput
-              placeholder="Tên đăng nhập (Số điện thoại)"
+              placeholder="Số điện thoại (Tên đăng nhập)"
               name="username"
               inputMode="numeric"
+              onBlur={e => this.validatePhone(e)}
               onInput={e => this._onChange(e)}
             />
           </div>
@@ -144,6 +166,8 @@ class Register extends Component {
             />
           </div>
           <p className="text-error">{this.state.mess}</p>
+          <p className="text-error">{this.state.messMail}</p>
+          <p className="text-error">{this.state.messPhone}</p>
         </div>
         <div className="btn-submit">
           <IonButton onClick={this.register}>
