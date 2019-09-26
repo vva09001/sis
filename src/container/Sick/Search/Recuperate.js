@@ -216,7 +216,7 @@ class Recuperate extends Component {
             ' ngày' +
             '</span>' +
             '.Bạn nhớ theo dõi cộng số ngày đã nhận quyền lợi,ngày chưa nhận quyền lợi để khi cần sử dụng đến.' +
-            'nên theo quy định, tổng thời gian các lần nghỉ ốm ngắn hạn trong năm hiện tại mà BHXH có trách nhiệm giải quyết quyền lợi cho bạn (nếu sảy ra sự việc), được giới hạn là ' +
+            'nên theo quy định, tổng thời gian các lần nghỉ ốm ngắn hạn trong năm hiện tại mà BHXH có trách nhiệm giải quyết quyền lợi cho bạn (nếu xảy ra sự việc), được giới hạn là ' +
             '</div>' +
             '<div>' +
             'Thời gian được nghỉ và tính quyền lợi BHXH là ' +

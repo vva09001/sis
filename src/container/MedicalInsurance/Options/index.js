@@ -21,7 +21,7 @@ class ManagerMedicalInsurance extends Component {
           <Buttons number={1} click={() => history.push('/check_medicalinsurance')}>
             {t('Kiểm tra quá trình tham gia BHYT')}
           </Buttons>
-          <Buttons number={2} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={2} click={() => history.push('/check_right_medicalinsurance')}>
             {t('Kiểm tra quyền lợi BHYT thời điểm hiện tại của bạn có được giải quyết không')}
           </Buttons>
           <Buttons number={3} click={() => history.push('/options_wifenotparticipating')}>

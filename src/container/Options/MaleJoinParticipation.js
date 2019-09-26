@@ -13,7 +13,7 @@ class MaleJoinParticipation extends Component {
     return (
       <Layout
         title={t('Quyền lợi nam giới có vợ tham gia BHXH')}
-        contentTitle={t('Có hai trường hợp sảy ra khi tra cứu quyền lợi BHXH này')}
+        contentTitle={t('Có hai trường hợp xảy ra khi tra cứu quyền lợi BHXH này')}
         btnColor="light"
         _onClick={() => history.goBack()}
         btnName={t('back')}

@@ -190,7 +190,7 @@ class ShortDay extends Component {
             '</span>' +
             ',bạn ốm ' +
             this.props.data.truonghopomdau +
-            ' nên theo quy định, tổng thời gian các lần nghỉ ốm ngắn hạn trong năm hiện tại mà BHXH có trách nhiệm giải quyết quyền lợi cho bạn (nếu sảy ra sự việc), được giới hạn là ' +
+            ' nên theo quy định, tổng thời gian các lần nghỉ ốm ngắn hạn trong năm hiện tại mà BHXH có trách nhiệm giải quyết quyền lợi cho bạn (nếu xảy ra sự việc), được giới hạn là ' +
             '<span class="momney">' +
             parseInt(this.props.data.thoigiandcnghi) +
             ' ngày' +

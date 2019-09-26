@@ -139,6 +139,7 @@ import MenNoParticipate from './MenChildren/Options/NoParticipate';
 import ManagerMedicalInsurance from './MedicalInsurance/Options/index';
 import Check from './MedicalInsurance/Options/Check';
 import Reason from './MedicalInsurance/Info/Reason';
+import CheckRight from './MedicalInsurance/Options/CheckRight';
 
 const AppRouter = () => {
   return (
@@ -297,6 +298,7 @@ const AppRouter = () => {
           <Route path="/manager_medicalinsurance" component={ManagerMedicalInsurance} />
           <Route path="/check_medicalinsurance" component={Check} />
           <Route path="/reason_medicalinsurance" component={Reason} />
+          <Route path="/check_right_medicalinsurance" component={CheckRight} />
         </Switch>
       </RootContainer>
     </Router>
