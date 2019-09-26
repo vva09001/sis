@@ -10,6 +10,7 @@ import {
   TablePayInsurance,
   TablePayInsuranceDetail
 } from 'components/Table';
+import toltal from 'utils/total';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import history from 'utils/history';
@@ -22,9 +23,17 @@ class ProcessParticipation extends Component {
       showTable: false,
       showTableProcessDetail: false,
       showTablePayInsurance: false,
-      showTablePayInsuranceDetail: false
+      showTablePayInsuranceDetail: false,
+      totalMomney: ''
     };
   }
+
+  componentDidMount() {
+    this.setState({
+      totalMomney: toltal(this.props.data)
+    });
+  }
+
   render() {
     const { t } = this.props;
     return (
@@ -41,11 +50,13 @@ class ProcessParticipation extends Component {
         />
         <TablePayInsurance
           data={this.props.data}
+          monney={this.state.totalMomney}
           show={this.state.showTablePayInsurance}
           close={() => this.setState({ showTablePayInsurance: false })}
         />
         <TablePayInsuranceDetail
           data={this.props.data}
+          monney={this.state.totalMomney}
           show={this.state.showTablePayInsuranceDetail}
           close={() => this.setState({ showTablePayInsuranceDetail: false })}
         />

@@ -3,11 +3,11 @@ import React from 'react';
 import { IonButton } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import { currency } from 'utils/currency';
 import _ from 'lodash';
 
 const TablePayInsuranceDetail = props => {
   const { t } = props;
-  let total = 0;
   return (
     <React.Fragment>
       {props.show && (
@@ -26,8 +26,6 @@ const TablePayInsuranceDetail = props => {
                 </tr>
 
                 {_.map(props.data, (item, index) => {
-                  const tem = item[5].replace(/,/g, '.');
-                  total = total + parseFloat(tem);
                   return (
                     <tr key={index}>
                       <td> {item[0]}</td>
@@ -36,13 +34,13 @@ const TablePayInsuranceDetail = props => {
                       <td> {item[14]}</td>
                       <td> {item[4]}</td>
                       <td> {item[6]}</td>
-                      <td> {item[5]}</td>
+                      <td> {currency(item[5])}</td>
                     </tr>
                   );
                 })}
                 <tr>
                   <th colSpan="6">{t('Cộng')}</th>
-                  <th>{total}</th>
+                  <th>{props.monney}</th>
                 </tr>
               </tbody>
             </table>
@@ -60,7 +58,8 @@ TablePayInsuranceDetail.propTypes = {
   t: PropTypes.func,
   data: PropTypes.array,
   show: PropTypes.bool,
-  close: PropTypes.func
+  close: PropTypes.func,
+  monney: PropTypes.string
 };
 
 export default withTranslation()(TablePayInsuranceDetail);
