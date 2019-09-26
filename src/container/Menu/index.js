@@ -26,7 +26,9 @@ class Mflmbenefits extends Component {
             {t('Kiểm tra và tính toán quyền lợi Bảo Hiểm thất nghiệp')}
           </Buttons>
           <Buttons number={5}>{t('Kiểm tra và tính toán quyền lợi BHXH một lần')}</Buttons>
-          <Buttons number={6}>{t('Kiểm tra và tính toán quyền lợi Bảo Hiểm Y Tế')}</Buttons>
+          <Buttons number={6} click={() => history.push('/manager_medicalinsurance')}>
+            {t('Kiểm tra và tính toán quyền lợi Bảo Hiểm Y Tế')}
+          </Buttons>
           <Buttons number={7}>{t('Kiểm tra và tính toán quyền lợi BHXH Hưu trí')}</Buttons>
           <Buttons number={8}>
             {t('Kiểm tra và tính toán quyền lợi BHXH được hưởng khi thân nhân tử tuất')}

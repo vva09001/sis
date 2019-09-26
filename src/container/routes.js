@@ -136,6 +136,9 @@ import SearchLostMyJob from './Unemployed/Search/LostMyJob';
 import SearchTemporary from './Unemployed/Search/Temporary';
 import MenChildren from './MenChildren/Options';
 import MenNoParticipate from './MenChildren/Options/NoParticipate';
+import ManagerMedicalInsurance from './MedicalInsurance/Options/index';
+import Check from './MedicalInsurance/Options/Check';
+import Reason from './MedicalInsurance/Info/Reason';
 
 const AppRouter = () => {
   return (
@@ -289,6 +292,11 @@ const AppRouter = () => {
           {/* Nam giới có vợ sinh con */}
           <Route path="/menchildren" component={MenChildren} />
           <Route path="/menchildren_noparticipate" component={MenNoParticipate} />
+
+          {/* BHYT */}
+          <Route path="/manager_medicalinsurance" component={ManagerMedicalInsurance} />
+          <Route path="/check_medicalinsurance" component={Check} />
+          <Route path="/reason_medicalinsurance" component={Reason} />
         </Switch>
       </RootContainer>
     </Router>
