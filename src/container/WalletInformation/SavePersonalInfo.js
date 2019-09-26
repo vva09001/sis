@@ -39,14 +39,13 @@ class SavePersonalInfo extends Component {
     });
   };
   register = () => {
-    const { username, email, password, gender, DOB, CMND, bhxh, fullname } = this.state;
+    const { username, email, password, gender, DOB, CMND, fullname } = this.state;
     if (
       username === '' ||
       email === '' ||
       password === '' ||
       DOB === '' ||
       CMND === '' ||
-      // bhxh === '' ||
       fullname === ''
     ) {
       this.setState({ mess: 'Tất cả các trường là bắt buộc không được để trống' });
@@ -59,7 +58,6 @@ class SavePersonalInfo extends Component {
       gender: gender,
       DOB: DOB,
       CMND: CMND,
-      // bhxh: bhxh,
       fullname: fullname
     };
     if (!this.state.ckeckMail && !this.state.ckeckPhone) {
