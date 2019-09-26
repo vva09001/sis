@@ -18,7 +18,7 @@ class ContraceptiveManagement extends Component {
         btnName={t('back')}
       >
         <div className="cardInfo">
-          <p>{t('quy định')}</p>
+          <p>{t('luật BHXH 2014')}</p>
           <p>
             {t('khi thực hiện các biện pháp tránh thai')} <br />
             {t('07 ngày')} <br />

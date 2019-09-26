@@ -89,7 +89,7 @@ class HomePage extends Component {
         <div className="from-peson">
           <div className="phone">
             <IonInput
-              placeholder="Tên đăng nhập (Số điện thoại)"
+              placeholder="Số điện thoại"
               name="username"
               inputMode="numeric"
               onInput={e => this._onChange(e)}

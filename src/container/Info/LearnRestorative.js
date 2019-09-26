@@ -18,7 +18,7 @@ class LearnRestorative extends Component {
       >
         <div className="cardInfo">
           <p>
-            {t('Lao động nứ thuộc 03 trường hợp')}
+            {t('Lao động nữ thuộc 03 trường hợp')}
             <br />
             {t('trường hợp 1')}
             <br />

@@ -80,7 +80,7 @@ class Accident extends Component {
         <div className="cardInfo">
           <ContentTitle>
             {t(
-              'Bạn bổ xung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
+              'Bạn bổ sung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
             )}
           </ContentTitle>
           <div className="form">
@@ -147,14 +147,14 @@ class Accident extends Component {
             '</span>' +
             '</div>' +
             '<div class="text-bule">' +
-            'Tổng số tiền trợ cấp DN (đơn vị) bạn có trách nghiệm chi trả cho bạn: ' +
+            'Tổng số tiền trợ cấp DN (đơn vị) bạn có trách nhiệm chi trả cho bạn: ' +
             '<span class="momney">' +
             currency(parseInt(this.props.data.doannghiechitra)) +
             ' vnđ' +
             '</span>' +
             '</div>' +
             '<div>' +
-            'Ngoài số tiền trợ cấp này, DN đơn vị bạn có trách nghiệm thanh toán đầy đủ tiền lươn cho bạn trong thời gian điều trị, cũng như những chi phí điều trị không nằm trong danh mục chi trả của BHYT' +
+            'Ngoài số tiền trợ cấp này, DN đơn vị bạn có trách nhiệm thanh toán đầy đủ tiền lươn cho bạn trong thời gian điều trị, cũng như những chi phí điều trị không nằm trong danh mục chi trả của BHYT' +
             '</div>'
           }
         />

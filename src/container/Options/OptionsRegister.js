@@ -11,7 +11,7 @@ class Register extends Component {
       <LayoutButtons
         title={t('THỦ TỤC ĐĂNG KÝ BAN ĐẦU ĐỂ SỬ DỤNG ĐƯỢC VÍ')}
         sussget={t(
-          'Lời khuyên hữu ích để sử dụng được hết các tiện ích tra cứu của Ví, bạn hãy thật kiên trì bổ sung thông tin, và hãy thật kiên trì bổ sung thông tin ....đối với mỗi phần tiện ích. Ví không sang tạo các phần thông tin bổ sung này, mà là trong nội dung các thủ tục văn bản BHXH yêu cầu như vậy thì kế quả tính toán tra cứu của bạn mới có kết quả.'
+          'Lời khuyên hữu ích để sử dụng được hết các tiện ích tra cứu của Ví, bạn hãy thật kiên trì bổ sung thông tin, và hãy thật kiên trì bổ sung thông tin ....đối với mỗi phần tiện ích. Ví không sáng tạo các phần thông tin bổ sung này, mà là trong nội dung các thủ tục văn bản BHXH yêu cầu như vậy thì kế quả tính toán tra cứu của bạn mới có kết quả.'
         )}
         btnColor="primary"
         btnName={t('next')}

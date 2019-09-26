@@ -142,7 +142,7 @@ class RehabilitationManagement extends Component {
         <div className="cardInfo">
           <ContentTitle>
             {t(
-              'Bạn bổ xung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
+              'Bạn bổ sung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
             )}
           </ContentTitle>
           <div className="form">

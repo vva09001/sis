@@ -88,7 +88,7 @@ class Rehibilitate extends Component {
         <div className="cardInfo">
           <ContentTitle>
             {t(
-              'Bạn bổ xung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
+              'Bạn bổ sung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
             )}
           </ContentTitle>
           <div className="form">
@@ -150,7 +150,7 @@ class Rehibilitate extends Component {
             '</div>' +
             '<div>' +
             '<div>' +
-            'DN (đơn vị) bạn có trách nghiệm thanh toán đủ tiền lương cho bạn trong thời gian nghỉ dưỡng phục hồi sức khỏe' +
+            'DN (đơn vị) bạn có trách nhiệm thanh toán đủ tiền lương cho bạn trong thời gian nghỉ dưỡng phục hồi sức khỏe' +
             '</div>' +
             '<div>' +
             'Số ngày nghỉ chế độ của bạn theo quy định của BHXH và được tính quyền lợi là ' +

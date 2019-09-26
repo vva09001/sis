@@ -18,7 +18,7 @@ const TableProcessDetail = props => {
                   <th>{t('STT')}</th>
                   <th>{t('Từ tháng/năm')}</th>
                   <th>{t('Đến tháng/năm')}</th>
-                  <th>{t('Điễn giải')}</th>
+                  <th>{t('Diễn giải')}</th>
                   <th>{t('Đơn vị')}</th>
                   <th>{t('Mức lương đón/Hệ số lương')}</th>
                 </tr>

@@ -39,7 +39,7 @@ class LaborAccident extends Component {
             {t('Trợ cấp cho người lao động')}
           </p>
           <p>
-            {t('Trách nghiệm của cơ quan BHXH:')} <br />
+            {t('Trách nhiệm của cơ quan BHXH:')} <br />
             {t('Trả trợ cấp 1 lần')} <br />
             {t('Trợ cấp 1 lần')}
           </p>

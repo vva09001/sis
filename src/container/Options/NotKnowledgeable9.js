@@ -21,7 +21,7 @@ class NotKnowledgeable9 extends Component {
       >
         <Buttons number={2}>{t('đăng ký số điện thoại đã nghỉ việc')}</Buttons>
         <div className="content-options">
-          <p className="tittle">{t('bổ xung thêm')}</p>
+          <p className="tittle">{t('bổ sung thêm')}</p>
           <p className="font-10">{t('ví sẽ hoàn thiện')}</p>
           <div className="form-save">
             <div className="input">

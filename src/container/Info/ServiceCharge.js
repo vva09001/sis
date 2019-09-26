@@ -21,7 +21,7 @@ class ServiceCharge extends Component {
           <p>{t('với dịch vụ')}</p>
           <p>
             {t('phí dịch vụ')}
-            <span> 50.000 VĐN</span>
+            <span> 50.000 VND</span>
           </p>
         </div>
         <div className="btn-black">

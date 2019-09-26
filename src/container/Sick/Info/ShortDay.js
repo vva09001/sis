@@ -21,8 +21,8 @@ class SickShortDay extends Component {
           <p className="text-blue text-bold">
             {t('Điều kiện được hưởng')} <br />
           </p>
-          <p>{t('điểu kiện 1:')}</p>
-          <p>{t('điểu kiện 2:')}</p>
+          <p>{t('điểu kiện 1')}</p>
+          <p>{t('điểu kiện 2')}</p>
           <p>{t('trường hợp ốm đau')}</p>
           <p className="text-blue text-bold">
             {t('quyền lợi')} <br />

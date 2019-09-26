@@ -20,6 +20,7 @@ class ManagementOfMiscarriage extends Component {
       >
         <div className="cardInfo">
           <p>{t('khoản 1')}</p>
+          <p>{t('khi xảy thai')}</p>
           <p>
             {t('thời gian nghỉ việc tối đa')} <br />
             {t('10 ngày')}

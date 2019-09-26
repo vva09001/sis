@@ -27,7 +27,7 @@ class NotKnowledgeable7 extends Component {
           <div className="box">
             <div className="box-text">{t('xem nguyên tắc')}</div>
             <img src={arrow} className="icon-arrow" alt="icon" />
-            <div className="box-text text-medium">{t('bổ xung thông tin')}</div>
+            <div className="box-text text-medium">{t('bổ sung thông tin')}</div>
             <img src={arrow} className="icon-arrow" alt="icon" />
             <div className="box-text text-small">{t('nhận tờ khai')}</div>
           </div>

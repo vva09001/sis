@@ -106,7 +106,7 @@ class ShortDay extends Component {
         <div className="cardInfo">
           <ContentTitle>
             {t(
-              'Bạn bổ xung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
+              'Bạn bổ sung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
             )}
           </ContentTitle>
           <div className="form">
@@ -190,7 +190,7 @@ class ShortDay extends Component {
             '</span>' +
             ',bạn ốm ' +
             this.props.data.truonghopomdau +
-            ' nên theo quy định, tổng thời gian các lần nghỉ ốm ngắn hạn trong năm hiện tại mà BHXH có trách nghiệm giải quyết quyền lợi cho bạn (nếu sảy ra sự việc), được giới hạn là ' +
+            ' nên theo quy định, tổng thời gian các lần nghỉ ốm ngắn hạn trong năm hiện tại mà BHXH có trách nhiệm giải quyết quyền lợi cho bạn (nếu sảy ra sự việc), được giới hạn là ' +
             '<span class="momney">' +
             parseInt(this.props.data.thoigiandcnghi) +
             ' ngày' +

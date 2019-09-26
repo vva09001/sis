@@ -26,11 +26,11 @@ class Sick extends Component {
           <p>{t('Đk nghề nghiệp')}</p>
           <p className="text-blue text-bold">{t('được hưởng')}</p>
           <p>
-            {t('Trách nghiệm')} <br />
+            {t('Trách nhiệm')} <br />
             {t('Trả đủ tiền lương nghề nghiệp')} <br />
           </p>
           <p>
-            {t('Trách nghiệm cơ quan')} <br />
+            {t('Trách nhiệm cơ quan')} <br />
             {t('Trả trợ cấp 1 lần')} <br />
             {t('Trợ cấp 1 lần')}
           </p>

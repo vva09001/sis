@@ -87,7 +87,7 @@ class Miscarriage extends Component {
         <div className="cardInfo">
           <ContentTitle>
             {t(
-              'Bạn bổ xung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
+              'Bạn bổ sung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
             )}
           </ContentTitle>
           <div className="form">
@@ -131,7 +131,7 @@ class Miscarriage extends Component {
             'Thời gian nghỉ' +
             '</div>' +
             '<div>' +
-            'Căn cứ theo quy định và tháng tuổi thai bạn kê khai và quy định cảu luật BHXH, bạn ở trong trường hợp có ' +
+            'Căn cứ theo quy định và tháng tuổi thai bạn kê khai và quy định của luật BHXH, bạn ở trong trường hợp có ' +
             this.props.data.tuantuoi +
             ' tuần tuổi.' +
             ' Nên bạn được nghỉ việc hồi phục sức khỏe là ' +

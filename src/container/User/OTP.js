@@ -50,7 +50,7 @@ class OTP extends Component {
     }
   };
   validatePhone = e => {
-    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    const regex = /(09|01[2|6|8|9]|0[7|8|3|5])+([0-9]{8})\b/;
     if (!regex.test(e.target.value)) {
       this.setState({ messPhone: 'Số điện thoại không đúng định dạng', ckeckPhone: true });
     } else {
@@ -58,7 +58,7 @@ class OTP extends Component {
     }
   };
   validatePhone2 = e => {
-    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    const regex = /(09|01[2|6|8|9]|0[7|8|3|5])+([0-9]{8})\b/;
     if (!regex.test(e.target.value)) {
       this.setState({ messPhone2: 'Số điện thoại không đúng định dạng', ckeckPhone2: true });
     } else {

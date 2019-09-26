@@ -46,7 +46,7 @@ class SavePersonalInfo extends Component {
       password === '' ||
       DOB === '' ||
       CMND === '' ||
-      bhxh === '' ||
+      // bhxh === '' ||
       fullname === ''
     ) {
       this.setState({ mess: 'Tất cả các trường là bắt buộc không được để trống' });
@@ -59,7 +59,7 @@ class SavePersonalInfo extends Component {
       gender: gender,
       DOB: DOB,
       CMND: CMND,
-      bhxh: bhxh,
+      // bhxh: bhxh,
       fullname: fullname
     };
     if (!this.state.ckeckMail && !this.state.ckeckPhone) {
@@ -85,7 +85,7 @@ class SavePersonalInfo extends Component {
     }
   };
   validatePhone = e => {
-    const regex = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+    const regex = /(09|01[2|6|8|9]|0[7|8|3|5])+([0-9]{8})\b/;
     if (!regex.test(e.target.value)) {
       this.setState({ messPhone: 'Số điện thoại không đúng định dạng', ckeckPhone: true });
     } else {

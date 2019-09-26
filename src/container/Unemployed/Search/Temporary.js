@@ -94,7 +94,7 @@ class Temporary extends Component {
         <div className="cardInfo">
           <ContentTitle>
             {t(
-              'Bạn bổ xung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
+              'Bạn bổ sung thêm thông tin theo quy định của BHXH để Ví kiểm tra quyền lợi và cung cấp dịch vụ hỗ trợ thủ tục cho bạn nhanh và chính xác nhất'
             )}
           </ContentTitle>
           <div className="form">
@@ -141,7 +141,7 @@ class Temporary extends Component {
             'Đơn vị bạn đang làm việc, hiện tại đang nợ tiền đóng BHXH, hoặc không đóng Bảo hiểm thất nghiệp cho bạn.' +
             '</div>' +
             '<div>' +
-            'Nên theo luật lao động nắm 2012, DN (đơn vị) bạn có trách nghiệm chi trả toàn bộ trợ cấp thôi việc cho bạn mà không có sự hỗ trợ thêm của BHXH' +
+            'Nên theo luật lao động nắm 2012, DN (đơn vị) bạn có trách nhiệm chi trả toàn bộ trợ cấp thôi việc cho bạn mà không có sự hỗ trợ thêm của BHXH' +
             '</div>' +
             '<div>' +
             'Thời gian làm việc tại đơn vị là ' +
