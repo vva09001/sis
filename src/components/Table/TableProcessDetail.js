@@ -3,6 +3,7 @@ import React from 'react';
 import { IonButton } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
+import { currency } from 'utils/currency';
 import _ from 'lodash';
 
 const TableProcessDetail = props => {
@@ -31,7 +32,7 @@ const TableProcessDetail = props => {
                       <td> {item[2]}</td>
                       <td> {item[3]}</td>
                       <td> {item[4]}</td>
-                      <td> {item[5]}</td>
+                      <td> {currency(item[5])}</td>
                     </tr>
                   );
                 })}

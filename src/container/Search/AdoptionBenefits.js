@@ -22,6 +22,7 @@ class AdoptionBenefits extends Component {
       endDay: '',
       endMonth: '',
       endYear: '',
+      num: '',
       loading: false,
       mess: '',
       show: false
@@ -89,7 +90,7 @@ class AdoptionBenefits extends Component {
           <div className="form">
             <div className="numberChildren">
               <p>{t('Số tháng tuổi con nuôi')}</p>
-              <ButtonNumber />
+              <ButtonNumber changeNumber={e => this.setState({ num: e.target.value })} />
             </div>
             <div>
               <p>{t('Thời điểm bắt đầu nghỉ')}</p>
@@ -109,7 +110,7 @@ class AdoptionBenefits extends Component {
             </div>
             <div className="numberChildren">
               <p>{t('Số lượng con nuôi')}</p>
-              <ButtonNumber />
+              <ButtonNumber changeNumber={e => this.setState({ num: e.target.value })} />
             </div>
             <div className="mess-error">
               <p>{this.state.mess}</p>
