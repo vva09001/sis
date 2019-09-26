@@ -24,6 +24,7 @@ class ChildDiesAfterBirth extends Component {
       endMonth: '',
       endYear: '',
       qty: '',
+      num: '',
       loading: false,
       mess: '',
       show: false
@@ -141,11 +142,11 @@ class ChildDiesAfterBirth extends Component {
             </div>
             <div className="numberChildren">
               <p>{t('Số lượng con còn sống')}</p>
-              <ButtonNumber />
+              <ButtonNumber changeNumber={e => this.setState({ num: e.target.value })} />
             </div>
             <div className="numberChildren">
               <p>{t('Số lượng con đã chết')}</p>
-              <ButtonNumber />
+              <ButtonNumber changeNumber={e => this.setState({ num: e.target.value })} />
             </div>
             <div>
               <p>{t('Khi con chết trong khoảng thời gian nào')}</p>
