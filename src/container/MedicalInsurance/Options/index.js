@@ -24,30 +24,30 @@ class ManagerMedicalInsurance extends Component {
           <Buttons number={2} click={() => history.push('/check_right_medicalinsurance')}>
             {t('Kiểm tra quyền lợi BHYT thời điểm hiện tại của bạn có được giải quyết không')}
           </Buttons>
-          <Buttons number={3} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={3} click={() => history.push('/cases_medicalinsurance')}>
             {t(
               'Các trường hợp mất thẻ BHYT, thẻ BHYT bị rách thẻ BHYT hết hạn liên quan đến giải quyết quyền lợi BHYT thế nào.'
             )}
           </Buttons>
-          <Buttons number={4} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={4} click={() => history.push('/right_have_medicalinsurance')}>
             {t('Quyền lợi BHYT – Khám bệnh, chữa bệnh NLĐ có thẻ BHYT')}
           </Buttons>
-          <Buttons number={5} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={5} click={() => history.push('/right_have_not_medicalinsurance')}>
             {t('Quyền lợi BHYT – Khám bệnh, chữa bệnh NLĐ không có thẻ BHYT')}
           </Buttons>
-          <Buttons number={6} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={6} click={() => history.push('/right_diagnose_medicalinsurance')}>
             {t('Quyền lợi BHYT – Khám bệnh để sang lọc chẩn đoán sớm một số bệnh')}
           </Buttons>
-          <Buttons number={7} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={7} click={() => history.push('/right_rehabilitation_medicalinsurance')}>
             {t('Quyền lợi BHYT – Phục hồi chức năng')}
           </Buttons>
-          <Buttons number={8} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={8} click={() => history.push('/right_pregnancy_medicalinsurance')}>
             {t('Quyền lợi BHYT – Khám thai nhằm mục đích điều trị')}
           </Buttons>
-          <Buttons number={9} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={9} click={() => history.push('/right_birth_medicalinsurance')}>
             {t('Quyền lợi BHYT – Sinh con')}
           </Buttons>
-          <Buttons number={10} click={() => history.push('/options_wifenotparticipating')}>
+          <Buttons number={10} click={() => history.push('/right_transfer_medicalinsurance')}>
             {t(
               'Quyền lợi BHYT – Thanh toán phí vận chuyển người bệnh từ tuyến Huyện lên tuyến trến'
             )}

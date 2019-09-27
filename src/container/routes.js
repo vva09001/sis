@@ -140,6 +140,30 @@ import ManagerMedicalInsurance from './MedicalInsurance/Options/index';
 import Check from './MedicalInsurance/Options/Check';
 import Reason from './MedicalInsurance/Info/Reason';
 import CheckRight from './MedicalInsurance/Options/CheckRight';
+import Cases from './MedicalInsurance/Options/Cases';
+import CaseLost from './MedicalInsurance/Info/CaseLost';
+import CaseTorn from './MedicalInsurance/Info/CaseTorn';
+import CaseOutdated from './MedicalInsurance/Info/CaseOutdated';
+import CaseExpired from './MedicalInsurance/Info/CaseExpired';
+import RightHave from './MedicalInsurance/Options/RightHave';
+import RightRoute from './MedicalInsurance/Options/RightRoute';
+import WrongRoute from './MedicalInsurance/Options/WrongRoute';
+import NoContract from './MedicalInsurance/Options/NoContract';
+import NoContractDistrict from './MedicalInsurance/Options/NoContractDistrict';
+import NoContractProvince from './MedicalInsurance/Options/NoContractProvince';
+import NoContractCenter from './MedicalInsurance/Options/NoContractCenter';
+import UnderstandHow from './MedicalInsurance/Info/UnderstandHow';
+import RegisterSupport from './MedicalInsurance/Info/RegisterSupport';
+import Pay100 from './MedicalInsurance/Info/Pay100';
+import Pay100District from './MedicalInsurance/Info/Pay100District';
+import Pay100Province from './MedicalInsurance/Info/Pay100Province';
+import Pay95 from './MedicalInsurance/Info/Pay95';
+import Pay80 from './MedicalInsurance/Info/Pay80';
+import UnderstandHowWrongRoute from './MedicalInsurance/Info/UnderstandHowWrongRoute';
+import WrongRouteDistrict from './MedicalInsurance/Options/WrongRouteDistrict';
+import WrongRouteProvince from './MedicalInsurance/Options/WrongRouteProvince';
+import WrongRouteCenter from './MedicalInsurance/Options/WrongRouteCenter';
+import UnderstandHowNoContract from './MedicalInsurance/Info/UnderstandHowNoContract';
 
 const AppRouter = () => {
   return (
@@ -299,6 +323,30 @@ const AppRouter = () => {
           <Route path="/check_medicalinsurance" component={Check} />
           <Route path="/reason_medicalinsurance" component={Reason} />
           <Route path="/check_right_medicalinsurance" component={CheckRight} />
+          <Route path="/cases_medicalinsurance" component={Cases} />
+          <Route path="/case_lost_medicalinsurance" component={CaseLost} />
+          <Route path="/case_torn_medicalinsurance" component={CaseTorn} />
+          <Route path="/case_outdated_medicalinsurance" component={CaseOutdated} />
+          <Route path="/case_expired_medicalinsurance" component={CaseExpired} />
+          <Route path="/right_have_medicalinsurance" component={RightHave} />
+          <Route path="/right_route_medicalinsurance" component={RightRoute} />
+          <Route path="/wrong_route_medicalinsurance" component={WrongRoute} />
+          <Route path="/no_contract_medicalinsurance" component={NoContract} />
+          <Route path="/no_contract_district_medicalinsurance" component={NoContractDistrict} />
+          <Route path="/no_contract_province_medicalinsurance" component={NoContractProvince} />
+          <Route path="/no_contract_center_medicalinsurance" component={NoContractCenter} />
+          <Route path="/wrong_route_district_medicalinsurance" component={WrongRouteDistrict} />
+          <Route path="/wrong_route_province_medicalinsurance" component={WrongRouteProvince} />
+          <Route path="/wrong_route_center_medicalinsurance" component={WrongRouteCenter} />
+          <Route path="/understand_how_medicalinsurance" component={UnderstandHow} />
+          <Route path="/register_support_medicalinsurance" component={RegisterSupport} />
+          <Route path="/pay100_medicalinsurance" component={Pay100} />
+          <Route path="/pay100_district_medicalinsurance" component={Pay100District} />
+          <Route path="/pay100_province_medicalinsurance" component={Pay100Province} />
+          <Route path="/pay95_medicalinsurance" component={Pay95} />
+          <Route path="/pay80_medicalinsurance" component={Pay80} />
+          <Route path="/understand_how_wrong_route_medicalinsurance" component={UnderstandHowWrongRoute} />
+          <Route path="/understand_how_no_contract_medicalinsurance" component={UnderstandHowNoContract} />
         </Switch>
       </RootContainer>
     </Router>
