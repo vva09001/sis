@@ -20,7 +20,9 @@ class NoContractDistrict extends Component {
         <div className="cardInfo">
           <p>{t('0,15 mức lương cơ sở tại thời diểm khám bệnh chữa bệnh')}</p>
           <p>{t('0.5 mức lương cơ sở tại thời điểm ra viện')}</p>
-          <p><em>{t('Cả hai trường hợp này đều trừ trường hợp cấp cứu')}</em></p>
+          <p>
+            <em>{t('Cả hai trường hợp này đều trừ trường hợp cấp cứu')}</em>
+          </p>
         </div>
       </Layout>
     );

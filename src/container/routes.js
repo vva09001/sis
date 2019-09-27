@@ -345,8 +345,14 @@ const AppRouter = () => {
           <Route path="/pay100_province_medicalinsurance" component={Pay100Province} />
           <Route path="/pay95_medicalinsurance" component={Pay95} />
           <Route path="/pay80_medicalinsurance" component={Pay80} />
-          <Route path="/understand_how_wrong_route_medicalinsurance" component={UnderstandHowWrongRoute} />
-          <Route path="/understand_how_no_contract_medicalinsurance" component={UnderstandHowNoContract} />
+          <Route
+            path="/understand_how_wrong_route_medicalinsurance"
+            component={UnderstandHowWrongRoute}
+          />
+          <Route
+            path="/understand_how_no_contract_medicalinsurance"
+            component={UnderstandHowNoContract}
+          />
         </Switch>
       </RootContainer>
     </Router>

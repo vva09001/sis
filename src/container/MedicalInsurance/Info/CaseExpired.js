@@ -12,7 +12,9 @@ class CaseExpired extends Component {
     return (
       <Layout
         cardName="contentBoder"
-        title={t('Trường hợp đang trong thời gian điều trị bệnh (nội ngoại trú), thẻ BHYT lại bị hết hạn')}
+        title={t(
+          'Trường hợp đang trong thời gian điều trị bệnh (nội ngoại trú), thẻ BHYT lại bị hết hạn'
+        )}
         btnColor="light"
         _onClick={() => history.goBack()}
         btnName={t('ignore')}

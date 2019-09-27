@@ -27,9 +27,7 @@ class Pay95 extends Component {
               <p>{t('Người thuộc hộ gia đình nghèo')}</p>
             </li>
             <li>
-              <p>
-                {t('Người dân tộc thiểu số')}
-              </p>
+              <p>{t('Người dân tộc thiểu số')}</p>
             </li>
             <li>
               <p>{t('Thân nhân của liệt sỹ')}</p>
@@ -38,9 +36,7 @@ class Pay95 extends Component {
           <p className="text-blue text-bold">{t('Thì bạn được BHYT thanh toán cho bạn 95%')}</p>
           <div className="btn-submit">
             <IonButton>
-              <p>
-                {t('Kiểm tra quyền lợi')}
-              </p>
+              <p>{t('Kiểm tra quyền lợi')}</p>
             </IonButton>
           </div>
         </div>

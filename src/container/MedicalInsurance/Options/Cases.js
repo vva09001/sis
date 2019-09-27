@@ -28,7 +28,9 @@ class Cases extends Component {
             {t('Trường hợp thời điểm khám chữa bệnh, thẻ BHYT đã quá hạn trước đó một thời gian')}
           </Buttons>
           <Buttons number={4} click={() => history.push('/case_expired_medicalinsurance')}>
-            {t('Trường hợp đang trong thời gian điều trị bệnh (nội ngoại trú), thẻ BHYT lại bị hết hạn')}
+            {t(
+              'Trường hợp đang trong thời gian điều trị bệnh (nội ngoại trú), thẻ BHYT lại bị hết hạn'
+            )}
           </Buttons>
         </div>
       </Layout>

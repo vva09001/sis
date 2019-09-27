@@ -19,7 +19,9 @@ class NoContractCenter extends Component {
       >
         <div className="cardInfo">
           <p>{t('2.5 mức lương cơ sở tại thời điểm ra viện')}</p>
-          <p><em>{t('Quy định không tính')}</em></p>
+          <p>
+            <em>{t('Quy định không tính')}</em>
+          </p>
         </div>
       </Layout>
     );
