@@ -6,8 +6,20 @@ import { IonButton } from '@ionic/react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import history from 'utils/history';
+import { userActions } from '../../store/actions';
+import { connect } from 'react-redux';
 
 class HealthCheck extends Component {
+  onFail = () => {};
+
+  onSuccess = () => {
+    history.goBack();
+  };
+
+  goBack = () => {
+    this.props.getProfile(this.onSuccess, this.onFail);
+  };
+
   render() {
     const { t } = this.props;
     return (
@@ -15,7 +27,7 @@ class HealthCheck extends Component {
         <Layout
           title={t('Kiếm tra “Sức khỏe” bảo hiểm xã hội hàng tháng của bạn')}
           btnName={t('ignore')}
-          _onClick={() => history.goBack()}
+          _onClick={this.goBack}
           btnColor="light"
         >
           <div className="content-options content-position">
@@ -37,7 +49,15 @@ class HealthCheck extends Component {
 
 HealthCheck.propTypes = {
   t: PropTypes.func,
-  data: PropTypes.array
+  data: PropTypes.array,
+  getProfile: PropTypes.func
 };
 
-export default withTranslation()(HealthCheck);
+const mapDispatchToPros = {
+  getProfile: userActions.getProfile
+};
+
+export default connect(
+  null,
+  mapDispatchToPros
+)(withTranslation()(HealthCheck));

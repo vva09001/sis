@@ -1,7 +1,14 @@
 import actions from './actions';
 import { all, fork, put, select, takeLatest } from 'redux-saga/effects';
 import { id, token } from '../selectors';
-import { Register, Login, SaveCodeInsurance, SaveInfo, getUserByID } from '../../services/user';
+import {
+  Register,
+  Login,
+  SaveCodeInsurance,
+  SaveInfo,
+  getUserByID,
+  getUserProfile
+} from '../../services/user';
 
 export function* registerSaga() {
   yield takeLatest(actions.REGISTER_REQUEST, function*(data) {
@@ -83,12 +90,30 @@ export function* logoutSaga() {
   });
 }
 
+export function* getProfileSaga() {
+  yield takeLatest(actions.GET_PROFILE_REQUEST, function*(data) {
+    const { success, fail } = data;
+    try {
+      const userid = yield select(id);
+      const userToken = yield select(token);
+      const res = yield getUserProfile(userid, userToken);
+      if (res.status === 200) {
+        yield put({ type: actions.GET_PROFILE_SUCCESS, profile: res.data });
+        yield success();
+      }
+    } catch (error) {
+      yield fail('Không thể kết nối đến Sever');
+    }
+  });
+}
+
 export default function* rootSaga() {
   yield all([
     fork(registerSaga),
     fork(loginSaga),
     fork(saveCodeInsuranceSaga),
     fork(saveInfo),
-    fork(logoutSaga)
+    fork(logoutSaga),
+    fork(getProfileSaga)
   ]);
 }

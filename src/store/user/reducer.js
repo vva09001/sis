@@ -19,6 +19,11 @@ const User = (state = initialState, action) => {
       return { ...state, profile: action.profile };
     case actions.LOOUT_SUCCESS:
       return { ...state, profile: {} };
+    case actions.GET_PROFILE_SUCCESS:
+      return {
+        ...state,
+        profile: action.profile
+      };
     default:
       return state;
   }

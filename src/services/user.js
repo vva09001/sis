@@ -44,4 +44,14 @@ const getUserByID = (id, token) => {
     }
   });
 };
-export { Register, Login, SaveCodeInsurance, SaveInfo, getUserByID };
+
+const getUserProfile = (id, token) => {
+  return request({
+    url: `user/${id}`,
+    method: 'get',
+    headers: {
+      Authorization: 'Bearer ' + token
+    }
+  });
+};
+export { Register, Login, SaveCodeInsurance, SaveInfo, getUserByID, getUserProfile };

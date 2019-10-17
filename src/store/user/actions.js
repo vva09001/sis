@@ -43,6 +43,15 @@ const actions = {
   LOOUT_SUCCESS: 'LOOUT_SUCCESS',
   logout: () => ({
     type: actions.LOOUT_REQUEST
+  }),
+
+  GET_PROFILE_REQUEST: 'GET_PROFILE_REQUEST',
+  GET_PROFILE_SUCCESS: 'GET_PROFILE_SUCCESS',
+
+  getProfile: (success, fail) => ({
+    type: actions.GET_PROFILE_REQUEST,
+    success,
+    fail
   })
 };
 export default actions;
